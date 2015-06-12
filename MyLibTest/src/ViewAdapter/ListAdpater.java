@@ -66,12 +66,6 @@ public class ListAdpater extends BaseAdapter {
 			LayoutInflater inflater = (LayoutInflater) m_Context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflater.inflate(m_Res, null);
 		}
-		// ((TextView)
-		// view.findViewById(R.id.list_line_ssid)).setText(m_ListItem.get(position).getSSID());
-		// ((TextView)
-		// view.findViewById(R.id.list_line_decibel)).setText(m_ListItem.get(position).getDecibel());
-		// ((TextView)
-		// view.findViewById(R.id.list_line_mac)).setText(m_ListItem.get(position).getMac());
 		return view;
 	}
 }
