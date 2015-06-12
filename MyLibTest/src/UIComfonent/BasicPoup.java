@@ -41,7 +41,7 @@ public class BasicPoup extends ParentPopup implements View.OnClickListener {
 
     @Override
     protected void init() {
-        setTitle("지하철안전지킴이");
+        setTitle("팝업");
         setPopupSize(656, 300);
         setButton(EVENT_BTN_NAME, EVENT_BTN, this);
 
