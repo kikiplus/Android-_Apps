@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
  * @Class Name : Dialog
  * @Description : �˾�â Ŭ����
  * @since 2015. 1. 5.
+ * @author grapegirl
  * @version 1.0
  */
 public class TestDialog implements android.content.DialogInterface.OnClickListener {

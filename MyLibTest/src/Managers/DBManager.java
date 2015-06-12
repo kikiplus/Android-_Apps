@@ -13,10 +13,9 @@ import android.database.sqlite.SQLiteOpenHelper;
  * 
  * @Class Name : DBManager
  * @Description : DB Acess 클래스
- * @author 컨버전스스퀘어
  * @since 2015. 6. 12.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public class DBManager extends SQLiteOpenHelper {
 

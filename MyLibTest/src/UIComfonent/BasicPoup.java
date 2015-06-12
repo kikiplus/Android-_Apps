@@ -14,7 +14,7 @@ import com.test.mihye.R;
  * @Description : 기본 팝업
  * @since 2015. 5. 19.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public class BasicPoup extends ParentPopup implements View.OnClickListener {
 

@@ -17,7 +17,7 @@ import android.widget.Toast;
  * @Description :
  * @since 2015. 6. 12.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public class DBHandlerActivity extends Activity {
 

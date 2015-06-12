@@ -5,7 +5,7 @@ package Bean;
  * @Description :
  * @since 2015. 6. 10.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public class StationData {
 

@@ -10,18 +10,19 @@ import android.os.Parcelable;
  * @Class Name : WiFiAP
  * @Description : 와이파이 AP 정보 클래스
  * @since 2015. 1. 6.
+ * @author grapegirl
  * @version 1.0
  */
 public class WiFiAP implements Parcelable {
 
 	/** AP 맥 주소 */
-	private String m_Mac;
+	private String	m_Mac;
 
 	/** AP 맥의 데시벨 */
-	private String m_Decibel;
+	private String	m_Decibel;
 
 	/** AP 맥의 이름 */
-	private String m_SSID;
+	private String	m_SSID;
 
 	/**
 	 * 생성자
@@ -108,21 +109,21 @@ public class WiFiAP implements Parcelable {
 
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeString(m_SSID);
-		dest.writeString(m_Decibel);
-		dest.writeString(m_Mac);
+		dest.writeString( m_SSID );
+		dest.writeString( m_Decibel );
+		dest.writeString( m_Mac );
 	}
 
-	public static final Parcelable.Creator<WiFiAP> CREATOR = new Creator<WiFiAP>() {
+	public static final Parcelable.Creator<WiFiAP>	CREATOR	= new Creator<WiFiAP>() {
 
-		@Override
-		public WiFiAP[] newArray(int size) {
-			return new WiFiAP[size];
-		}
+																@Override
+																public WiFiAP[] newArray(int size) {
+																	return new WiFiAP[size];
+																}
 
-		@Override
-		public WiFiAP createFromParcel(Parcel source) {
-			return new WiFiAP(source);
-		}
-	};
+																@Override
+																public WiFiAP createFromParcel(Parcel source) {
+																	return new WiFiAP( source );
+																}
+															};
 }

@@ -4,22 +4,22 @@
 package Bean;
 
 /***
- * 
  * @Class Name : PostData
  * @Description : �� ������ ���� Ŭ����
  * @since 2015. 1. 5.
+ * @author grapegirl
  * @version 1.0
  */
 public class PostData {
 
 	/** ���� */
-	private String m_title = null;
+	private String	m_title		= null;
 
 	/** ������� */
-	private String m_date = null;
+	private String	m_date		= null;
 
 	/** ���� */
-	private String m_contents = null;
+	private String	m_contents	= null;
 
 	/**
 	 * ������

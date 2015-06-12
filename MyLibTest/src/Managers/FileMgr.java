@@ -15,7 +15,7 @@ import android.content.res.AssetManager;
  * @Class Name : 파일 관련 클래스
  * @since 2015. 6. 11.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public class FileMgr {
 

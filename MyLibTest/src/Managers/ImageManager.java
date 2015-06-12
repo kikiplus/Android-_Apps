@@ -7,7 +7,7 @@ package Managers;
  * @Class Name : ImageManager.java
  * @Description : 
  *
- * @author 컨버전스스퀘어
+ * @author grapegirl
  * @since 2014.08.01
  * @version 1.0
  */

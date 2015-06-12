@@ -36,7 +36,7 @@ import android.widget.TextView;
  * @Description : 최상위 팝업
  * @since 2015. 5. 18.
  * @version 1.0
- * @author mh kim
+ * @author grapegirl
  */
 public abstract class ParentPopup implements android.content.DialogInterface.OnKeyListener {
 

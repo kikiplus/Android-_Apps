@@ -5,8 +5,8 @@ package Managers;
 
 /**
  * @Class Name : SocketManager.java
- * @Description : 
- *
+ * @Description :
+ * @author grapegirl
  * @since 2014.08.01
  * @version 1.0
  */

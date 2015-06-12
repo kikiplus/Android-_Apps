@@ -12,19 +12,20 @@ import android.widget.BaseAdapter;
 /***
  * @Class Name : ListAdpater
  * @Description : 와이파이 목록 어뎁터
- * @since 2015. 1. 6.
+ * @since 2015. 1. 6. 
+ * @author grapegirl
  * @version 1.0
  */
 public class ListAdpater extends BaseAdapter {
 
 	/** 컨텍스트 */
-	private Context m_Context = null;
+	private Context				m_Context	= null;
 
 	/** 리소스 아이디 */
-	private int m_Res = -1;
+	private int					m_Res		= -1;
 
 	/** 리스트 아이템 */
-	private ArrayList<WiFiAP> m_ListItem = null;
+	private ArrayList<WiFiAP>	m_ListItem	= null;
 
 	/**
 	 * 생성자
@@ -37,7 +38,7 @@ public class ListAdpater extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		if (m_ListItem != null) {
+		if ( m_ListItem != null ) {
 			return m_ListItem.size();
 		}
 		return -1;
@@ -45,15 +46,15 @@ public class ListAdpater extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-		if (m_ListItem != null) {
-			return m_ListItem.get(position);
+		if ( m_ListItem != null ) {
+			return m_ListItem.get( position );
 		}
 		return null;
 	}
 
 	@Override
 	public long getItemId(int position) {
-		if (m_ListItem != null) {
+		if ( m_ListItem != null ) {
 			return position;
 		}
 		return 0;
@@ -62,9 +63,9 @@ public class ListAdpater extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view = convertView;
-		if (view == null) {
-			LayoutInflater inflater = (LayoutInflater) m_Context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			view = inflater.inflate(m_Res, null);
+		if ( view == null ) {
+			LayoutInflater inflater = (LayoutInflater) m_Context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+			view = inflater.inflate( m_Res, null );
 		}
 		return view;
 	}
