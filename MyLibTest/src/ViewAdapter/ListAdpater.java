@@ -1,7 +1,8 @@
-package com.example.zzzzz;
-
+package ViewAdapter;
 
 import java.util.ArrayList;
+
+import com.test.mihye.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;
