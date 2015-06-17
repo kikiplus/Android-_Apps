@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UIFrame;
+package UIComfonent;
 
 import android.R;
 import android.app.AlertDialog;

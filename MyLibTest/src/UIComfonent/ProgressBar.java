@@ -1,7 +1,7 @@
 /**
  * 
  */
-package UIFrame;
+package UIComfonent;
 
 import android.app.ProgressDialog;
 import android.content.Context;
