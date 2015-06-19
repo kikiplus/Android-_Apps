@@ -17,7 +17,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="main.GridLayoutTestActivity"
+            android:name="main.AlramMainActivity"
             android:theme="@android:style/Theme.Holo.Light" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="main.SmsTestActivity" >
+        <activity android:name="main.SmsTestActivity" />
+        <activity android:name="main.AlramActiivty" >
+            <intent-filter>
+                <action android:name="com.test.mihye.main.alram" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
