@@ -18,8 +18,8 @@ import android.support.v4.view.ViewPager;
 import com.test.mihye.R;
 
 /***
- * @Class Name :
- * @Description :
+ * @Class Name : TabActivity
+ * @Description : 탭 관련 클래스
  * @since 2015. 6. 17.
  * @version 1.0
  * @author grapegirl

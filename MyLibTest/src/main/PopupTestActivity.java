@@ -11,6 +11,13 @@ import android.view.View;
 
 import com.test.mihye.R;
 
+/**
+ * @Class Name : PopupTestActivity
+ * @Description : 팝업 테스트 클래스
+ * @since 2015. 6. 19.
+ * @version 1.0
+ * @author grapegirl
+ */
 public class PopupTestActivity extends Activity implements PopupEventListener, android.view.View.OnClickListener {
 
     private BasicPoup mBasicPoup = null;

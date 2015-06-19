@@ -5,8 +5,13 @@ import android.os.Bundle;
 
 import com.test.mihye.R;
 
-/**
- * Created by cosquare on 2015-06-19.
+/***
+ * *
+ * @Class Name : GridLayoutTestActivity
+ * @Description : 그리드 레이아웃 테스트 클래스
+ * @since 2015. 6. 19.
+ * @version 1.0
+ * @author grapegirl
  */
 public class GridLayoutTestActivity extends Activity {
 
