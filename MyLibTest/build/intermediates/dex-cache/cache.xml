@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="W:\workspace\Git\Android_Apps\MyLibTest\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28">
+        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\android-support-v4-727bfb92d8a0efab9ad614cda269b12b77e98807.jar" />
+    </item>
+
+</items>

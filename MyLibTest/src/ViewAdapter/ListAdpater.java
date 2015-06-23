@@ -1,6 +1,9 @@
 package ViewAdapter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
 import com.test.mihye.R;
 
@@ -13,7 +16,7 @@ import android.widget.TextView;
 
 /***
  * @Class Name : ListAdpater
- * @Description : 와이파이 목록 어뎁터
+ * @Description : 리스트 목록 어뎁터
  * @since 2015. 1. 6. 
  * @author grapegirl
  * @version 1.0
@@ -27,7 +30,7 @@ public class ListAdpater extends BaseAdapter {
 	private int					m_Res		= -1;
 
 	/** 리스트 아이템 */
-	private ArrayList<String>	m_ListItem	= null;
+	private ArrayList<String> m_ListItem	= null;
 
 	/**
 	 * 생성자
@@ -69,9 +72,10 @@ public class ListAdpater extends BaseAdapter {
 			LayoutInflater inflater = (LayoutInflater) m_Context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 			view = inflater.inflate( m_Res, null );
 		}
-		((TextView)view.findViewById(R.id.listview_line_Textview)).setText(m_ListItem.get(position));
+		((TextView) view.findViewById(R.id.listview_line_Textview)).setText(m_ListItem.get(position));
 		return view;
 	}
+
 	
 	/**
 	 * 데이타 리스트 변경 메소드

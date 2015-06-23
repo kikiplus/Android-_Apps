@@ -3,7 +3,10 @@ package main;
 
 import java.util.ArrayList;
 
+import Bean.PostData;
 import ViewAdapter.ListAdpater;
+import ViewAdapter.ReverseListAdpater;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,9 +26,9 @@ import com.test.mihye.R;
 public class ListTestActivity extends Activity implements OnClickListener {
 
 	/** 리스트 데이타*/
-	private ArrayList<String> mDataList = null;
+	private ArrayList<PostData> mDataList = null;
 	/** 리스트 어뎁타*/
-	private ListAdpater mAdapter = null;
+	private ReverseListAdpater mAdapter = null;
 	/** 리스트뷰*/
 	private ListView mListView = null;
 	/** 버튼*/
@@ -38,17 +41,17 @@ public class ListTestActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview_layout);
 
-		mDataList = new ArrayList<String>();
+		mDataList = new ArrayList<PostData>();
 		for (int i = 0; i < mCount + 10; i++) {
 			String temp = "Data " + i + "";
-			System.out.println(temp);
-			mDataList.add(temp);
+			PostData data = new PostData("",temp,"2015-06-23",i);
+			mDataList.add(data);
 		}
 		mListView = (ListView) findViewById(R.id.listView);
 		mListView.setDividerHeight(1);
 		mButton = (Button) findViewById(R.id.button);
 		mButton.setOnClickListener(this);
-		mAdapter = new ListAdpater(getApplicationContext(),
+		mAdapter = new ReverseListAdpater(getApplicationContext(),
 				R.layout.listview_line, mDataList);
 
 		mListView.setAdapter(mAdapter);
@@ -62,8 +65,8 @@ public class ListTestActivity extends Activity implements OnClickListener {
 			mCount += 10;
 			for (int i = mCount; i < mCount + 10; i++) {
 				String temp = "Data " + i + "";
-				mDataList.add(temp);
-				System.out.println(temp);
+				PostData data = new PostData("",temp,"2015-06-23",i);
+				mDataList.add(data);
 			}
 			mAdapter.setDataList(mDataList);
 			break;
