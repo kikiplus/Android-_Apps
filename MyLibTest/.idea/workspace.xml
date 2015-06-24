@@ -22,8 +22,209 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45c77ebf-6ea6-4b2c-be75-855e0d23a0e3" name="Default" comment="">
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\AlramActiivty.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ToolBarTestActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/color.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/menu_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/toolbar_layout.xml" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\.idea\libraries\android_support_v4.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\generated\source\buildConfig\release\com\test\mihye\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\generated\source\r\release\com\test\mihye\R.java" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\assets\release\test.csv" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Bean\PostData.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Bean\StationData.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Bean\WiFiAP$1.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Bean\WiFiAP.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Event\PopupEventListener.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Interface\NetException.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Interface\ServerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\DBManager.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\FileMgr.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\HTTPManager.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\ImageManager.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\SMSSendManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\SMSSendManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\SMSSendManager$SMSSendListener.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\SMSSendManager.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\SocketManager.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Managers\WifiManger.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\BasicPoup.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\BasicTab.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\BasicTab2.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\BasicTab3.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\ProgressBar.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIComfonent\TestDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\UIFrame\ParentPopup.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Utils\DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Utils\SharedPreferenceUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\Utils\StringUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\ViewAdapter\ListAdpater.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\ViewAdapter\TabPageAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\ViewAdapter\ViewFlipper.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\com\test\mihye\R.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\AlramActiivty.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\AlramMainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\DBHandlerActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\GridLayoutTestActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\ListTestActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\MainMenuActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\PopupTestActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\SmsTestActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\SmsTestActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\SmsTestActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\SocketTestMainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\TabActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\release\main\TabActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\incremental\aidl\release\dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\incremental\mergeAssets\release\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\incremental\mergeResources\release\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\manifests\full\release\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\mockable-android-19.jar" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\android-support-v4-727bfb92d8a0efab9ad614cda269b12b77e98807.jar" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\anim\card_flip_left_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\anim\card_flip_left_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\anim\card_flip_right_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\anim\card_flip_right_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\ic_action_new.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\ic_action_photo.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\ic_list_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\p_2empty_02.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\p_2empty_02_p.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-hdpi\p_bg_basic2.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-ldpi\p_2empty_02.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-ldpi\p_2empty_02_p.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-ldpi\p_bg_basic2.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\ic_action_new.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\ic_action_photo.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\ic_list_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\p_2empty_02.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\p_2empty_02_p.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-mdpi\p_bg_basic2.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\ic_action_info.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\ic_action_new.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\ic_action_photo.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\ic_list_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\p_2empty_02.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\p_2empty_02_p.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xhdpi\p_bg_basic2.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xxhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xxhdpi\p_2empty_02.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xxhdpi\p_2empty_02_p.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable-xxhdpi\p_bg_basic2.9.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\drawable\btn_btn_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\activity_popup_test.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\activity_tab1.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\activity_tab2.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\activity_tab3.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\alram_main_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\grid_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\listview_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\listview_line.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\main_tab_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\popup_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\socket_main_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\tabview_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\tabview_main_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\layout\test_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\menu\popup_test.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\values-w820dp\values-w820dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\res\release\values\values.xml" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\resources\resources-release.ap_" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\outputs\logs\manifest-merger-release-report.txt" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\debug\css\base-style.css" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\debug\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\debug\index.html" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\debug\js\report.js" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\release\css\base-style.css" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\release\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\release\index.html" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\reports\tests\release\js\report.js" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testDebug\output.bin" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testDebug\output.bin.idx" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testDebug\results.bin" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testRelease\output.bin" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testRelease\output.bin.idx" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\test-results\binary\testRelease\results.bin" afterPath="" />
+      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\libs\android-support-v4.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/AlramActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/AlramActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/AlramMainActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/AlramMainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicPoup.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicPoup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/BasicTab3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/BuildConfig.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/BuildConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/DBHandlerActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/DBHandlerActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/DBManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/DBManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/DateUtils.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/DateUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/FileMgr.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/FileMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/GridLayoutTestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/GridLayoutTestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/HTTPManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/HTTPManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/ImageManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/ImageManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ListAdpater.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ListAdpater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/ListTestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/ListTestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/MainMenuActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/MainMenuActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MyLibTest-debug-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MyLibTest-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/MyLibTest-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/MyLibTest-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Interface/NetException.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Interface/NetException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIFrame/ParentPopup.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIFrame/ParentPopup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Event/PopupEventListener.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Event/PopupEventListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/PopupTestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/PopupTestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/PostData.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/PostData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/ProgressBar.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/ProgressBar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$anim.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$anim.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$attr.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$integer.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/test/mihye/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ReverseListAdpater.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ReverseListAdpater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$SMSSendListener.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager$SMSSendListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SMSSendManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Interface/ServerResponse.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Interface/ServerResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SharedPreferenceUtils.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SharedPreferenceUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SmsTestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SocketAsynTaskManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SocketAsynTaskManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SocketManager.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/SocketManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SocketTestMainActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/SocketTestMainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SortUtils$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SortUtils$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SortUtils.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/SortUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/StationData.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/StationData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/StringUtils.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Utils/StringUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/TabActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/TabActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/main/TabActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/main/TabActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/TabPageAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/TabPageAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/TestDialog.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/UIComfonent/TestDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ViewFlipper.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/ViewAdapter/ViewFlipper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/WiFiAP$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/WiFiAP$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/WiFiAP.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Bean/WiFiAP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/WifiManger.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/Managers/WifiManger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
@@ -31,31 +232,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/androidTest/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/androidTest/debug/com/test/mihye/test/BuildConfig.java" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/androidTest/debug/com/test/mihye/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/com/test/mihye/BuildConfig.java" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/com/test/mihye/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ViewAdapter/ListAdpater.java" afterPath="$PROJECT_DIR$/src/ViewAdapter/ListAdpater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ListTestActivity.java" afterPath="$PROJECT_DIR$/src/main/ListTestActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLibTest.iml" afterPath="$PROJECT_DIR$/MyLibTest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PostData.java" afterPath="$PROJECT_DIR$/src/Bean/PostData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/test/mihye/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/test/mihye/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Managers/SocketManager.java" afterPath="$PROJECT_DIR$/src/Managers/SocketManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jarlist.cache" afterPath="$PROJECT_DIR$/bin/jarlist.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/SortUtils.java" afterPath="$PROJECT_DIR$/src/Utils/SortUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/androidTest/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/debug/values-w820dp/values-w820dp.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/values-w820dp/values-w820dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyLibTest.iws" />
@@ -84,76 +273,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ListTestActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ListTestActivity.java">
+      <file leaf-file-name="ToolBarTestActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/ToolBarTestActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.92">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.38917977">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseListAdpater.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ViewAdapter/ReverseListAdpater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36860672">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SortUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/SortUtils.java">
+      <file leaf-file-name="AlramActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AlramActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#383#586#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/DateUtils.java">
+      <file leaf-file-name="AlramMainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AlramMainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
-              <folding />
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedPreferenceUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/SharedPreferenceUtils.java">
+      <file leaf-file-name="DBHandlerActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/DBHandlerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding />
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bean/PostData.java">
+      <file leaf-file-name="GridLayoutTestActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/GridLayoutTestActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-              <folding />
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListAdpater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ViewAdapter/ListAdpater.java">
+      <file leaf-file-name="ListTestActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ListTestActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding />
+              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenuActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/MainMenuActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopupTestActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/PopupTestActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/TabActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1757#1979#0" expanded="false" />
+                <element signature="e#1978#1979#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -570,6 +793,16 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:appcompat-v7:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV72200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareDebugAndroidTestDependencies" />
               </ExternalTaskPojo>
@@ -688,7 +921,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1435019969222" />
+        <entry key="$PROJECT_DIR$" value="1435049850008" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -703,7 +936,9 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$MODULE_DIR$/libs/android-support-v4.jar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/22.0.0/appcompat-v7-22.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/22.0.0/support-v4-22.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.2.3/gradle-1.2.3-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.2.3/gradle-1.2.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/1.2.3/gradle-core-1.2.3-sources.jar" />
@@ -866,13 +1101,24 @@
         <option value="$PROJECT_DIR$/src/main/AlramActivty.java" />
         <option value="$PROJECT_DIR$/res/layout/socket_main_layout.xml" />
         <option value="$PROJECT_DIR$/src/main/SocketTestMainActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/listview_layout.xml" />
         <option value="$PROJECT_DIR$/src/ViewAdapter/ListAdpater.java" />
         <option value="$PROJECT_DIR$/src/main/ListTestActivity.java" />
         <option value="$PROJECT_DIR$/src/Bean/PostData.java" />
-        <option value="$PROJECT_DIR$/src/Utils/SortUtils.java" />
         <option value="$PROJECT_DIR$/src/ViewAdapter/ReverseListAdpater.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/Utils/SortUtils.java" />
+        <option value="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/res/values/test.xml" />
+        <option value="$PROJECT_DIR$/res/layout/toolbar_layout.xml" />
+        <option value="$PROJECT_DIR$/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/res/values/menu_main.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/menu/menu_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/a.java" />
+        <option value="$PROJECT_DIR$/src/main/ToolBarTestActivity.java" />
       </list>
     </option>
   </component>
@@ -915,45 +1161,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -982,20 +1190,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="41006679e43ea191" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
@@ -1004,15 +1281,24 @@
     <property name="SearchEverywhereHistoryKey" value="m_client&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
+    <property name="android.project.structure.last.selected" value="MyLibTest" />
+    <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.test.mihye" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\res\layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\workspace\Git\Android_Apps\MyLibTest\res\menu" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\main" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\interface" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ViewAdapter" />
@@ -1241,26 +1527,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30846325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30846325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17483296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1271,6 +1555,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17483296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1289,6 +1575,39 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/TabActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1757#1979#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/SharedPreferenceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/PostData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ViewAdapter/ListAdpater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1297,43 +1616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/FileMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4799302">
-          <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/ImageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.12739965">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/SMSSendManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033158813">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/SocketAsynTaskManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1341,25 +1627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56369984">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026685392">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AlramMainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26825842">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1367,25 +1634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10674157">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AlramActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61376405">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/SocketManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,85 +1641,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42696628">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/socket_main_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68508285">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Managers/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/DBHandlerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/listview_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/listview_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.7">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/GridLayoutTestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/PopupTestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SmsTestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/TabActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,7 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1487,23 +1684,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33260393">
           <caret line="207" column="24" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ListTestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.92">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/SharedPreferenceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.39790577">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,7 +1698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +1705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,26 +1712,298 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/SortUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#383#586#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ViewAdapter/ReverseListAdpater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36860672">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.24270073">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/FileMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/HTTPManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/ImageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/SMSSendManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/SocketAsynTaskManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/SocketManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Managers/WifiManger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23211169">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/toolbar_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#651#672#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/alram_main_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.866667">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/SortUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.28">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/toolbar_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#651#672#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#349#369#0" expanded="false" />
+            <element signature="e#480#500#0" expanded="false" />
+            <element signature="e#611#631#0" expanded="false" />
+            <element signature="e#742#762#0" expanded="false" />
+            <element signature="e#873#893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/popup_test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.8">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AlramActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AlramMainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/DBHandlerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/GridLayoutTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ListTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/PopupTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41722974">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#349#369#0" expanded="false" />
+            <element signature="e#480#500#0" expanded="false" />
+            <element signature="e#611#631#0" expanded="false" />
+            <element signature="e#742#762#0" expanded="false" />
+            <element signature="e#873#893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/TabActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1757#1979#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ToolBarTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38917977">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding />
         </state>
       </provider>

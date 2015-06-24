@@ -8,7 +8,7 @@ import Bean.PostData;
 
 /***
  * @Class Name : SortUtils
- * @Description : Á¤·Ä °ü·Ã Å¬·¡½º
+ * @Description : ì •ë ¬ ê´€ë ¨ í´ë˜ìŠ¤
  * @since 2015. 6. 23.
  * @version 1.0
  */
@@ -20,7 +20,7 @@ public class SortUtils {
 
         @Override
         public int compare(PostData left, PostData right) {
-            //¿ª¼ø Á¤·Ä
+            //ì—­ìˆœ ì •ë ¬
             return left.getmNo() < right.getmNo() ? 1 : -1;
         }
     };

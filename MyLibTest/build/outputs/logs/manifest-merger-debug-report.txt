@@ -13,6 +13,8 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
+MERGED from com.android.support:appcompat-v7:22.0.0:20:5
+MERGED from com.android.support:support-v4:22.0.0:20:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 	android:minSdkVersion
@@ -35,13 +37,15 @@ ADDED from AndroidManifest.xml:14:5
 		ADDED from AndroidManifest.xml:14:22
 application
 ADDED from AndroidManifest.xml:16:5
+MERGED from com.android.support:appcompat-v7:22.0.0:22:5
+MERGED from com.android.support:support-v4:22.0.0:22:5
 	android:label
 		ADDED from AndroidManifest.xml:19:9
 	android:allowBackup
 		ADDED from AndroidManifest.xml:17:9
 	android:icon
 		ADDED from AndroidManifest.xml:18:9
-activity#main.ListTestActivity
+activity#main.ToolBarTestActivity
 ADDED from AndroidManifest.xml:20:9
 	android:theme
 		ADDED from AndroidManifest.xml:22:13
