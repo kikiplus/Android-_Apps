@@ -240,6 +240,15 @@
     <string name="action_settings">Settings</string>
     <string name="action_toggle">Toggle indicator</string>
     <string name="app_name">MH Test</string>
+    <string name="bluetooth_main_searchbtn_name">찾기</string>
+    <string name="bluetooth_main_toggglebtn_off">꺼짐</string>
+    <string name="bluetooth_main_toggglebtn_on">켜짐</string>
+    <string name="blutooth_main_bluetoothadpater_cancle">사용자가 블루투스를 활성화 하지 않았습니다</string>
+    <string name="blutooth_main_bluetoothadpater_disable">블루투스가 활성화 되어 있지 않은 상태입니다</string>
+    <string name="blutooth_main_bluetoothadpater_enable">블루투스가 활성화 되어 있는 상태입니다</string>
+    <string name="blutooth_main_log">BLUETOOTH_CS</string>
+    <string name="blutooth_main_notsupport">해당 디바이스는 블루투스를 지원하지 않습니다.</string>
+    <string name="blutooth_main_support">해당 디바이스는 블루투스를 지원합니다.</string>
     <string name="card_back_description"><![CDATA[Lorem ipsum dolor sit]]></string>
     <string name="card_back_title">Angry Red Android</string>
     <string name="description_image_1">Image 1</string>

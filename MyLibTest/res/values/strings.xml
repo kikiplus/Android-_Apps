@@ -63,4 +63,20 @@
     <string name="menu_item3">메뉴3</string>
     <string name="menu_item4">메뉴4</string>
     <string name="menu_item5">메뉴5</string>
+
+    <!-- xml 버튼 -->
+    <string name="bluetooth_main_searchbtn_name">찾기</string>
+    <string name="bluetooth_main_toggglebtn_on">켜짐</string>
+    <string name="bluetooth_main_toggglebtn_off">꺼짐</string>
+
+    <!-- 화면-->
+    <string name="blutooth_main_notsupport">해당 디바이스는 블루투스를 지원하지 않습니다.</string>
+    <string name="blutooth_main_support">해당 디바이스는 블루투스를 지원합니다.</string>
+    <string name="blutooth_main_bluetoothadpater_enable">블루투스가 활성화 되어 있는 상태입니다</string>
+    <string name="blutooth_main_bluetoothadpater_disable">블루투스가 활성화 되어 있지 않은 상태입니다</string>
+    <string name="blutooth_main_bluetoothadpater_cancle">사용자가 블루투스를 활성화 하지 않았습니다</string>
+
+
+    <!-- 로그-->
+    <string name="blutooth_main_log">BLUETOOTH_CS</string>
 </resources>
