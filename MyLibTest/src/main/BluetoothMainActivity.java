@@ -135,10 +135,9 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        switch (view.getId()) {
-            case R.id.bluetooth_main_listview://등록요청
-                break;
-        }
+        System.out.println("@@ 등록요청 : " + position);
+
+
         return false;
     }
 
@@ -297,6 +296,9 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     private static final int INIT_LISTVIEW = 3;
 
     @Override
+    /**
+     * 이벤트 메시지 처리 메소드
+     */
     public void onAction(int what, Object obj) {
         switch (what) {
             case SET_ADDED_IST:// 페어링된 기기 리스트
@@ -318,11 +320,19 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     }
 
     @Override
+    /**
+     * 등록 메소드
+     * @param obj 블루투스 등록할 정보
+     */
     public void setAddMac(Object obj) {
 
     }
 
     @Override
+    /***
+     * 수정 메소드
+     * @param obj 블루투스 수정할 정보
+     */
     public void setChangetMacName(Object obj) {
 
     }

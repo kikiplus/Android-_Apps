@@ -49,6 +49,7 @@ public class BluetoothDataManager {
      */
     private BluetoothEventListener mBluetoothEventListener = null;
 
+
     /**
      * 생성자
      */
@@ -101,9 +102,7 @@ public class BluetoothDataManager {
             } else if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
                 final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
                         BluetoothAdapter.ERROR);
-                System.out.println("1");
                 if ((state == BluetoothAdapter.STATE_OFF)) {
-                    System.out.println("12");
                     mBluetoothEventListener.onAction(mBluetoothEventListener.BLUETOOTH_OFF, null);
                 } else if ((state == BluetoothAdapter.STATE_ON)) {
                     mBluetoothEventListener.onAction(mBluetoothEventListener.BLUETOOTH_ON, null);
@@ -193,6 +192,18 @@ public class BluetoothDataManager {
         } else {
             return null;
         }
+    }
+
+    /**
+     * 디바이스 UUID 반환 메소드
+     *
+     * @param index 주변 기기 리스트의 인덱스
+     * @return 디바이스 UUID
+     */
+    public String getDeviceUUID(int index) {
+
+
+        return null;
     }
 
     /**
