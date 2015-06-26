@@ -36,54 +36,36 @@ ADDED from AndroidManifest.xml:14:5
 	android:name
 		ADDED from AndroidManifest.xml:14:22
 uses-permission#android.permission.BLUETOOTH
-ADDED from AndroidManifest.xml:15:5
-	android:name
-		ADDED from AndroidManifest.xml:15:22
-uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from AndroidManifest.xml:16:5
 	android:name
 		ADDED from AndroidManifest.xml:16:22
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from AndroidManifest.xml:17:5
+	android:name
+		ADDED from AndroidManifest.xml:17:22
 application
-ADDED from AndroidManifest.xml:18:5
+ADDED from AndroidManifest.xml:19:5
 MERGED from com.android.support:appcompat-v7:22.0.0:22:5
 MERGED from com.android.support:support-v4:22.0.0:22:5
 	android:label
-		ADDED from AndroidManifest.xml:21:9
+		ADDED from AndroidManifest.xml:22:9
 	android:allowBackup
-		ADDED from AndroidManifest.xml:19:9
-	android:icon
 		ADDED from AndroidManifest.xml:20:9
-activity#main.BluetoothMainActivity
-ADDED from AndroidManifest.xml:22:9
+	android:icon
+		ADDED from AndroidManifest.xml:21:9
+activity#main.NavigationDrawerActivity
+ADDED from AndroidManifest.xml:23:9
 	android:theme
+		ADDED from AndroidManifest.xml:25:13
+	android:name
 		ADDED from AndroidManifest.xml:24:13
-	android:name
-		ADDED from AndroidManifest.xml:23:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:25:13
+ADDED from AndroidManifest.xml:26:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:26:17
-	android:name
-		ADDED from AndroidManifest.xml:26:25
-category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:27:17
 	android:name
-		ADDED from AndroidManifest.xml:27:27
-activity#main.SmsTestActivity
-ADDED from AndroidManifest.xml:31:9
+		ADDED from AndroidManifest.xml:27:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:28:17
 	android:name
-		ADDED from AndroidManifest.xml:31:19
-activity#main.AlramActivity
-ADDED from AndroidManifest.xml:32:9
-	android:name
-		ADDED from AndroidManifest.xml:32:19
-intent-filter#android.intent.category.DEFAULT+com.test.mihye.main.alram
-ADDED from AndroidManifest.xml:33:13
-action#com.test.mihye.main.alram
-ADDED from AndroidManifest.xml:34:17
-	android:name
-		ADDED from AndroidManifest.xml:34:25
-category#android.intent.category.DEFAULT
-ADDED from AndroidManifest.xml:35:17
-	android:name
-		ADDED from AndroidManifest.xml:35:27
+		ADDED from AndroidManifest.xml:28:27

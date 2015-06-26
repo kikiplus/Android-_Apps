@@ -79,4 +79,9 @@
 
     <!-- 로그-->
     <string name="blutooth_main_log">BLUETOOTH_CS</string>
+
+    <!-- 앱명-->
+    <string name="navigation_app_name">NavigationDrawer</string>
+    <string name="navigation_open_drawer">NavigationDrawerOpen</string>
+    <string name="navigation_close_drawer">NavigationDrawerClose</string>
 </resources>
