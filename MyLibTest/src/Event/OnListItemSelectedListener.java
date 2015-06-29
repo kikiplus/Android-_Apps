@@ -2,7 +2,7 @@ package Event;
 
 /***
  * @Class Name : OnListItemSelectedListener
- * @Description : ¸®½ºÆ® ¾ÆÀÌÅÛ ¼±ÅÃ ÀÌº¥Æ® ¸®½º³Ê
+ * @Description : ë¦¬ìŠ¤íŠ¸ì— ì„ íƒì‹œ ì´ë²¤íŠ¸
  * @since 2015. 6. 28.
  * @version 1.0
  * @author grapegirl

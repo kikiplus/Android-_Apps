@@ -14,19 +14,6 @@ public interface BluetoothEventListener {
     public void onAction(int what, Object obj);
 
     /**
-     * 등록 메소드
-     * @param obj 블루투스 등록할 정보
-     */
-    public void setAddMac(Object obj);
-
-    /***
-     * 수정 메소드
-     * @param obj 블루투스 수정할 정보
-     */
-    public void setChangetMacName(Object obj);
-
-
-    /**
      * 등록된 기기 보기
      */
     public static final int SET_ADDED_IST = 100;

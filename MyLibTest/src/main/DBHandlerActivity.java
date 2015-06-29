@@ -54,6 +54,7 @@ public class DBHandlerActivity extends Activity {
 						+ temps[12] + ");";
 				mDBManager.executeTable( query );
 			}
+			
 			mDBManager.close();
 			Toast.makeText( getApplicationContext(), "DB 생성 끝", Toast.LENGTH_LONG ).show();
 			System.out.println( "질의문 실행 완료==" );

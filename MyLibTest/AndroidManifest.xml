@@ -18,20 +18,34 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/transmode_app_name">
-        <activity
-            android:name="main.TransModeTest"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.Light">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        android:icon="@drawable/ic_launcher">
 
-        </activity>
+        <!-- 블루투스 테스트-->
+        <!--<activity-->
+        <!--android:name="main.BluetoothMainActivity"-->
+        <!--android:theme="@android:style/Theme.Holo.Light">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+
+        <!--</activity>-->
 
 
+        <!-- 가로모드 테스트 -->
+        <!--<activity-->
+        <!--android:name="main.TransModeTestActivity"-->
+        <!--android:screenOrientation="landscape"-->
+        <!--android:theme="@android:style/Theme.Holo.Light">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+
+        <!--</activity>-->
+
+
+        <!-- 리스트 프래그먼트 테스트 -->
         <!--<activity-->
         <!--android:name="main.ListFragementTest"-->
         <!--android:theme="@android:style/Theme.Holo">-->
@@ -40,6 +54,7 @@
         <!--<category android:name="android.intent.category.LAUNCHER" />-->
         <!--</intent-filter>-->
 
+        <!-- 네비게이션 드로어 테스트-->
         <!--</activity>-->
         <!-- -->
         <!--<activity-->
@@ -51,17 +66,36 @@
         <!--</intent-filter>-->
         <!--</activity>-->
 
-        <!--
-        <activity android:name="main.SmsTestActivity"></activity>
-        -->
-        <!--
+        <!-- 알람 매니저 테스트-->
+        <!--<activity android:name="main.AlramMainActivity">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name="main.AlramActivity">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.test.mihye.main.alram" />-->
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- 브로드캐스트 리시버로 알람 수신 받기 -->
+        <!--<receiver android:name="receiver.AlramReceiver"></receiver>-->
+
+        <!-- JobInfo 클래스 및 job Service 실행-->
+        <activity android:name="main.AlramMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="main.AlramActivity">
             <intent-filter>
                 <action android:name="com.test.mihye.main.alram" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        -->
     </application>
 
 </manifest>

@@ -11,13 +11,12 @@ apply plugin: 'com.android.application'
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     //툴바 메뉴에 추가하기
-    compile 'com.android.support:appcompat-v7:22.0.+'
+    // compile 'com.android.support:appcompat-v7:22.0.+'
 }
 
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -40,5 +39,11 @@ android {
         // by a similar customization.
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 21
+    }
+    productFlavors {
     }
 }

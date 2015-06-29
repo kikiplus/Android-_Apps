@@ -15,14 +15,14 @@ import org.w3c.dom.Text;
 import Bean.Book;
 
 /**
- * Created by mihye on 2015-06-28.
+ * @author grapegirl
+ * @version 1.0
+ * @Class Name : DetailFragement
+ * @Description : ìƒì„¸ í”Œë˜ê·¸ë¨¼íŠ¸
+ * @since 2015. 6. 28.
  */
 public class DetailFragement extends Fragment {
-    /**
-     * ÀÎ½ºÅÏ½º »ı¼º ÈÄ ¹İÈ¯ ¸Ş¼Òµå
-     *
-     * @return ÀÎ½ºÅÏ½º
-     */
+
     public static DetailFragement newInstance(int position) {
         DetailFragement mInstance = new DetailFragement();
         Bundle bundle = new Bundle();
@@ -31,20 +31,12 @@ public class DetailFragement extends Fragment {
         return mInstance;
     }
 
-    /**
-     * ÀÎµ¦½º ¹İÈ¯ ¸Ş¼Òµå
-     *
-     * @return ÀÎµ¦½º
-     */
     public int getPosition() {
         return getArguments().getInt("position", 0);
     }
 
     @Nullable
     @Override
-    /**
-     * ºä »ı¼ºÇÏ¿© ¹İÈ¯ÇÏ´Â ¸Ş¼Òµå
-     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.transversemode_detail_layout, container, false);
         TextView textView = (TextView) view.findViewById(R.id.transversemode_details_textview);

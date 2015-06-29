@@ -56,12 +56,10 @@ public class DBManager extends SQLiteOpenHelper {
 	}
 
 	/**
-	 * 테이블 생성 메소드
+	 * 질의문 실행 메소드
 	 * 
-	 * @param tableName
-	 *            테이블 이름
-	 * @param colums
-	 *            칼럼 정보
+	 * @param sql
+	 *            질의문
 	 */
 	public void executeTable(String sql) {
 		try {

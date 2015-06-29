@@ -16,7 +16,7 @@ import Bean.Book;
  * @author grapegirl
  * @version 1.0
  * @Class Name : TitleFragement
- * @Description : Ÿ��Ʋ �÷��׸�Ʈ
+ * @Description : 타이틀 플래그먼트
  * @since 2015. 6. 28.
  */
 public class TitleFragement extends ListFragment {

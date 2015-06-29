@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -18,27 +18,92 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/navigation_app_name" >
-        <activity
-            android:name="main.NavigationDrawerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:icon="@drawable/ic_launcher" >
+
+        <!-- 블루투스 테스트 -->
+        <!-- <activity -->
+        <!-- android:name="main.BluetoothMainActivity" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- </activity> -->
+
+
+        <!-- 가로모드 테스트 -->
+        <!-- <activity -->
+        <!-- android:name="main.TransModeTestActivity" -->
+        <!-- android:screenOrientation="landscape" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- </activity> -->
+
+
+        <!-- 리스트 프래그먼트 테스트 -->
+        <!-- <activity -->
+        <!-- android:name="main.ListFragementTest" -->
+        <!-- android:theme="@android:style/Theme.Holo"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- 네비게이션 드로어 테스트 -->
+        <!-- </activity> -->
+        <!--  -->
+        <!-- <activity -->
+        <!-- android:name="main.NavigationDrawerActivity" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 알람 매니저 테스트 -->
+        <!-- <activity android:name="main.AlramMainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity android:name="main.AlramActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.test.mihye.main.alram" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 브로드캐스트 리시버로 알람 수신 받기 -->
+        <!-- <receiver android:name="receiver.AlramReceiver"></receiver> -->
+
+
+        <!-- JobInfo 클래스 및 job Service 실행 -->
+        <activity android:name="main.AlramMainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-<!--         <activity android:name="main.SmsTestActivity"></activity> -->
-        <!--
-        <activity android:name="main.AlramActivity">
+        <activity android:name="main.AlramActivity" >
             <intent-filter>
                 <action android:name="com.test.mihye.main.alram" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        -->
     </application>
 
 </manifest>

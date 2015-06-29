@@ -20,7 +20,6 @@ public class AlramActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         TextView textView = new TextView(this);
         textView.setText("TEST");
 

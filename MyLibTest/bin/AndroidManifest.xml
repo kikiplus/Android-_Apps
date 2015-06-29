@@ -19,16 +19,37 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/navigation_app_name">
+        android:label="@string/transmode_app_name">
         <activity
-            android:name="main.NavigationDrawerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:name="main.TransModeTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
+
+
+        <!--<activity-->
+        <!--android:name="main.ListFragementTest"-->
+        <!--android:theme="@android:style/Theme.Holo">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+
+        <!--</activity>-->
+        <!-- -->
+        <!--<activity-->
+        <!--android:name="main.NavigationDrawerActivity"-->
+        <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
 
         <!--
         <activity android:name="main.SmsTestActivity"></activity>

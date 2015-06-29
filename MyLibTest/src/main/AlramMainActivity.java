@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.test.mihye.R;
 
+import receiver.AlramReceiver;
+
 /**
  * @Class Name : AlramMainActivity
  * @Description : 알람 매니저 이용 클래스
@@ -62,8 +64,12 @@ public class AlramMainActivity extends Activity implements View.OnClickListener 
 
         Intent intent = new Intent(INTENT_ACTION);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
-
         alramManager.set(alramManager.RTC, System.currentTimeMillis() + 3000, pendingIntent);
+
+//        브로드캐스트 리시버로 알람 울리기
+//        Intent broadcastIntent = new Intent(this, AlramReceiver.class);
+//        PendingIntent broadcastPendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, broadcastIntent, 0);
+//        alramManager.set(alramManager.RTC, System.currentTimeMillis() + 3000, broadcastPendingIntent);
     }
 
     /**

@@ -22,7 +22,7 @@ import Event.BluetoothEventListener;
 import Managers.BluetoothDataManager;
 
 
-public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, AdapterView.OnItemLongClickListener, BluetoothEventListener {
+public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, BluetoothEventListener {
 
     /**
      * 검색버튼
@@ -82,7 +82,6 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
      */
     private boolean mToggleStatus = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,7 +98,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
         mListview = (ListView) findViewById(R.id.bluetooth_main_pairedDevices_listview);
         registerForContextMenu(mListview);
         mSeartchListview = (ListView) findViewById(R.id.bluetooth_main_listview);
-        mSeartchListview.setOnItemLongClickListener(this);
+        registerForContextMenu(mSeartchListview);
 
         mArrayList = new ArrayList<String>();
         //버튼 초기화
@@ -109,36 +108,31 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        switch (v.getId()) {
-            case R.id.bluetooth_main_pairedDevices_listview:
-                menu.add(0, CONTEXT_MENU_CHNAGE_NAME, Menu.NONE, "이름 변경");
-                menu.add(0, CONTEXT_MENU_REMOVE_DEVICE, Menu.NONE, "등록 해제");
-                break;
+        if(v.getId()== R.id.bluetooth_main_pairedDevices_listview){
+            menu.add(0, CONTEXT_MENU_REMOVE_DEVICE, Menu.NONE, "등록 해제");
+        }else if(v.getId() == R.id.bluetooth_main_listview){
+            menu.add(0, CONTEXT_MENU_PAIRING_DEVICE, Menu.NONE, "등록");
         }
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo contextMenuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        System.out.println("@@ index : " + contextMenuInfo.position);
-
         switch (item.getItemId()) {
-            case CONTEXT_MENU_CHNAGE_NAME:
-                System.out.println("@@ 컨텍스트 메뉴 - 이름 변경");
+            case CONTEXT_MENU_REMOVE_DEVICE://등록해제
+                String mac = mArrayList.get(contextMenuInfo.position).split("\n")[1];
+                boolean isUnpair = mBluetoothMgr.setUnpairDevice(mac);
+                if(isUnpair){
+                    mArrayList.remove(contextMenuInfo.position);
+                    mArrayAdapter.notifyDataSetChanged();
+                }
                 break;
-            case CONTEXT_MENU_REMOVE_DEVICE:
-                System.out.println("@@ 컨텍스트 메뉴 - 기기 삭제");
+            case CONTEXT_MENU_PAIRING_DEVICE://등록
+                mac = mSearchArrayList.get(contextMenuInfo.position).split("\n")[1];
+                mBluetoothMgr.setPairingDevice(mac);
                 break;
         }
         return super.onContextItemSelected(item);
-    }
-
-    @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        System.out.println("@@ 등록요청 : " + position);
-
-
-        return false;
     }
 
     @Override
@@ -282,9 +276,10 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
      *********************************************/
 
     /**
-     * 메뉴 1- 이름 변경
+     * 메뉴 1- 페어링 등록
      */
-    private static final int CONTEXT_MENU_CHNAGE_NAME = 1;
+    private static final int CONTEXT_MENU_PAIRING_DEVICE = 1;
+
     /**
      * 메뉴 2- 등록 해제
      */
@@ -317,23 +312,5 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
                 mHandler.sendEmptyMessage(BLUETOOTH_ON);
                 break;
         }
-    }
-
-    @Override
-    /**
-     * 등록 메소드
-     * @param obj 블루투스 등록할 정보
-     */
-    public void setAddMac(Object obj) {
-
-    }
-
-    @Override
-    /***
-     * 수정 메소드
-     * @param obj 블루투스 수정할 정보
-     */
-    public void setChangetMacName(Object obj) {
-
     }
 }

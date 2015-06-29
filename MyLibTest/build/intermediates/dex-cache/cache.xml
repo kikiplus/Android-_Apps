@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jar="C:\Users\cosquare\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\classes-95117817e1bfa40140cf8c9b0e6860ea0e6a575f.jar" />
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-13754cdffccbccdd833468915e5c1dd010ef1d95.jar" />
     </item>
     <item
         jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
@@ -16,18 +16,11 @@
         <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-613369a76e81e60267a7c217d196ae9648d69fb8.jar" />
     </item>
     <item
-        jar="C:\Users\cosquare\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-13754cdffccbccdd833468915e5c1dd010ef1d95.jar" />
-    </item>
-    <item
-        jar="W:\workspace\Git\Android_Apps\MyLibTest\libs\android-support-v4.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28">
-        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\android-support-v4-727bfb92d8a0efab9ad614cda269b12b77e98807.jar" />
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\classes-95117817e1bfa40140cf8c9b0e6860ea0e6a575f.jar" />
     </item>
     <item
         jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"

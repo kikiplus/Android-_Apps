@@ -32,7 +32,7 @@ public class SocketAsynTaskManager extends AsyncTask<Void, Void, Void> {
     /**
      * 서버 아이피(앱 사용시에 아이피 변경해야함)
      */
-    private static final String m_serverIp = "210.220.248.236";
+    private static final String m_serverIp = "127.0.0.1";
 
     /**
      * 서버 포트
