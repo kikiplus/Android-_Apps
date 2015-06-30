@@ -66,7 +66,7 @@ public class FileMgr {
 	/***
 	 * 파일로 부터 읽기 메소드
 	 * 
-	 * @param InputStream
+	 * @param is
 	 *            파일 인풋 스트림
 	 * @throws IOException
 	 */

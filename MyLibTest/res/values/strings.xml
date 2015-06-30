@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Titles -->
-    <string name="app_name">MH Test</string>
     <string name="title_crossfade">Simple Crossfade</string>
     <string name="title_card_flip">Card Flip</string>
     <string name="title_screen_slide">Screen Slide</string>
@@ -78,13 +77,10 @@
     <string name="navigation_open_drawer">NavigationDrawerOpen</string>
     <string name="navigation_close_drawer">NavigationDrawerClose</string>
 
-    <!-- 로그-->
-    <string name="blutooth_main_log">BLUETOOTH_CS</string>
-    <string name="main_log">PLUS</string>
-
     <!-- 앱명-->
     <string name="transmode_app_name">transmode</string>
     <string name="navigation_app_name">NavigationDrawer</string>
     <string name="tutorial_app_name">Tutorial</string>
+    <string name="app_name">MHTestApp</string>
 
 </resources>

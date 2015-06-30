@@ -103,9 +103,19 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
 
+
+        <!-- 튜토리얼 테스트 -->
+        <!-- <activity android:name="main.TutorialActivity" -->
+        <!-- android:label="@string/tutorial_app_name"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
         <activity
-            android:name="main.TutorialActivity"
-            android:label="@string/tutorial_app_name" >
+            android:name="main.HTTPUrlConnectionActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -55,19 +55,19 @@ MERGED from com.android.support:support-v4:22.0.0:22:5
 		ADDED from AndroidManifest.xml:20:9
 	android:icon
 		ADDED from AndroidManifest.xml:21:9
-activity#main.TutorialActivity
-ADDED from AndroidManifest.xml:101:9
+activity#main.HTTPUrlConnectionActivity
+ADDED from AndroidManifest.xml:109:9
 	android:label
-		ADDED from AndroidManifest.xml:102:13
+		ADDED from AndroidManifest.xml:110:19
 	android:name
-		ADDED from AndroidManifest.xml:101:19
+		ADDED from AndroidManifest.xml:109:19
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:103:13
+ADDED from AndroidManifest.xml:111:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:104:17
+ADDED from AndroidManifest.xml:112:17
 	android:name
-		ADDED from AndroidManifest.xml:104:25
+		ADDED from AndroidManifest.xml:112:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:105:17
+ADDED from AndroidManifest.xml:113:17
 	android:name
-		ADDED from AndroidManifest.xml:105:27
+		ADDED from AndroidManifest.xml:113:27

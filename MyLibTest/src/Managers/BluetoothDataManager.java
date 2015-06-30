@@ -67,7 +67,7 @@ public class BluetoothDataManager {
         if (mBluetoothAdapter == null) {
             Toast.makeText(mContext, mContext.getString(R.string.blutooth_main_notsupport), Toast.LENGTH_LONG).show();
         } else {
-            Log.d(mContext.getString(R.string.blutooth_main_log), mContext.getString(R.string.blutooth_main_support));
+            Log.d(conf.Log.LOG_NAME, this.getClass() + mContext.getString(R.string.blutooth_main_support));
         }
 
         // 브로드캐스트 리시버 등록
