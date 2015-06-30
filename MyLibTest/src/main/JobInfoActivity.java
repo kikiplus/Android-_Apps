@@ -9,5 +9,5 @@ import android.app.Activity;
  * @Description :
  * @since 2015-06-29.
  */
-public class JobInfoTestActivity extends Activity {
+public class JobInfoActivity extends Activity {
 }

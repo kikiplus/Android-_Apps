@@ -75,14 +75,16 @@
     <string name="blutooth_main_bluetoothadpater_enable">블루투스가 활성화 되어 있는 상태입니다</string>
     <string name="blutooth_main_bluetoothadpater_disable">블루투스가 활성화 되어 있지 않은 상태입니다</string>
     <string name="blutooth_main_bluetoothadpater_cancle">사용자가 블루투스를 활성화 하지 않았습니다</string>
-
+    <string name="navigation_open_drawer">NavigationDrawerOpen</string>
+    <string name="navigation_close_drawer">NavigationDrawerClose</string>
 
     <!-- 로그-->
     <string name="blutooth_main_log">BLUETOOTH_CS</string>
+    <string name="main_log">PLUS</string>
 
     <!-- 앱명-->
     <string name="transmode_app_name">transmode</string>
     <string name="navigation_app_name">NavigationDrawer</string>
-    <string name="navigation_open_drawer">NavigationDrawerOpen</string>
-    <string name="navigation_close_drawer">NavigationDrawerClose</string>
+    <string name="tutorial_app_name">Tutorial</string>
+
 </resources>

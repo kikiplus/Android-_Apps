@@ -16,7 +16,7 @@ import com.test.mihye.R;
  * @Description :
  * @since 2015-06-23.
  */
-public class ToolBarTestActivity extends ActionBarActivity {
+public class ToolBarActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

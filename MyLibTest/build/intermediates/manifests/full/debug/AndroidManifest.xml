@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -90,18 +90,26 @@
 
 
         <!-- JobInfo 클래스 및 job Service 실행 -->
-        <activity android:name="main.AlramMainActivity" >
+        <!-- <activity android:name="main.AlramMainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity android:name="main.AlramActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.test.mihye.main.alram" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+        <activity
+            android:name="main.TutorialActivity"
+            android:label="@string/tutorial_app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="main.AlramActivity" >
-            <intent-filter>
-                <action android:name="com.test.mihye.main.alram" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

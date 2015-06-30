@@ -11,6 +11,9 @@
 # view res/layout/toolbar_layout.xml #generated:6
 -keep class android.support.v7.widget.Toolbar { <init>(...); }
 
-# view AndroidManifest.xml #generated:23
--keep class main.BluetoothMainActivity { <init>(...); }
+# view AndroidManifest.xml #generated:93
+-keep class main.AlramActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class main.AlramMainActivity { <init>(...); }
 

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.test.mihye.R;
 
 /**
  * @Class Name : AlramActiivty

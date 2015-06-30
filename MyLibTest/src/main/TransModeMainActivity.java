@@ -12,7 +12,7 @@ import com.test.mihye.R;
  * @Description : 가로모드 테스트
  * @since 2015-06-28.
  */
-public class TransModeTestActivity extends Activity {
+public class TransModeMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,23 +12,28 @@ import android.widget.Toast;
 
 import com.test.mihye.R;
 
-import receiver.AlramReceiver;
 
 /**
+ * @author grapegirl
+ * @version 1.0
  * @Class Name : AlramMainActivity
  * @Description : 알람 매니저 이용 클래스
  * @since 2015. 6. 19.
- * @version 1.0
- * @author grapegirl
  */
 public class AlramMainActivity extends Activity implements View.OnClickListener {
 
-    /** 알람 등록 버튼*/
+    /**
+     * 알람 등록 버튼
+     */
     private Button mAddBtn = null;
-    /** 알람 취소 버튼*/
+    /**
+     * 알람 취소 버튼
+     */
     private Button mCancleBtn = null;
-    /** 알람 인텐트 액션명*/
-    private final  String INTENT_ACTION = "com.test.mihye.main.alram";
+    /**
+     * 알람 인텐트 액션명
+     */
+    private final String INTENT_ACTION = "com.test.mihye.main.alram";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

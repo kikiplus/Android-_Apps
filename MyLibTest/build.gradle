@@ -10,8 +10,8 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    //Åø¹Ù ¸Ş´º¿¡ Ãß°¡ÇÏ±â
-    // compile 'com.android.support:appcompat-v7:22.0.+'
+    //íˆ´ë°” ë©”ë‰´ì— ì¶”ê°€í•˜ê¸°
+    compile 'com.android.support:appcompat-v7:22.0.+'
 }
 
 android {
@@ -41,7 +41,7 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 21
     }
     productFlavors {
