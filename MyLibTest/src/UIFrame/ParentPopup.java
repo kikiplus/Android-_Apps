@@ -156,8 +156,6 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
      * 
      * @param flag
      *            구분 값
-     * @param height
-     *            컨텐츠 뷰 사이즈
      * @param obj
      *            데이타
      */
@@ -189,14 +187,13 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
     /***
      * 팝업 버튼 설정 메소드
      * 
-     * @param Btnsize
-     *            버튼 사이즈
-     * @param btnNames
-     * @param btnIDs
+     * @param onClickListener 버튼 리스너
+     * @param btnNames 버튼 이름들
+     * @param btnIDs 버튼 id
      */
 
-    protected void setButton(String[] btnNames, int[] btnIDs, OnClickListener l) {
-        m_ClickListener = l;
+    protected void setButton(String[] btnNames, int[] btnIDs, OnClickListener onClickListener) {
+        m_ClickListener = onClickListener;
         LinearLayout buttonView = (LinearLayout) m_CurrentView.findViewById(R.id.popup_view_button);
         buttonView.setBackgroundColor(Color.WHITE);
         int btnSize = btnNames.length;

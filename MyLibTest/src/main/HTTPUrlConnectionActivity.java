@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import com.test.mihye.R;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 import Interface.IHttpReceive;
 import Managers.HTTPTaskManager;
@@ -41,7 +43,9 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
      */
     private Handler mHandler = null;
 
-    /** 프로그래스바 */
+    /**
+     * 프로그래스바
+     */
     private ProgressBar mProgressDialog = null;
 
     @Override
@@ -78,9 +82,9 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
 
     @Override
     public boolean handleMessage(Message msg) {
-        switch (msg.what){
+        switch (msg.what) {
             case 0://데이타 설정
-                String data = (String)msg.obj;
+                String data = (String) msg.obj;
                 mTextView.setText(data);
                 break;
         }

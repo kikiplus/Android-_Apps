@@ -85,7 +85,7 @@ public class HTTPTaskManager extends AsyncTask<String, Void, Void> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 if(params != null){
                     String sendData = (String)params[0];
-                    outputStream.write(sendData.getBytes("EUC-KR"));
+                    outputStream.write(sendData.getBytes("UTF-8"));
                     outputStream.flush();
                     outputStream.close();
                 }
@@ -104,6 +104,7 @@ public class HTTPTaskManager extends AsyncTask<String, Void, Void> {
                 }
                 bufferedReader.close();
                 mIHttpReceive.onHttpReceive(data);
+                httpURLConnection.disconnect();
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();

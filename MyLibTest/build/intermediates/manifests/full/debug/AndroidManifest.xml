@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <!-- 블루투스 퍼미션 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -113,8 +118,20 @@
         <!-- </intent-filter> -->
         <!-- </activity> -->
 
+
+        <!-- HTTP 통신(post,get)방식 -->
+        <!-- <activity android:name="main.HTTPUrlConnectionActivity" -->
+        <!-- android:label="@string/app_name"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 파일 전송 -->
         <activity
-            android:name="main.HTTPUrlConnectionActivity"
+            android:name="main.HttpFileUploadActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
