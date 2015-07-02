@@ -47,19 +47,21 @@ public final class R {
     }
     public static final class drawable {
         public static final int btn_btn_selector=0x7f020000;
-        public static final int ic_action_cancel=0x7f020001;
-        public static final int ic_action_discard=0x7f020002;
-        public static final int ic_action_info=0x7f020003;
-        public static final int ic_action_new=0x7f020004;
-        public static final int ic_action_paste=0x7f020005;
-        public static final int ic_action_photo=0x7f020006;
-        public static final int ic_action_search=0x7f020007;
-        public static final int ic_drawer=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int ic_list_remove=0x7f02000a;
-        public static final int p_2empty_02=0x7f02000b;
-        public static final int p_2empty_02_p=0x7f02000c;
-        public static final int p_bg_basic2=0x7f02000d;
+        public static final int ic_action_back=0x7f020001;
+        public static final int ic_action_cancel=0x7f020002;
+        public static final int ic_action_discard=0x7f020003;
+        public static final int ic_action_info=0x7f020004;
+        public static final int ic_action_new=0x7f020005;
+        public static final int ic_action_paste=0x7f020006;
+        public static final int ic_action_photo=0x7f020007;
+        public static final int ic_action_search=0x7f020008;
+        public static final int ic_drawer=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int ic_list_remove=0x7f02000b;
+        public static final int p_2empty_02=0x7f02000c;
+        public static final int p_2empty_02_p=0x7f02000d;
+        public static final int p_bg_basic2=0x7f02000e;
+        public static final int tutorial01=0x7f02000f;
     }
     public static final class id {
         public static final int View_layout=0x7f080014;
@@ -73,7 +75,7 @@ public final class R {
     
          */
         public static final int action_next=0x7f080000;
-        public static final int action_settings=0x7f080029;
+        public static final int action_settings=0x7f08002f;
         public static final int alram_main_add_alram=0x7f080004;
         public static final int alram_main_cancle_alram=0x7f080005;
         public static final int bluetooth_layout=0x7f080007;
@@ -92,11 +94,11 @@ public final class R {
         public static final int main_tab3=0x7f080011;
         public static final int main_tab4=0x7f080012;
         public static final int main_tab5=0x7f080013;
-        public static final int menu_item1=0x7f080024;
-        public static final int menu_item2=0x7f080025;
-        public static final int menu_item3=0x7f080026;
-        public static final int menu_item4=0x7f080027;
-        public static final int menu_item5=0x7f080028;
+        public static final int menu_item1=0x7f08002a;
+        public static final int menu_item2=0x7f08002b;
+        public static final int menu_item3=0x7f08002c;
+        public static final int menu_item4=0x7f08002d;
+        public static final int menu_item5=0x7f08002e;
         public static final int navigation_fragment_toolbar=0x7f080015;
         public static final int navigation_main_drawerlayout=0x7f080017;
         public static final int navigtaion_fragment_container=0x7f080016;
@@ -112,6 +114,12 @@ public final class R {
         public static final int transversemode_details=0x7f080023;
         public static final int transversemode_details_textview=0x7f080021;
         public static final int transversemode_titles=0x7f080022;
+        public static final int tutorial_main_checkbox1=0x7f080024;
+        public static final int tutorial_main_checkbox2=0x7f080025;
+        public static final int tutorial_main_checkbox3=0x7f080026;
+        public static final int tutorial_main_checkbox4=0x7f080027;
+        public static final int tutorial_main_checkbox5=0x7f080028;
+        public static final int tutorial_main_viewFlipper=0x7f080029;
     }
     public static final class integer {
         public static final int card_flip_time_full=0x7f090000;
@@ -139,78 +147,77 @@ public final class R {
         public static final int toolbar_layout=0x7f030012;
         public static final int transversemode_detail_layout=0x7f030013;
         public static final int transversemode_main_layout=0x7f030014;
+        public static final int tutorial_main_layout=0x7f030015;
     }
     public static final class menu {
         public static final int menu_main=0x7f0b0000;
         public static final int popup_test=0x7f0b0001;
     }
     public static final class string {
-        public static final int action_add_item=0x7f0a0008;
-        public static final int action_finish=0x7f0a000c;
-        public static final int action_info=0x7f0a000d;
-        public static final int action_next=0x7f0a000b;
-        public static final int action_photo=0x7f0a000e;
-        public static final int action_previous=0x7f0a000a;
-        public static final int action_remove_item=0x7f0a0009;
-        public static final int action_settings=0x7f0a0019;
+        public static final int action_add_item=0x7f0a0007;
+        public static final int action_finish=0x7f0a000b;
+        public static final int action_info=0x7f0a000c;
+        public static final int action_next=0x7f0a000a;
+        public static final int action_photo=0x7f0a000d;
+        public static final int action_previous=0x7f0a0009;
+        public static final int action_remove_item=0x7f0a0008;
+        public static final int action_settings=0x7f0a0018;
         /**  Actions 
          */
-        public static final int action_toggle=0x7f0a0007;
-        /**  Titles 
-         */
-        public static final int app_name=0x7f0a0000;
+        public static final int action_toggle=0x7f0a0006;
+        public static final int app_name=0x7f0a002e;
         /**  xml 버튼 
          */
-        public static final int bluetooth_main_searchbtn_name=0x7f0a0022;
-        public static final int bluetooth_main_toggglebtn_off=0x7f0a0024;
-        public static final int bluetooth_main_toggglebtn_on=0x7f0a0023;
-        public static final int blutooth_main_bluetoothadpater_cancle=0x7f0a0029;
-        public static final int blutooth_main_bluetoothadpater_disable=0x7f0a0028;
-        public static final int blutooth_main_bluetoothadpater_enable=0x7f0a0027;
-        /**  로그
-         */
-        public static final int blutooth_main_log=0x7f0a002a;
+        public static final int bluetooth_main_searchbtn_name=0x7f0a0021;
+        public static final int bluetooth_main_toggglebtn_off=0x7f0a0023;
+        public static final int bluetooth_main_toggglebtn_on=0x7f0a0022;
+        public static final int blutooth_main_bluetoothadpater_cancle=0x7f0a0028;
+        public static final int blutooth_main_bluetoothadpater_disable=0x7f0a0027;
+        public static final int blutooth_main_bluetoothadpater_enable=0x7f0a0026;
         /**  화면
          */
-        public static final int blutooth_main_notsupport=0x7f0a0025;
-        public static final int blutooth_main_support=0x7f0a0026;
-        public static final int card_back_description=0x7f0a0015;
+        public static final int blutooth_main_notsupport=0x7f0a0024;
+        public static final int blutooth_main_support=0x7f0a0025;
+        public static final int card_back_description=0x7f0a0014;
         /**  Other strings 
          */
-        public static final int card_back_title=0x7f0a0014;
+        public static final int card_back_title=0x7f0a0013;
         /**  Accessibility-only descriptions 
          */
-        public static final int description_image_1=0x7f0a0011;
-        public static final int description_image_2=0x7f0a0012;
-        public static final int description_zoom_touch_close=0x7f0a0013;
-        public static final int hello_world=0x7f0a0018;
-        public static final int lorem_ipsum=0x7f0a0016;
+        public static final int description_image_1=0x7f0a0010;
+        public static final int description_image_2=0x7f0a0011;
+        public static final int description_zoom_touch_close=0x7f0a0012;
+        public static final int hello_world=0x7f0a0017;
+        public static final int lorem_ipsum=0x7f0a0015;
         /**  설정 
          */
-        public static final int menu_item1=0x7f0a001d;
-        public static final int menu_item2=0x7f0a001e;
-        public static final int menu_item3=0x7f0a001f;
-        public static final int menu_item4=0x7f0a0020;
-        public static final int menu_item5=0x7f0a0021;
+        public static final int menu_item1=0x7f0a001c;
+        public static final int menu_item2=0x7f0a001d;
+        public static final int menu_item3=0x7f0a001e;
+        public static final int menu_item4=0x7f0a001f;
+        public static final int menu_item5=0x7f0a0020;
         /**  Messages 
          */
-        public static final int message_empty_layout_changes=0x7f0a000f;
-        public static final int message_zoom_touch_expand=0x7f0a0010;
+        public static final int message_empty_layout_changes=0x7f0a000e;
+        public static final int message_zoom_touch_expand=0x7f0a000f;
         public static final int navigation_app_name=0x7f0a002c;
-        public static final int navigation_close_drawer=0x7f0a002e;
-        public static final int navigation_open_drawer=0x7f0a002d;
-        public static final int title_activity_popup_test=0x7f0a0017;
-        public static final int title_card_flip=0x7f0a0002;
-        public static final int title_crossfade=0x7f0a0001;
-        public static final int title_layout_changes=0x7f0a0005;
-        public static final int title_screen_slide=0x7f0a0003;
-        public static final int title_section1=0x7f0a001a;
-        public static final int title_section2=0x7f0a001b;
-        public static final int title_section3=0x7f0a001c;
-        public static final int title_template_step=0x7f0a0006;
-        public static final int title_zoom=0x7f0a0004;
+        public static final int navigation_close_drawer=0x7f0a002a;
+        public static final int navigation_open_drawer=0x7f0a0029;
+        public static final int title_activity_popup_test=0x7f0a0016;
+        public static final int title_card_flip=0x7f0a0001;
+        /**  Titles 
+         */
+        public static final int title_crossfade=0x7f0a0000;
+        public static final int title_layout_changes=0x7f0a0004;
+        public static final int title_screen_slide=0x7f0a0002;
+        public static final int title_section1=0x7f0a0019;
+        public static final int title_section2=0x7f0a001a;
+        public static final int title_section3=0x7f0a001b;
+        public static final int title_template_step=0x7f0a0005;
+        public static final int title_zoom=0x7f0a0003;
         /**  앱명
          */
         public static final int transmode_app_name=0x7f0a002b;
+        public static final int tutorial_app_name=0x7f0a002d;
     }
 }

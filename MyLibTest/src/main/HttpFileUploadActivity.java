@@ -86,13 +86,17 @@ public class HttpFileUploadActivity extends Activity implements View.OnClickList
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fileupload_main_layout);
-
+        // 버튼 초기화
         mSendBtn = (Button) findViewById(R.id.fileupload_main_sendButton);
         mCametraBtn = (Button) findViewById(R.id.fileupload_main_cametraButton);
-        mImageView = (ImageView) findViewById(R.id.fileupload_main_imagview);
-        mTextView = (TextView) findViewById(R.id.fileupload_main_textview);
         mSendBtn.setOnClickListener(this);
         mCametraBtn.setOnClickListener(this);
+
+        //이미지뷰, 텍스트뷰 초기화
+        mImageView = (ImageView) findViewById(R.id.fileupload_main_imagview);
+        mTextView = (TextView) findViewById(R.id.fileupload_main_textview);
+
+        //핸들러, 프로그래스바 생성
         mHandler = new Handler(this);
         mProgressDialog = new ProgressBar(this);
     }
@@ -120,12 +124,6 @@ public class HttpFileUploadActivity extends Activity implements View.OnClickList
             case R.id.fileupload_main_cametraButton:
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 if (intent.resolveActivity(getPackageManager()) != null) {
-                    File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/KIKI");
-                    if (!path.exists()) {
-                        path.mkdirs();
-                    }
-                    mFilePath = path.getPath() + "/" + System.currentTimeMillis() + ".jpg";
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(mFilePath)));
                     startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
                 }
                 break;
@@ -136,6 +134,9 @@ public class HttpFileUploadActivity extends Activity implements View.OnClickList
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Log.d(conf.Log.LOG_NAME, this.getClass() + "onActivityResult");
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mHandler.sendMessage(mHandler.obtainMessage(0, imageBitmap));
         }
     }
 
