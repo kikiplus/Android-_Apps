@@ -4,20 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.test.mihye.R;
 
-import java.util.HashMap;
-import java.util.Objects;
-
 import Interface.IHttpReceive;
-import Managers.HTTPTaskManager;
+import Managers.HTTPUrlTaskManager;
 import UIComfonent.ProgressBar;
-import Utils.StringUtils;
 
 /**
  * @author grapegirl
@@ -68,7 +63,7 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
         mTextView.setText(null);
         mProgressDialog.setDataLoadingDialog(true, "데이타를 불러오고 있습니다");
 
-        HTTPTaskManager manager = new HTTPTaskManager("https://github.com/", false, this);
+        HTTPUrlTaskManager manager = new HTTPUrlTaskManager("https://github.com/", false, this);
         manager.execute();
     }
 

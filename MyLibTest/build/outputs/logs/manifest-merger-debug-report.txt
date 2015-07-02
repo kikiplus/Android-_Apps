@@ -35,45 +35,49 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from AndroidManifest.xml:14:5
 	android:name
 		ADDED from AndroidManifest.xml:14:22
-uses-permission#android.permission.INTERNET
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:15:5
 	android:name
 		ADDED from AndroidManifest.xml:15:22
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:16:5
+	android:name
+		ADDED from AndroidManifest.xml:16:22
 uses-feature#android.hardware.camera
-ADDED from AndroidManifest.xml:17:5
+ADDED from AndroidManifest.xml:18:5
 	android:required
+		ADDED from AndroidManifest.xml:20:9
+	android:name
 		ADDED from AndroidManifest.xml:19:9
-	android:name
-		ADDED from AndroidManifest.xml:18:9
 uses-permission#android.permission.BLUETOOTH
-ADDED from AndroidManifest.xml:22:5
-	android:name
-		ADDED from AndroidManifest.xml:22:22
-uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from AndroidManifest.xml:23:5
 	android:name
 		ADDED from AndroidManifest.xml:23:22
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from AndroidManifest.xml:24:5
+	android:name
+		ADDED from AndroidManifest.xml:24:22
 application
-ADDED from AndroidManifest.xml:25:5
+ADDED from AndroidManifest.xml:26:5
 MERGED from com.android.support:appcompat-v7:22.0.0:22:5
 MERGED from com.android.support:support-v4:22.0.0:22:5
 	android:allowBackup
-		ADDED from AndroidManifest.xml:26:9
-	android:icon
 		ADDED from AndroidManifest.xml:27:9
-activity#main.HttpFileUploadActivity
-ADDED from AndroidManifest.xml:125:9
+	android:icon
+		ADDED from AndroidManifest.xml:28:9
+activity#main.FileUploadActivity
+ADDED from AndroidManifest.xml:126:9
 	android:label
+		ADDED from AndroidManifest.xml:128:13
+	android:name
 		ADDED from AndroidManifest.xml:127:13
-	android:name
-		ADDED from AndroidManifest.xml:126:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:128:13
+ADDED from AndroidManifest.xml:129:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:129:17
-	android:name
-		ADDED from AndroidManifest.xml:129:25
-category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:130:17
 	android:name
-		ADDED from AndroidManifest.xml:130:27
+		ADDED from AndroidManifest.xml:130:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:131:17
+	android:name
+		ADDED from AndroidManifest.xml:131:27

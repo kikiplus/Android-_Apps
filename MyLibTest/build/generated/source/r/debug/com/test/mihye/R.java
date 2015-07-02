@@ -1393,7 +1393,7 @@ containing a value of this type.
         public static final int end=0x7f0c0016;
         public static final int expand_activities_button=0x7f0c0024;
         public static final int expanded_menu=0x7f0c002a;
-        public static final int fileupload_main_cametraButton=0x7f0c004a;
+        public static final int fileupload_main_downloadButton=0x7f0c004a;
         public static final int fileupload_main_imagview=0x7f0c004c;
         public static final int fileupload_main_sendButton=0x7f0c004b;
         public static final int fileupload_main_textview=0x7f0c004d;

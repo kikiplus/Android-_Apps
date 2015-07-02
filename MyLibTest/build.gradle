@@ -10,7 +10,7 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    //툴바 메뉴에 추가하기
+    //롤리팝 라이브러리 추가하기
     compile 'com.android.support:appcompat-v7:22.0.+'
 }
 

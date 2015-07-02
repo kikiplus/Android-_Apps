@@ -423,7 +423,7 @@ int id edit_query 0x7f0c0035
 int id end 0x7f0c0016
 int id expand_activities_button 0x7f0c0024
 int id expanded_menu 0x7f0c002a
-int id fileupload_main_cametraButton 0x7f0c004a
+int id fileupload_main_downloadButton 0x7f0c004a
 int id fileupload_main_imagview 0x7f0c004c
 int id fileupload_main_sendButton 0x7f0c004b
 int id fileupload_main_textview 0x7f0c004d
