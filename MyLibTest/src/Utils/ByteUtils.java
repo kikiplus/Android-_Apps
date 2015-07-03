@@ -8,15 +8,15 @@ import java.io.ByteArrayOutputStream;
  * @author grapegirl
  * @version 1.0
  * @Class Name : ByteUtils
- * @Description : ¹ÙÀÌÆ® º¯È¯ À¯Æ¿ Å¬·¡½º
+ * @Description : ë°”ì´íŠ¸ ë³€í™˜ ìœ í‹¸ í´ë˜ìŠ¤
  * @since 2015-07-03.
  */
 public class ByteUtils {
 
     /**
-     *  ºñÆ®¸ÊÀ» ¹ÙÀÌÆ® ¹è¿­·Î º¯È¯ÇÏ´Â ¸Ş¼Òµå
-     * @param map ºñÆ®¸Ê
-     * @return ¹ÙÀÌÆ® ¹è¿­
+     *  ë¹„íŠ¸ë§µì„ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ë³€í™˜í•˜ëŠ” ë©”ì†Œë“œ
+     * @param map ë¹„íŠ¸ë§µ
+     * @return ë°”ì´íŠ¸ ë°°ì—´
      */
     public static byte[] getByteArrayFromBitmap(Bitmap map) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

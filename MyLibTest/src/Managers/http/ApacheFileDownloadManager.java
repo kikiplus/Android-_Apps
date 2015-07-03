@@ -22,24 +22,24 @@ import Interface.IHttpReceive;
 /**
  * @author grapegirl
  * @version 1.0
- * @Class Name : ApacheFileDownloadManager
- * @Description : ¾ÆÆÄÄ¡ ÆÄÀÏ http ÆÄÀÏ ´Ù¿î·Îµå ¸Å´ÏÀú
- * @since 2015-07-03.
+ * @Class Name : ì•„íŒŒì¹˜ íŒŒì¼ http íŒŒì¼ ë‹¤ìš´ë¡œë“œ ë§¤ë‹ˆì €
+ * @Description : ìƒì„±ì
+ * @since 2015-07-02.
  */
 public class ApacheFileDownloadManager extends AsyncTask<Object, Void, Void> {
 
     /**
-     * Á¢¼Ó Url
+     * ì ‘ì† Url
      */
     private String mUrl = null;
 
     /**
-     * ÀÀ´ä ¸®½Ã¹ö °´Ã¼
+     * ì‘ë‹µ ë¦¬ì‹œë²„ ê°ì²´
      */
     private IHttpReceive mHttpReceive = null;
 
     /**
-     * »ı¼ºÀÚ
+     * ìƒì„±ì
      */
     public ApacheFileDownloadManager(IHttpReceive receive) {
         mHttpReceive = receive;

@@ -30,6 +30,13 @@
         <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\httpmime-4.2.5-468a8a71280264d7a17a36375ef622108f230d40.jar" />
     </item>
     <item
+        jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\classes-40b774f1005e91fa3ca50d9911bf509e4aa80aa8.jar" />
+    </item>
+    <item
         jar="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"

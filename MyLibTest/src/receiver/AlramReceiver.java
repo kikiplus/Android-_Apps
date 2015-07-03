@@ -3,6 +3,7 @@ package receiver;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -16,7 +17,7 @@ public class AlramReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        System.out.println("AlramReceiver onReceive");
-        Toast.makeText(context, "알람 실행" , Toast.LENGTH_LONG).show();
+        Log.d(conf.Log.LOG_NAME, "AlramReceiver onReceive");
+        Toast.makeText(context, "알람 실행", Toast.LENGTH_LONG).show();
     }
 }
