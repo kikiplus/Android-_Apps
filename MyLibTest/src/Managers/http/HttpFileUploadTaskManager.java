@@ -1,4 +1,4 @@
-package Managers;
+package Managers.http;
 
 import android.graphics.Bitmap;
 import android.os.AsyncTask;

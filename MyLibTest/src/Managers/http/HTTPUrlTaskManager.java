@@ -1,7 +1,7 @@
 /**
  *
  */
-package Managers;
+package Managers.http;
 
 import android.os.AsyncTask;
 import android.util.Log;

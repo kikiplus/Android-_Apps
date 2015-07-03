@@ -14,7 +14,7 @@ import com.test.mihye.R;
 
 import Interface.NetException;
 import Interface.ServerResponse;
-import Managers.SocketAsynTaskManager;
+import Managers.socket.SocketAsynTaskManager;
 
 /**
  * @author grapegirl

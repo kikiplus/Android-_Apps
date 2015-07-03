@@ -1,4 +1,4 @@
-package Managers;
+package Managers.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

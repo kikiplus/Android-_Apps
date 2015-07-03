@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.test.mihye.R;
 
 import Interface.IHttpReceive;
-import Managers.HTTPUrlTaskManager;
+import Managers.http.HTTPUrlTaskManager;
 import UIComfonent.ProgressBar;
 
 /**

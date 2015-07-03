@@ -19,7 +19,7 @@ import com.test.mihye.R;
 import java.util.ArrayList;
 
 import Event.BluetoothEventListener;
-import Managers.BluetoothDataManager;
+import Managers.bluetooth.BluetoothDataManager;
 
 
 public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, BluetoothEventListener {

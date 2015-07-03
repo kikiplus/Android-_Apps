@@ -20,8 +20,8 @@ import com.test.mihye.R;
 import java.io.File;
 
 import Interface.IHttpReceive;
-import Managers.HttpFileDownloadManager;
-import Managers.HttpFileUploadTaskManager;
+import Managers.http.HttpFileDownloadManager;
+import Managers.http.HttpFileUploadTaskManager;
 import Managers.ImageManager;
 import UIComfonent.ProgressBar;
 
