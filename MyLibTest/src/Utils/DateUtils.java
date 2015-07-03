@@ -1,15 +1,7 @@
 package Utils;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-
-import android.content.Context;
-import android.os.Debug;
-import android.util.Log;
-
-import com.test.mihye.R;
 
 /***
  * @Class Name : DateUtils

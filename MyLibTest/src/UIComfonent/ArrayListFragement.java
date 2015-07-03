@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.test.mihye.R;
-
 import Event.OnListItemSelectedListener;
 
 /**

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.test.mihye.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import Bean.PostData;

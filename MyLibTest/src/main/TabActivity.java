@@ -1,11 +1,5 @@
 package main;
 
-import java.util.ArrayList;
-
-import UIComfonent.BasicTab;
-import UIComfonent.BasicTab2;
-import UIComfonent.BasicTab3;
-import ViewAdapter.TabPageAdapter;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
@@ -16,6 +10,13 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
 import com.test.mihye.R;
+
+import java.util.ArrayList;
+
+import UIComfonent.BasicTab;
+import UIComfonent.BasicTab2;
+import UIComfonent.BasicTab3;
+import ViewAdapter.TabPageAdapter;
 
 /***
  * @Class Name : TabActivity

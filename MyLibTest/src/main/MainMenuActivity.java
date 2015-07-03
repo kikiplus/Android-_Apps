@@ -1,16 +1,12 @@
 package main;
 
-import com.test.mihye.R;
-
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.test.mihye.R;
 
 /***
  * @Class Name : 메인메뉴 5개 테스트

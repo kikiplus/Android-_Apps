@@ -3,9 +3,7 @@ package main;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
@@ -17,12 +15,8 @@ import android.widget.TextView;
 
 import com.test.mihye.R;
 
-import java.io.File;
-
 import Interface.IHttpReceive;
-import Managers.http.HttpFileDownloadManager;
-import Managers.http.HttpFileUploadTaskManager;
-import Managers.ImageManager;
+import Managers.http.HttpUrlFileUploadManager;
 import UIComfonent.ProgressBar;
 
 /**
@@ -84,6 +78,11 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
      */
     private String mFilePath = null;
 
+    /**
+     * 비트맵 이미지
+     */
+    private Bitmap mBitmap = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,29 +109,27 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             // 전송 버튼
-            case R.id.fileupload_main_sendButton:
-                mProgressDialog.setDataLoadingDialog(true, "파일을 전송하고 있습니다.");
-                ImageManager imageManager = new ImageManager(this);
-                // 사진찍은 이미지 가져오기
-                Bitmap bitmap = imageManager.getImageDrawbleToBitmap(R.drawable.tutorial01);
+            case R.id.fileupload_main_sendButton:// 웹 전송 업로드
+                //mProgressDialog.setDataLoadingDialog(true, "파일을 전송하고 있습니다.");
+                //ApacheFileUploadManager fileUploadTaskMangaer = new ApacheFileUploadManager(this);
+                //fileUploadTaskMangaer.execute("url", mBitmap, "test.jpg");
 
-                //파일 업로드
-                String saveFileName = "test.jpg";
-
-                HttpFileUploadTaskManager fileUploadTaskMangaer = new HttpFileUploadTaskManager("url", this);
-                fileUploadTaskMangaer.execute(bitmap, saveFileName);
+                //HttpUrlFileUploadManager manager = new HttpUrlFileUploadManager(this);
+                //manager.execute("url", mBitmap, "test.jpg");
                 break;
-            case R.id.fileupload_main_cametraButton:
-                takePichure();
+            case R.id.fileupload_main_cametraButton://사진찍기
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
                 }
                 break;
-            case R.id.fileupload_main_downloadButton:
-                mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
-                HttpFileDownloadManager fileDownloadManager = new HttpFileDownloadManager(this);
-                fileDownloadManager.execute("url", "test.txt");
+            case R.id.fileupload_main_downloadButton: // 다운로드
+                //mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
+                //HttpUrlFileDownloadManager fileDownloadManager = new HttpUrlFileDownloadManager(this);
+                //fileDownloadManager.execute("url", "filename.txt");
+
+                //ApacheFileDownloadManager fileDownloadManager = new ApacheFileDownloadManager(this);
+                //fileDownloadManager.execute("url","finame.txt");
                 break;
         }
     }
@@ -152,11 +149,11 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     @Override
     public boolean handleMessage(Message msg) {
         switch (msg.what) {
-            case 0:
-                Bitmap img = (Bitmap) msg.obj;
-                mImageView.setImageBitmap(img);
+            case 0:// 이미지 표시
+                mBitmap = (Bitmap) msg.obj;
+                mImageView.setImageBitmap(mBitmap);
                 break;
-            case 1:
+            case 1:// 텍스트 결과 표시
                 mProgressDialog.setDataLoadingDialog(false, null);
                 String result = (String) msg.obj;
                 mTextView.setText(result);
@@ -168,17 +165,5 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     @Override
     public void onHttpReceive(Object obj) {
         mHandler.sendMessage(mHandler.obtainMessage(1, obj));
-    }
-
-
-    public void takePichure() {
-        File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/KIKI");
-        if (!path.exists()) {
-            path.mkdirs();
-        }
-        mFilePath = path.getPath() + "/" + System.currentTimeMillis() + ".jpg";
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(mFilePath)));
-        startActivityForResult(intent, REQUEST_SAVE_IMAGE);
     }
 }

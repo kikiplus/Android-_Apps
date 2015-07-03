@@ -26,7 +26,7 @@ import Interface.IHttpReceive;
  * @Description : HTTP 통신 매니저 클래스
  * @since 2014.08.01
  */
-public class HTTPUrlTaskManager extends AsyncTask<String, Void, Void> {
+public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
 
     /**
      * 접속할 URL
@@ -47,7 +47,7 @@ public class HTTPUrlTaskManager extends AsyncTask<String, Void, Void> {
     /**
      * 생성자
      */
-    public HTTPUrlTaskManager(String url, boolean post, IHttpReceive receive) {
+    public HttpUrlTaskManager(String url, boolean post, IHttpReceive receive) {
         mURl = url;
         isPost = post;
         mIHttpReceive = receive;
@@ -90,7 +90,6 @@ public class HTTPUrlTaskManager extends AsyncTask<String, Void, Void> {
                     outputStream.close();
                 }
             }
-
             if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 String buffer = null;
                 BufferedReader bufferedReader;

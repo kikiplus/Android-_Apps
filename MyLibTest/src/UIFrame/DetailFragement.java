@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.test.mihye.R;
 
-import org.w3c.dom.Text;
-
 import Bean.Book;
 
 /**

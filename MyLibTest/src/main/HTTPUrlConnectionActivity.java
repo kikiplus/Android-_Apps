@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.test.mihye.R;
 
 import Interface.IHttpReceive;
-import Managers.http.HTTPUrlTaskManager;
+import Managers.http.HttpUrlTaskManager;
 import UIComfonent.ProgressBar;
 
 /**
@@ -63,7 +63,7 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
         mTextView.setText(null);
         mProgressDialog.setDataLoadingDialog(true, "데이타를 불러오고 있습니다");
 
-        HTTPUrlTaskManager manager = new HTTPUrlTaskManager("https://github.com/", false, this);
+        HttpUrlTaskManager manager = new HttpUrlTaskManager("https://github.com", false, this);
         manager.execute();
     }
 

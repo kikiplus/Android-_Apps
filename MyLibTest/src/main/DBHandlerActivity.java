@@ -1,16 +1,17 @@
 package main;
 
+import android.app.Activity;
+import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.widget.Toast;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
 import Managers.DBManager;
 import Managers.FileMgr;
-import android.app.Activity;
-import android.content.res.AssetManager;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.widget.Toast;
 
 /***
  * @Class Name :

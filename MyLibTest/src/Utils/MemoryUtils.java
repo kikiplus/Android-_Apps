@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.Debug;
 import android.util.Log;
 
-import com.test.mihye.R;
-
 /**
  * @author grapegirl
  * @version 1.0

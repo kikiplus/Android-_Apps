@@ -1,12 +1,6 @@
 package main;
 
 
-import java.util.ArrayList;
-
-import Bean.PostData;
-import ViewAdapter.ListAdpater;
-import ViewAdapter.ReverseListAdpater;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +9,11 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.test.mihye.R;
+
+import java.util.ArrayList;
+
+import Bean.PostData;
+import ViewAdapter.ReverseListAdpater;
 
 /***
  * @Class Name :ListTestActivity 

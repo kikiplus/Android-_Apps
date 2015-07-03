@@ -3,8 +3,6 @@
  */
 package main;
 
-import java.io.UnsupportedEncodingException;
-
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -17,6 +15,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.test.mihye.R;
+
+import java.io.UnsupportedEncodingException;
 
 public class SmsTestActivity extends Activity {
 

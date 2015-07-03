@@ -1,7 +1,6 @@
 package Utils;
 
 import java.text.Collator;
-import java.util.ArrayList;
 import java.util.Comparator;
 
 import Bean.PostData;

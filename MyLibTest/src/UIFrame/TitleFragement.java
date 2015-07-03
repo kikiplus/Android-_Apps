@@ -1,6 +1,5 @@
 package UIFrame;
 
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ListFragment;
 import android.os.Bundle;
