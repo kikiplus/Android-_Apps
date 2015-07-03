@@ -29,9 +29,14 @@ public class HttpFileUploadTaskManager extends AsyncTask<Object, Void, Void> {
 
     private String mUrl = null;
 
+    /** 응답 리시버 객체*/
     private IHttpReceive mHttpReceive = null;
 
-
+    /**
+     * 생성자
+     * @param url url
+     * @param receive 응답 리시버 객체
+     */
     public HttpFileUploadTaskManager(String url, IHttpReceive receive) {
         mUrl = url;
         mHttpReceive = receive;

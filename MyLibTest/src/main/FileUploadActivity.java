@@ -91,10 +91,10 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
         setContentView(R.layout.fileupload_main_layout);
         // 버튼 초기화
         mSendBtn = (Button) findViewById(R.id.fileupload_main_sendButton);
-//        mCametraBtn = (Button) findViewById(R.id.fileupload_main_cametraButton);
+        mCametraBtn = (Button) findViewById(R.id.fileupload_main_cametraButton);
         mDownLoadBtn = (Button) findViewById(R.id.fileupload_main_downloadButton);
         mSendBtn.setOnClickListener(this);
-//        mCametraBtn.setOnClickListener(this);
+        mCametraBtn.setOnClickListener(this);
         mDownLoadBtn.setOnClickListener(this);
 
         //이미지뷰, 텍스트뷰 초기화
@@ -106,7 +106,6 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
         mProgressDialog = new ProgressBar(this);
     }
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -116,26 +115,24 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
                 ImageManager imageManager = new ImageManager(this);
                 // 사진찍은 이미지 가져오기
                 Bitmap bitmap = imageManager.getImageDrawbleToBitmap(R.drawable.tutorial01);
-//                byte[] imgbyteArr = imageManager.getBitmapToByteArray(bitmap);
 
                 //파일 업로드
-//                Bitmap saveFile = (Bitmap) params[0];
-                String saveFileName = "123456789";
+                String saveFileName = "test.jpg";
 
-//
-                HttpFileUploadTaskManager fileUploadTaskMangaer = new HttpFileUploadTaskManager("http://safety.congnavi.com/api/2010.do?cpNo=123456789", this);
+                HttpFileUploadTaskManager fileUploadTaskMangaer = new HttpFileUploadTaskManager("url", this);
                 fileUploadTaskMangaer.execute(bitmap, saveFileName);
                 break;
-//            case R.id.fileupload_main_cametraButton:
-//                takePichure();
-//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                if (intent.resolveActivity(getPackageManager()) != null) {
-//                    startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
-//                }
-//                break;
+            case R.id.fileupload_main_cametraButton:
+                takePichure();
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+                }
+                break;
             case R.id.fileupload_main_downloadButton:
-                HttpFileDownloadManager fileDownloadManager = new HttpFileDownloadManager();
-                fileDownloadManager.execute("http://safety.congnavi.com/download/download.do?path=/complain/complain&ufn=20150702173050_20494");
+                mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
+                HttpFileDownloadManager fileDownloadManager = new HttpFileDownloadManager(this);
+                fileDownloadManager.execute("url", "test.txt");
                 break;
         }
     }
