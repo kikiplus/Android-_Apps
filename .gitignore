@@ -1,4 +1,8 @@
 MyLibTest/.idea/workspace.xml
 MyLibTest/.build/*
-MyLibTest/.idea/workspace.xml
+MyLibTest/.gradle/*
+MyLibTest/local.properties
+MyLibTest/.idea/libraries
 *.xml
+
+
