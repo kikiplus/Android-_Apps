@@ -81,6 +81,6 @@
     <string name="transmode_app_name">transmode</string>
     <string name="navigation_app_name">NavigationDrawer</string>
     <string name="tutorial_app_name">Tutorial</string>
-    <string name="app_name">MHTestApp</string>
+    <string name="app_name">MHApp</string>
 
 </resources>

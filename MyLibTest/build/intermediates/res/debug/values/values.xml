@@ -268,7 +268,7 @@
     <string name="action_remove_item">Remove item</string>
     <string name="action_settings">Settings</string>
     <string name="action_toggle">Toggle indicator</string>
-    <string name="app_name">MHTestApp</string>
+    <string name="app_name">MHApp</string>
     <string name="bluetooth_main_searchbtn_name">찾기</string>
     <string name="bluetooth_main_toggglebtn_off">꺼짐</string>
     <string name="bluetooth_main_toggglebtn_on">켜짐</string>

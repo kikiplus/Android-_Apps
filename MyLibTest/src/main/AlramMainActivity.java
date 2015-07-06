@@ -33,7 +33,7 @@ public class AlramMainActivity extends Activity implements View.OnClickListener 
     /**
      * 알람 인텐트 액션명
      */
-    private final String INTENT_ACTION = "com.test.mihye.main.alram";
+    private final String INTENT_ACTION = "com.kiki.mihye.main.alram";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

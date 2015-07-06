@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.test.mihye;
+package com.kiki.mihye;
 
 public final class R {
     public static final class anim {

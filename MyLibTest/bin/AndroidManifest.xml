@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.test.mihye"
+    package="com.kiki.mihye"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -57,7 +57,7 @@
         <!--
         <activity android:name="main.AlramActivity">
             <intent-filter>
-                <action android:name="com.test.mihye.main.alram" />
+                <action android:name="com.kiki.mihye.main.alram" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
