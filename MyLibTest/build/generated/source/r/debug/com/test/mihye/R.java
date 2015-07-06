@@ -1634,18 +1634,19 @@ containing a value of this type.
         public static final int main_tab_layout=0x7f040024;
         public static final int navigation_fragment_layout=0x7f040025;
         public static final int navigation_main_layout=0x7f040026;
-        public static final int popup_layout=0x7f040027;
-        public static final int recycer_item_layout=0x7f040028;
-        public static final int recycler_main_layout=0x7f040029;
-        public static final int socket_main_layout=0x7f04002a;
-        public static final int support_simple_spinner_dropdown_item=0x7f04002b;
-        public static final int tabview_layout=0x7f04002c;
-        public static final int tabview_main_layout=0x7f04002d;
-        public static final int test_layout=0x7f04002e;
-        public static final int toolbar_layout=0x7f04002f;
-        public static final int transversemode_detail_layout=0x7f040030;
-        public static final int transversemode_main_layout=0x7f040031;
-        public static final int tutorial_main_layout=0x7f040032;
+        public static final int notification_main_layout=0x7f040027;
+        public static final int popup_layout=0x7f040028;
+        public static final int recycer_item_layout=0x7f040029;
+        public static final int recycler_main_layout=0x7f04002a;
+        public static final int socket_main_layout=0x7f04002b;
+        public static final int support_simple_spinner_dropdown_item=0x7f04002c;
+        public static final int tabview_layout=0x7f04002d;
+        public static final int tabview_main_layout=0x7f04002e;
+        public static final int test_layout=0x7f04002f;
+        public static final int toolbar_layout=0x7f040030;
+        public static final int transversemode_detail_layout=0x7f040031;
+        public static final int transversemode_main_layout=0x7f040032;
+        public static final int tutorial_main_layout=0x7f040033;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;

@@ -136,13 +136,23 @@
         <!--</activity>-->
 
         <!-- 리사이클러뷰 -->
+        <!--<activity-->
+            <!--android:name="main.RecyclerViewActivity"-->
+            <!--android:label="@string/app_name">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- 노티피케이션 -->
         <activity
-            android:name="main.RecyclerViewActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        android:name="main.NotifivationActivity"
+        android:label="@string/app_name">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
         </activity>
     </application>
 
