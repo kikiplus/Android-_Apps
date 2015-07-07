@@ -1,6 +1,9 @@
 package main;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothDevice;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,17 +15,23 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.test.mihye.R;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import Event.BluetoothEventListener;
+import Interface.IBLConnectLinstener;
 import Managers.bluetooth.BluetoothDataManager;
 
 
-public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, BluetoothEventListener {
+public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, BluetoothEventListener, IBLConnectLinstener {
 
     /**
      * 검색버튼
@@ -82,6 +91,12 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
      */
     private boolean mToggleStatus = false;
 
+    /**
+     * 파일 전송 상대
+     */
+    private String mServerInfo = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,9 +123,10 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        if(v.getId()== R.id.bluetooth_main_pairedDevices_listview){
+        if (v.getId() == R.id.bluetooth_main_pairedDevices_listview) {
             menu.add(0, CONTEXT_MENU_REMOVE_DEVICE, Menu.NONE, "등록 해제");
-        }else if(v.getId() == R.id.bluetooth_main_listview){
+            menu.add(0, CONTEXT_MENU_SEND_DEVICE, Menu.NONE, "파일 전송");
+        } else if (v.getId() == R.id.bluetooth_main_listview) {
             menu.add(0, CONTEXT_MENU_PAIRING_DEVICE, Menu.NONE, "등록");
         }
     }
@@ -122,17 +138,34 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
             case CONTEXT_MENU_REMOVE_DEVICE://등록해제
                 String mac = mArrayList.get(contextMenuInfo.position).split("\n")[1];
                 boolean isUnpair = mBluetoothMgr.setUnpairDevice(mac);
-                if(isUnpair){
+                if (isUnpair) {
                     mArrayList.remove(contextMenuInfo.position);
                     mArrayAdapter.notifyDataSetChanged();
                 }
                 break;
             case CONTEXT_MENU_PAIRING_DEVICE://등록
                 mac = mSearchArrayList.get(contextMenuInfo.position).split("\n")[1];
-                mBluetoothMgr.setPairingDevice(mac);
+                boolean isPair = mBluetoothMgr.setPairingDevice(mac);
+                if (!isPair) {
+                    Toast.makeText(getApplicationContext(), "페어링한 +" + mac + " : 등록안됨", Toast.LENGTH_LONG).show();
+                }
+                break;
+            case CONTEXT_MENU_SEND_DEVICE://파일 전송
+                mServerInfo = mArrayList.get(contextMenuInfo.position);
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(intent, GET_FILE);
                 break;
         }
         return super.onContextItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == GET_FILE && resultCode == RESULT_OK) {
+            Uri fileUrl = data.getData();
+            mHandler.sendMessage(mHandler.obtainMessage(SEND_FILE, fileUrl));
+        }
     }
 
     @Override
@@ -194,10 +227,20 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
             case BLUETOOTH_ON://블루투스 상태 켜짐
                 setButton();
                 break;
+            case SEND_FILE: // 파일 전송
+                String name = mServerInfo.split("\n")[0];
+                String mac = mServerInfo.split("\n")[1];
+
+                Uri urlData = (Uri) msg.obj;
+                System.out.println("@@@ fileUrl : " + urlData.getPath());
+
+                File file = new File(urlData.getPath());
+                BluetoothDevice device = mBluetoothMgr.getBluetoothDevice(mac);
+
+                break;
         }
         return false;
     }
-
 
     @Override
     protected void onDestroy() {
@@ -268,7 +311,6 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
         findViewById(R.id.bluetooth_layout).setVisibility(View.INVISIBLE);
     }
 
-
     /***********************************************
      *
      * 컨텍스트 메뉴 정의값
@@ -286,9 +328,24 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     private static final int CONTEXT_MENU_REMOVE_DEVICE = 2;
 
     /**
+     * 메뉴 3- 파일 전송
+     */
+    private static final int CONTEXT_MENU_SEND_DEVICE = 3;
+
+    /**
      * 리스트 뷰 초기화
      */
-    private static final int INIT_LISTVIEW = 3;
+    private static final int INIT_LISTVIEW = 4;
+
+    /**
+     * 파일 전송
+     */
+    private static final int SEND_FILE = 5;
+
+    /**
+     * 파일 가져오기
+     */
+    private static final int GET_FILE = 6;
 
     @Override
     /**
@@ -310,6 +367,19 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
                 break;
             case BLUETOOTH_ON://블루투스 ON
                 mHandler.sendEmptyMessage(BLUETOOTH_ON);
+                break;
+        }
+    }
+
+    @Override
+    public void onReceiveAction(int what, Object obj) {
+        switch (what) {
+            case RECEIVE_ERROR:
+                System.out.println("@@ 블루투스 데이타 전송 결과 Not Okay: " + (String) obj);
+                break;
+
+            case RECEIVE_MESSAGE:
+                System.out.println("@@ 블루투스 데이타 전송 결과 오케이");
                 break;
         }
     }

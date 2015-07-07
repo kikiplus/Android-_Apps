@@ -1,5 +1,6 @@
 package Managers.bluetooth;
 
+import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -67,7 +68,7 @@ public class BluetoothDataManager {
         if (mBluetoothAdapter == null) {
             Toast.makeText(mContext, mContext.getString(R.string.blutooth_main_notsupport), Toast.LENGTH_LONG).show();
         } else {
-            Log.d(conf.Log.LOG_NAME, this.getClass() + mContext.getString(R.string.blutooth_main_support));
+            Log.d(conf.Log.LOG_NAME, mContext.getString(R.string.blutooth_main_support));
         }
 
         // 브로드캐스트 리시버 등록
@@ -120,7 +121,7 @@ public class BluetoothDataManager {
 
                 if (bondState == BluetoothDevice.BOND_NONE) {
                     System.out.println("연결안됨");
-                } else if (bondState == BluetoothDevice.BOND_BONDED){
+                } else if (bondState == BluetoothDevice.BOND_BONDED) {
                     System.out.println("연결됨");
                     mBluetoothEventListener.onAction(mBluetoothEventListener.SET_ADDED_IST, getAddedList());
                 }
@@ -194,7 +195,7 @@ public class BluetoothDataManager {
      * @return 등록된 기기 리스트
      */
     public ArrayList<String> getAddedList() {
-        if(mArrayList != null){
+        if (mArrayList != null) {
             mArrayList.clear();
         }
         if (mBluetoothAdapter.isEnabled()) {
@@ -251,6 +252,7 @@ public class BluetoothDataManager {
         try {
             Class<?> btDeviceInstance = Class.forName(BluetoothDevice.class.getCanonicalName());
             Method removeBondMethod = btDeviceInstance.getMethod("removeBond");
+
             boolean cleared = false;
             for (BluetoothDevice bluetoothDevice : bondedDevices) {
                 String mac = bluetoothDevice.getAddress();
@@ -272,15 +274,22 @@ public class BluetoothDataManager {
         return true;
     }
 
+    /**
+     * 페어링 등록 메소드
+     *
+     * @param currentMac 페어링할 맥주소
+     * @return 페어링 등록 여부(True - 등록, False - 등록안됨)
+     */
     public boolean setPairingDevice(String currentMac) {
         try {
+            boolean cleared = false;
+
+            BluetoothDevice bluetoothDevice = mBluetoothAdapter.getRemoteDevice(currentMac);
+
             Class<?> btDeviceInstance = Class.forName(BluetoothDevice.class.getCanonicalName());
             Method createBondMethod = btDeviceInstance.getMethod("createBond");
-            boolean cleared = false;
-            BluetoothDevice bluetoothDevice = mBluetoothAdapter.getRemoteDevice(currentMac);
-            createBondMethod.invoke(bluetoothDevice);
-            cleared = true;
-            System.out.println("OK Paired");
+            cleared = (boolean) createBondMethod.invoke(bluetoothDevice);
+//            cleared = bluetoothDevice.createBond();
             if (!cleared) {
                 System.out.println("Not Paired");
                 return false;
@@ -291,4 +300,20 @@ public class BluetoothDataManager {
         }
         return true;
     }
+
+
+    /**
+     * 블루투스 기기 반환 메소드
+     *
+     * @param mac 블루투스 맥주소
+     * @return 블루투스 기기 정보
+     */
+    public BluetoothDevice getBluetoothDevice(String mac) {
+        return mBluetoothAdapter.getRemoteDevice(mac);
+    }
+
+
 }
+
+
+
