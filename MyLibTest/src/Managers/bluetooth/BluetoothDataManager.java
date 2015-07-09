@@ -1,6 +1,5 @@
 package Managers.bluetooth;
 
-import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -16,7 +15,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Set;
 
-import Event.BluetoothEventListener;
+import Event.OnBluetoothEventListener;
 
 /**
  * @author grapegirl
@@ -49,13 +48,13 @@ public class BluetoothDataManager {
     /**
      * 블루투스 이벤트 리스너
      */
-    private BluetoothEventListener mBluetoothEventListener = null;
+    private OnBluetoothEventListener mBluetoothEventListener = null;
 
 
     /**
      * 생성자
      */
-    public BluetoothDataManager(Context context, BluetoothEventListener eventListener) {
+    public BluetoothDataManager(Context context, OnBluetoothEventListener eventListener) {
 
         mContext = context;
         mBluetoothEventListener = eventListener;

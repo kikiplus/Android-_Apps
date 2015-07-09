@@ -18,7 +18,7 @@ import android.content.Context;
 public class ProgressBar {
 
 	/** 다이얼로그*/
-	private ProgressDialog m_Dialog = null;
+	private ProgressDialog mDialog = null;
 
 	/** 컨텍스트*/
 	private Context m_Context = null;
@@ -38,20 +38,20 @@ public class ProgressBar {
 	 */
 	public void setDataLoadingDialog(boolean flag, String msg) {
 		if (flag) {
-			m_Dialog = new ProgressDialog(m_Context);
-			m_Dialog.setMessage(msg);
-			m_Dialog.setIndeterminate(true);
-			m_Dialog.setCancelable(false);
-			m_Dialog.show();
+			mDialog = new ProgressDialog(m_Context);
+			mDialog.setMessage(msg);
+			mDialog.setIndeterminate(true);
+			mDialog.setCancelable(false);
+			mDialog.show();
 		} else {
-			if (m_Dialog != null) {
-				m_Dialog.dismiss();
-				m_Dialog = null;
+			if (mDialog != null) {
+				mDialog.dismiss();
+				mDialog = null;
 			}
 		}
 	}
 
 	public boolean getDialogStatus() {
-		return m_Dialog.isShowing();
+		return mDialog.isShowing();
 	}
 }

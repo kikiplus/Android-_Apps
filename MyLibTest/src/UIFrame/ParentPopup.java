@@ -25,7 +25,7 @@ import android.widget.TextView;
 
 import com.test.mihye.R;
 
-import Event.PopupEventListener;
+import Event.OnPopupEventListener;
 
 /***
  * @Class Name : ParentPopup
@@ -43,11 +43,11 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
     /** 팝업 뷰 */
     protected View m_CurrentView = null;
     /** 팝업 창 */
-    protected Dialog m_Dialog = null;
+    protected Dialog mDialog = null;
     /** 팝업 창 빌드 */
-    protected AlertDialog.Builder m_DialogBuilder = null;
+    protected AlertDialog.Builder mDialogBuilder = null;
     /** 팝업 이벤트 리스너 */
-    public PopupEventListener m_PopupListener = null;
+    public OnPopupEventListener m_PopupListener = null;
 
     /** 핸들러 */
     private Handler m_Handler = null;
@@ -68,7 +68,7 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
     /** 클릭 이벤트 */
     protected OnClickListener m_ClickListener = null;
     /** 다이얼로그 클릭 이벤트 */
-    protected android.content.DialogInterface.OnClickListener m_DialogClickListener = null;
+    protected android.content.DialogInterface.OnClickListener mDialogClickListener = null;
     /** 라디오버튼 클릭 이벤트 */
     protected OnMultiChoiceClickListener m_MultiChoiceClickListener;
 
@@ -80,7 +80,7 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
      * @param res
      *            리소스 이름
      */
-    public ParentPopup(Context context, int res, PopupEventListener l) {
+    public ParentPopup(Context context, int res, OnPopupEventListener l) {
         m_Context = context;
         m_Res = res;
         m_PopupListener = l;
@@ -106,12 +106,12 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
             m_nDefaultHeight = metrics.heightPixels / 2;
         }
 
-        m_Dialog = new Dialog(m_Context);
-        m_Dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        m_Dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        m_Dialog.setCanceledOnTouchOutside(false);
+        mDialog = new Dialog(m_Context);
+        mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mDialog.setCanceledOnTouchOutside(false);
         setContentView(0, null);
-        m_Dialog.setContentView(m_CurrentView, new LinearLayout.LayoutParams(m_nDefaultWidth, 194 + m_nDefaultHeight));
+        mDialog.setContentView(m_CurrentView, new LinearLayout.LayoutParams(m_nDefaultWidth, 194 + m_nDefaultHeight));
     }
 
     /***
@@ -177,7 +177,7 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
         case TYPE_RADIO_POPUP:
             break;
         }
-        m_Dialog.setContentView(m_CurrentView, new LayoutParams(m_nDefaultWidth, 194 + m_nDefaultHeight));
+        mDialog.setContentView(m_CurrentView, new LayoutParams(m_nDefaultWidth, 194 + m_nDefaultHeight));
     }
 
     /***
@@ -231,8 +231,8 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
      * 팝업 열기 메소드
      */
     public void setOpnePopup() {
-        if (m_Dialog != null) {
-            m_Dialog.show();
+        if (mDialog != null) {
+            mDialog.show();
         }
     }
 
@@ -244,22 +244,22 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
      */
     public void setCancleable(boolean isCancleable) {
         m_bCancelable = isCancleable;
-        m_Dialog.setCancelable(m_bCancelable);
+        mDialog.setCancelable(m_bCancelable);
     }
 
     /***
      * 팝업 닫기 메소드
      */
     public void closePopup() {
-        if (m_Dialog != null && m_Dialog.isShowing()) {
+        if (mDialog != null && mDialog.isShowing()) {
             System.out.println("@@ closePopup");
-            m_Dialog.dismiss();
+            mDialog.dismiss();
         }
     }
 
     public boolean isShowing() {
-        if (m_Dialog != null) {
-            return m_Dialog.isShowing();
+        if (mDialog != null) {
+            return mDialog.isShowing();
         } else {
             return false;
         }
@@ -282,9 +282,9 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
         }
         m_Context = null;
         m_Res = 0;
-        if (m_Dialog != null) {
-            m_Dialog.dismiss();
-            m_Dialog = null;
+        if (mDialog != null) {
+            mDialog.dismiss();
+            mDialog = null;
         }
     }
 

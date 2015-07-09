@@ -20,23 +20,23 @@ import android.content.DialogInterface;
 public class KDialog implements android.content.DialogInterface.OnClickListener {
 
 	/** 다이얼로그 빌드 */
-	private AlertDialog.Builder m_dialog = null;
+	private AlertDialog.Builder mDialog = null;
 
 	/** 버튼 */
-	private int[] m_buttons;
+	private int[] mButtons;
 
 	/**
 	 * 생성자
 	 */
 	public KDialog(Context context, String title, String message) {
-		m_dialog = new Builder(context);
-		m_dialog.setTitle(title);
-		m_dialog.setMessage(message);
+		mDialog = new Builder(context);
+		mDialog.setTitle(title);
+		mDialog.setMessage(message);
 
-		m_dialog.setPositiveButton(R.string.ok, (android.content.DialogInterface.OnClickListener) this);
-		m_dialog.setNegativeButton(R.string.cancel, (android.content.DialogInterface.OnClickListener) this);
+		mDialog.setPositiveButton(R.string.ok, (android.content.DialogInterface.OnClickListener) this);
+		mDialog.setNegativeButton(R.string.cancel, (android.content.DialogInterface.OnClickListener) this);
 
-		m_dialog.show();
+		mDialog.show();
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package UIComfonent;
 import android.content.Context;
 import android.view.View;
 
-import Event.PopupEventListener;
+import Event.OnPopupEventListener;
 import UIFrame.ParentPopup;
 
 /***
@@ -31,7 +31,7 @@ public class BasicPoup extends ParentPopup implements View.OnClickListener {
      * @param res
      * @param l
      */
-    public BasicPoup(Context context, int res, PopupEventListener l) {
+    public BasicPoup(Context context, int res, OnPopupEventListener l) {
         super(context, res, l);
         m_PopupListener = l;
     }

@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.test.mihye.R;
 
-import Interface.NetException;
-import Interface.ServerResponse;
+import Interface.INetException;
+import Interface.IServerResponse;
 import Managers.socket.SocketAsynTaskManager;
 
 /**
@@ -24,7 +24,7 @@ import Managers.socket.SocketAsynTaskManager;
  * @since 2015. 1. 6.
  */
 public class SocketTestMainActivity extends Activity implements OnClickListener, Handler.Callback
-        , ServerResponse, NetException {
+        , IServerResponse, INetException {
 
     /**
      * 서버로부터 전송할 내용 입력 박스

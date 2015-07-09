@@ -9,8 +9,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import Interface.NetException;
-import Interface.ServerResponse;
+import Interface.INetException;
+import Interface.IServerResponse;
 
 /**
  * @author grapegirl
@@ -49,12 +49,12 @@ public class SocketManager implements Runnable {
     /**
      * 서버로부터 응답 결과를 받을 리스너
      */
-    private ServerResponse m_listener = null;
+    private IServerResponse m_listener = null;
 
     /**
      * 네트워크 결과를 받을 리스너
      */
-    private NetException m_exceptionListenr = null;
+    private INetException m_exceptionListenr = null;
 
     /**
      * 생성자
@@ -63,7 +63,7 @@ public class SocketManager implements Runnable {
      * @param listener       서버의 응답을 받을 리스너
      * @param exceptListener 네트워크 결과 리스너
      */
-    public SocketManager(String msg, ServerResponse listener, NetException exceptListener) {
+    public SocketManager(String msg, IServerResponse listener, INetException exceptListener) {
         m_msg = msg;
         m_listener = listener;
         m_exceptionListenr = exceptListener;

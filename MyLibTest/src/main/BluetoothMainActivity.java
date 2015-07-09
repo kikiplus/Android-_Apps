@@ -20,18 +20,15 @@ import android.widget.ToggleButton;
 
 import com.test.mihye.R;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
-import Event.BluetoothEventListener;
+import Event.OnBluetoothEventListener;
 import Interface.IBLConnectLinstener;
 import Managers.bluetooth.BluetoothDataManager;
 
 
-public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, BluetoothEventListener, IBLConnectLinstener {
+public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, OnBluetoothEventListener, IBLConnectLinstener {
 
     /**
      * 검색버튼

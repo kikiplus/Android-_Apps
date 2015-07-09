@@ -9,7 +9,7 @@ import com.test.mihye.R;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import Event.PopupEventListener;
+import Event.OnPopupEventListener;
 import UIComfonent.BasicPoup;
 
 /**
@@ -19,7 +19,7 @@ import UIComfonent.BasicPoup;
  * @version 1.0
  * @author grapegirl
  */
-public class PopupActivity extends Activity implements PopupEventListener, android.view.View.OnClickListener {
+public class PopupActivity extends Activity implements OnPopupEventListener, android.view.View.OnClickListener {
 
     private BasicPoup mBasicPoup = null;
 

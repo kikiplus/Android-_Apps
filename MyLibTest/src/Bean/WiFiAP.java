@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package Bean;
 
@@ -7,123 +7,152 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * @author grapegirl
+ * @version 1.0
  * @Class Name : WiFiAP
  * @Description : 와이파이 AP 정보 클래스
  * @since 2015. 1. 6.
- * @author grapegirl
- * @version 1.0
  */
 public class WiFiAP implements Parcelable {
 
-	/** AP 맥 주소 */
-	private String	m_Mac;
+    /**
+     * AP 맥 주소
+     */
+    private String mMAC;
 
-	/** AP 맥의 데시벨 */
-	private String	m_Decibel;
+    /**
+     * AP 맥의 데시벨
+     */
+    private String mDecibel;
 
-	/** AP 맥의 이름 */
-	private String	m_SSID;
+    /**
+     * AP 맥의 이름
+     */
+    private String mSSID;
 
-	/**
-	 * 생성자
-	 */
-	public WiFiAP() {
+    /**
+     * 보안설정
+     */
+    private String mCapability;
 
-	}
+    /**
+     * 생성자
+     */
+    public WiFiAP() {
 
-	public WiFiAP(Parcel parcel) {
-		m_Mac = parcel.readString();
-		m_Decibel = parcel.readString();
-		m_SSID = parcel.readString();
-	}
+    }
 
-	/**
-	 * 생성자
-	 * 
-	 * @param mac
-	 *            맥
-	 * @param deb
-	 *            데시벨
-	 */
-	public WiFiAP(String ssid, String deb, String mac) {
-		m_Mac = mac;
-		m_Decibel = deb;
-		m_SSID = ssid;
-	}
+    public WiFiAP(Parcel parcel) {
+        mMAC = parcel.readString();
+        mDecibel = parcel.readString();
+        mSSID = parcel.readString();
+    }
 
-	/**
-	 * @Description : 맥 주소 반환 메소든
-	 * @Return 맥주소
-	 */
-	public String getMac() {
-		return m_Mac;
-	}
+    /**
+     * 생성자
+     *
+     * @param mac 맥
+     * @param deb 데시벨
+     */
+    public WiFiAP(String ssid, String deb, String mac) {
+        mMAC = mac;
+        mDecibel = deb;
+        mSSID = ssid;
+    }
 
-	/**
-	 * @Description : 맥 이름 반환 메소든
-	 * @Return 맥주소
-	 */
-	public String getSSID() {
-		return m_SSID;
-	}
+    /**
+     * @Description : 맥 주소 반환 메소든
+     * @Return 맥주소
+     */
+    public String getMac() {
+        return mMAC;
+    }
 
-	/**
-	 * @Description : 맥의 데시벨 값 반환 메소드
-	 * @Return 데시벨 값
-	 */
-	public String getDecibel() {
-		return m_Decibel;
-	}
+    /**
+     * @Description : 맥 이름 반환 메소든
+     * @Return 맥주소
+     */
+    public String getSSID() {
+        return mSSID;
+    }
 
-	/**
-	 * @Description : 맥주소 설정 메소드
-	 * @param mac
-	 *            맥주소
-	 */
-	public void setMac(String mac) {
-		m_Mac = mac;
-	}
+    /**
+     * @Description : 맥의 데시벨 값 반환 메소드
+     * @Return 데시벨 값
+     */
+    public String getDecibel() {
+        return mDecibel;
+    }
 
-	/**
-	 * @Description : 맥 이름 설정 메소드
-	 * @param ssid
-	 *            맥이름
-	 */
-	public void setSSID(String ssid) {
-		m_SSID = ssid;
-	}
 
-	/**
-	 * @Description : 데시벨 값 설정 메소드
-	 * @param decibel
-	 *            데시벨
-	 */
-	public void setDecibel(String decibel) {
-		m_Decibel = decibel;
-	}
+    /**
+     * @Description : 보안 반환 값 메소드
+     * @Return 보안 값
+     */
+    public String getCapability() {
+        return mCapability;
+    }
 
-	@Override
-	public int describeContents() {
-		return 0;
-	}
+    /**
+     * @param mac 맥주소
+     * @Description : 맥주소 설정 메소드
+     */
+    public void setMac(String mac) {
+        mMAC = mac;
+    }
 
-	@Override
-	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeString( m_SSID );
-		dest.writeString( m_Decibel );
-		dest.writeString( m_Mac );
-	}
+    /**
+     * @param ssid 맥이름
+     * @Description : 맥 이름 설정 메소드
+     */
+    public void setSSID(String ssid) {
+        mSSID = ssid;
+    }
 
-	public static final Parcelable.Creator<WiFiAP>	CREATOR	= new Creator<WiFiAP>() {
+    /**
+     * @param decibel 데시벨
+     * @Description : 데시벨 값 설정 메소드
+     */
+    public void setDecibel(String decibel) {
+        mDecibel = decibel;
+    }
 
-																@Override
-																public WiFiAP[] newArray(int size) {
-																	return new WiFiAP[size];
-																}
+    /**
+     * @param capability 보안
+     * @Description : 보안 값 설정 메소드
+     */
+    public void setCapability(String capability) {
+        mCapability = capability;
+    }
 
-																@Override
-																public WiFiAP createFromParcel(Parcel source) {
-																	return new WiFiAP( source );
-																}
-															};
+
+    @Override
+    public String toString() {
+        return "ssid: " + mSSID + "\n/deb: " + mDecibel + " /mac: " + mMAC;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mSSID);
+        dest.writeString(mDecibel);
+        dest.writeString(mMAC);
+    }
+
+    public static final Parcelable.Creator<WiFiAP> CREATOR = new Creator<WiFiAP>() {
+
+        @Override
+        public WiFiAP[] newArray(int size) {
+            return new WiFiAP[size];
+        }
+
+        @Override
+        public WiFiAP createFromParcel(Parcel source) {
+            return new WiFiAP(source);
+        }
+    };
 }

@@ -67,6 +67,8 @@
     <string name="bluetooth_main_searchbtn_name">찾기</string>
     <string name="bluetooth_main_toggglebtn_on">켜짐</string>
     <string name="bluetooth_main_toggglebtn_off">꺼짐</string>
+    <string name="dialog_ok">확인</string>
+    <string name="dialog_cancle">취소</string>
 
     <!-- 화면-->
     <string name="blutooth_main_notsupport">해당 디바이스는 블루투스를 지원하지 않습니다.</string>
