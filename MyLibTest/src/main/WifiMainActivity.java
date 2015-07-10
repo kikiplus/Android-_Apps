@@ -2,6 +2,7 @@ package main;
 
 import android.app.Activity;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -108,6 +109,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
         IntentFilter receiverFilter = new IntentFilter();
         receiverFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
         receiverFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+        receiverFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mWifiMonitor, receiverFilter);
 
         mListView = (ListView) findViewById(R.id.wifi_main_listview);
@@ -158,8 +160,8 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onDestroy() {
+        super.onDestroy();
         if (mWifiMonitor != null) {
             unregisterReceiver(mWifiMonitor);
         }
@@ -169,10 +171,10 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
     @Override
     /***
      * Ap 리스트 결과 데이타 가공
-            */
-            public void onReceiveAction(Object obj) {
-                List<ScanResult> dataList = (List<ScanResult>) obj;
-                if (mWifitData == null) {
+     */
+    public void onReceiveAction(Object obj) {
+        List<ScanResult> dataList = (List<ScanResult>) obj;
+        if (mWifitData == null) {
             mWifitData = new ArrayList<WiFiAP>();
         } else {
             mWifitData.clear();
