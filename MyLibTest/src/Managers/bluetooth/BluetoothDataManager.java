@@ -27,32 +27,32 @@ import Event.OnBluetoothEventListener;
 public class BluetoothDataManager {
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„°
+     * ºí·çÅõ½º ¾îµªÅÍ
      */
     private BluetoothAdapter mBluetoothAdapter = null;
 
     /**
-     * ë“±ë¡ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸
+     * µî·ÏµÈ ±â±â ¸®½ºÆ®
      */
     private ArrayList<String> mArrayList = null;
     /**
-     * ê²€ìƒ‰ í›„ ë¦¬ìŠ¤íŠ¸
+     * °Ë»ö ÈÄ ¸®½ºÆ®
      */
     private ArrayList<String> mSearchArrayList = null;
 
     /**
-     * ì»¨í…ìŠ¤íŠ¸
+     * ÄÁÅØ½ºÆ®
      */
     private Context mContext = null;
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ
+     * ºí·çÅõ½º ÀÌº¥Æ® ¸®½º³Ê
      */
     private OnBluetoothEventListener mBluetoothEventListener = null;
 
 
     /**
-     * ìƒì„±ì
+     * »ı¼ºÀÚ
      */
     public BluetoothDataManager(Context context, OnBluetoothEventListener eventListener) {
 
@@ -62,7 +62,7 @@ public class BluetoothDataManager {
         mSearchArrayList = new ArrayList<String>();
 
 
-        // ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„°
+        // ºí·çÅõ½º ¾îµªÅÍ
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
             Toast.makeText(mContext, mContext.getString(R.string.blutooth_main_notsupport), Toast.LENGTH_LONG).show();
@@ -70,7 +70,7 @@ public class BluetoothDataManager {
             Log.d(conf.Log.LOG_NAME, mContext.getString(R.string.blutooth_main_support));
         }
 
-        // ë¸Œë¡œë“œìºìŠ¤íŠ¸ ë¦¬ì‹œë²„ ë“±ë¡
+        // ºê·ÎµåÄ³½ºÆ® ¸®½Ã¹ö µî·Ï
         IntentFilter Filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
         mContext.registerReceiver(mReceiver, Filter);
         Filter = new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
@@ -83,7 +83,7 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì£¼ë³€ê¸°ê¸° ê²€ìƒ‰ ë¦¬ì‹œë²„
+     * ºí·çÅõ½º ÁÖº¯±â±â °Ë»ö ¸®½Ã¹ö
      */
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
@@ -96,7 +96,7 @@ public class BluetoothDataManager {
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
                     String data = device.getName() + "\n"
                             + device.getAddress();
-                    //ê²€ìƒ‰ í›„ ì£¼ë³€ ë””ë°”ì´ìŠ¤ê°€ ë¦¬ìŠ¤íŠ¸ì— ì—†ëŠ” ê¸°ê¸°ì´ë©´ ì¶”ê°€
+                    //°Ë»ö ÈÄ ÁÖº¯ µğ¹ÙÀÌ½º°¡ ¸®½ºÆ®¿¡ ¾ø´Â ±â±âÀÌ¸é Ãß°¡
                     if (!checkAddedListItem(data)) {
                         mSearchArrayList.add(data);
                         mBluetoothEventListener.onAction(mBluetoothEventListener.SEARCH_DEVICES_LIST, data);
@@ -111,7 +111,7 @@ public class BluetoothDataManager {
                     mBluetoothEventListener.onAction(mBluetoothEventListener.BLUETOOTH_ON, null);
                 }
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
-                //ê²€ìƒ‰ í›„ ì™„ë£Œë˜ë©´ ì£¼ë³€ ë””ë°”ì´ìŠ¤ ì •ë³´ ë°˜í™˜
+                //°Ë»ö ÈÄ ¿Ï·áµÇ¸é ÁÖº¯ µğ¹ÙÀÌ½º Á¤º¸ ¹İÈ¯
                 mBluetoothEventListener.onAction(mBluetoothEventListener.COMPLE_SEARCH_DEVICES, true);
             } else if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
 
@@ -119,9 +119,9 @@ public class BluetoothDataManager {
                         BluetoothDevice.EXTRA_BOND_STATE, -1);
 
                 if (bondState == BluetoothDevice.BOND_NONE) {
-                    System.out.println("ì—°ê²°ì•ˆë¨");
+                    System.out.println("¿¬°á¾ÈµÊ");
                 } else if (bondState == BluetoothDevice.BOND_BONDED) {
-                    System.out.println("ì—°ê²°ë¨");
+                    System.out.println("¿¬°áµÊ");
                     mBluetoothEventListener.onAction(mBluetoothEventListener.SET_ADDED_IST, getAddedList());
                 }
             }
@@ -129,27 +129,32 @@ public class BluetoothDataManager {
     };
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„° ìƒíƒœ ë°˜í™˜ ë©”ì†Œë“œ
+     * ºí·çÅõ½º ¾îµªÅÍ »óÅÂ ¹İÈ¯ ¸Ş¼Òµå
      *
-     * @return ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„° ìƒíƒœ
+     * @return ºí·çÅõ½º ¾îµªÅÍ »óÅÂ
      */
     public boolean getBlutoothAdpaterStatus() {
-        return mBluetoothAdapter.isEnabled();
+        if (mBluetoothAdapter != null){
+            return mBluetoothAdapter.isEnabled();
+        }else{
+            return false;
+        }
+
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„° ê²€ìƒ‰ ìƒíƒœ ë°˜í™˜ ë©”ì†Œë“œ
+     * ºí·çÅõ½º ¾îµªÅÍ °Ë»ö »óÅÂ ¹İÈ¯ ¸Ş¼Òµå
      *
-     * @return ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„° ê²€ìƒ‰ ìƒíƒœ ë°˜í™˜
+     * @return ºí·çÅõ½º ¾îµªÅÍ °Ë»ö »óÅÂ ¹İÈ¯
      */
     public boolean getBlutoothAdpaterDiscoveringStatus() {
         return mBluetoothAdapter.isDiscovering();
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ì–´ëí„° ìƒíƒœ ì„¤ì • ë©”ì†Œë“œ
+     * ºí·çÅõ½º ¾îµªÅÍ »óÅÂ ¼³Á¤ ¸Ş¼Òµå
      *
-     * @param stats ì–´ëí„° ì‚¬ìš© ì—¬ë¶€
+     * @param stats ¾îµªÅÍ »ç¿ë ¿©ºÎ
      */
     public void setBluetoothStatus(boolean stats) {
         if (stats) {
@@ -160,9 +165,9 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ê²€ìƒ‰ ì„¤ì • ë©”ì†Œë“œ
+     * ºí·çÅõ½º °Ë»ö ¼³Á¤ ¸Ş¼Òµå
      *
-     * @param stats ì£¼ë³€ ê¸°ê¸° ê²€ìƒ‰ ì‚¬ìš© ì—¬ë¶€
+     * @param stats ÁÖº¯ ±â±â °Ë»ö »ç¿ë ¿©ºÎ
      */
     public void setBluetoothSearchStatus(boolean stats) {
         if (stats) {
@@ -173,10 +178,10 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€ë˜ì—ˆëŠ”ì§€ ì—¬ë¶€ ë°˜í™˜ ë©”ì†Œë“œ
+     * ¸®½ºÆ®¿¡ Ãß°¡µÇ¾ú´ÂÁö ¿©ºÎ ¹İÈ¯ ¸Ş¼Òµå
      *
-     * @param newItem ê¸°ê¸°ëª…ê³¼ ë§¥ì£¼ì†Œ
-     * @return ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€ë˜ì—ˆëŠ”ì§€ ì—¬ë¶€
+     * @param newItem ±â±â¸í°ú ¸ÆÁÖ¼Ò
+     * @return ¸®½ºÆ®¿¡ Ãß°¡µÇ¾ú´ÂÁö ¿©ºÎ
      */
     private boolean checkAddedListItem(String newItem) {
         for (int i = 0; i < mSearchArrayList.size(); i++) {
@@ -189,9 +194,9 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë“±ë¡ëœ ë¦¬ìŠ¤íŠ¸ ë°˜í™˜ ë©”ì†Œë“œ(ì´ˆê¸°)
+     * µî·ÏµÈ ¸®½ºÆ® ¹İÈ¯ ¸Ş¼Òµå(ÃÊ±â)
      *
-     * @return ë“±ë¡ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸
+     * @return µî·ÏµÈ ±â±â ¸®½ºÆ®
      */
     public ArrayList<String> getAddedList() {
         if (mArrayList != null) {
@@ -199,11 +204,11 @@ public class BluetoothDataManager {
         }
         if (mBluetoothAdapter.isEnabled()) {
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-            System.out.println("í˜ì–´ë§ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ : " + pairedDevices.size());
+            System.out.println("Æä¾î¸µµÈ ±â±â ¸®½ºÆ® : " + pairedDevices.size());
             if (pairedDevices.size() > 0) {
                 for (BluetoothDevice device : pairedDevices) {
                     mArrayList.add(device.getName() + "\n" + device.getAddress());
-                    System.out.println("@@ í˜ì–´ë§ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ : " + device.getName() + "," + device.getAddress());
+                    System.out.println("@@ Æä¾î¸µµÈ ±â±â ¸®½ºÆ® : " + device.getName() + "," + device.getAddress());
                 }
             }
             return mArrayList;
@@ -213,10 +218,10 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë””ë°”ì´ìŠ¤ UUID ë°˜í™˜ ë©”ì†Œë“œ
+     * µğ¹ÙÀÌ½º UUID ¹İÈ¯ ¸Ş¼Òµå
      *
-     * @param index ì£¼ë³€ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ì˜ ì¸ë±ìŠ¤
-     * @return ë””ë°”ì´ìŠ¤ UUID
+     * @param index ÁÖº¯ ±â±â ¸®½ºÆ®ÀÇ ÀÎµ¦½º
+     * @return µğ¹ÙÀÌ½º UUID
      */
     public String getDeviceUUID(int index) {
 
@@ -225,10 +230,10 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ë°ì´íƒ€ ë§¤ë‹ˆì € ë¦¬ì†ŒìŠ¤ í•´ì œ ë©”ì†Œë“œ
+     * ºí·çÅõ½º µ¥ÀÌÅ¸ ¸Å´ÏÀú ¸®¼Ò½º ÇØÁ¦ ¸Ş¼Òµå
      */
     public void close() {
-        // ë¦¬ì‹œë²„ í•´ì œ
+        // ¸®½Ã¹ö ÇØÁ¦
         mContext.unregisterReceiver(mReceiver);
         if (mArrayList != null) {
             mArrayList.clear();
@@ -241,10 +246,10 @@ public class BluetoothDataManager {
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ í˜ì–´ë§ í•´ì œ ë©”ì†Œë“œ
+     * ºí·çÅõ½º Æä¾î¸µ ÇØÁ¦ ¸Ş¼Òµå
      *
-     * @param currentMac í˜ì–´ë§ í•´ì œí•  ë§¥ì£¼ì†Œ
-     * @return í˜ì–´ë§ í•´ì œ ì—¬ë¶€
+     * @param currentMac Æä¾î¸µ ÇØÁ¦ÇÒ ¸ÆÁÖ¼Ò
+     * @return Æä¾î¸µ ÇØÁ¦ ¿©ºÎ
      */
     public boolean setUnpairDevice(String currentMac) {
         Set<BluetoothDevice> bondedDevices = mBluetoothAdapter.getBondedDevices();
@@ -274,21 +279,19 @@ public class BluetoothDataManager {
     }
 
     /**
-     * í˜ì–´ë§ ë“±ë¡ ë©”ì†Œë“œ
+     * Æä¾î¸µ µî·Ï ¸Ş¼Òµå
      *
-     * @param currentMac í˜ì–´ë§í•  ë§¥ì£¼ì†Œ
-     * @return í˜ì–´ë§ ë“±ë¡ ì—¬ë¶€(True - ë“±ë¡, False - ë“±ë¡ì•ˆë¨)
+     * @param currentMac Æä¾î¸µÇÒ ¸ÆÁÖ¼Ò
+     * @return Æä¾î¸µ µî·Ï ¿©ºÎ(True - µî·Ï, False - µî·Ï¾ÈµÊ)
      */
     public boolean setPairingDevice(String currentMac) {
         try {
             boolean cleared = false;
-
-            BluetoothDevice bluetoothDevice = mBluetoothAdapter.getRemoteDevice(currentMac);
-
             Class<?> btDeviceInstance = Class.forName(BluetoothDevice.class.getCanonicalName());
             Method createBondMethod = btDeviceInstance.getMethod("createBond");
+
+            BluetoothDevice bluetoothDevice = mBluetoothAdapter.getRemoteDevice(currentMac);
             cleared = (boolean) createBondMethod.invoke(bluetoothDevice);
-//            cleared = bluetoothDevice.createBond();
             if (!cleared) {
                 System.out.println("Not Paired");
                 return false;
@@ -302,13 +305,23 @@ public class BluetoothDataManager {
 
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ê¸°ê¸° ë°˜í™˜ ë©”ì†Œë“œ
+     * ºí·çÅõ½º ±â±â ¹İÈ¯ ¸Ş¼Òµå
      *
-     * @param mac ë¸”ë£¨íˆ¬ìŠ¤ ë§¥ì£¼ì†Œ
-     * @return ë¸”ë£¨íˆ¬ìŠ¤ ê¸°ê¸° ì •ë³´
+     * @param mac ºí·çÅõ½º ¸ÆÁÖ¼Ò
+     * @return ºí·çÅõ½º ±â±â Á¤º¸
      */
     public BluetoothDevice getBluetoothDevice(String mac) {
         return mBluetoothAdapter.getRemoteDevice(mac);
+    }
+
+
+    /**
+     * ºí·çÅõ½º ¾îµªÅÍ ¹İÈ¯ ¸Ş¼Òµå
+     *
+     * @return ºí·çÅõ½º ¾îµªÅÍ
+     */
+    public BluetoothAdapter getmBluetoothAdapter() {
+        return mBluetoothAdapter;
     }
 
 

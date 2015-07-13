@@ -53,7 +53,15 @@ public class WifiMonitor extends BroadcastReceiver {
                 mIWiFiStatusListener.OnChangedStatus(mIWiFiStatusListener.NETWORK_STATE_CONNECTING, null);
             } else if (networkInfo.getState() == NetworkInfo.State.DISCONNECTING) {
                 mIWiFiStatusListener.OnChangedStatus(mIWiFiStatusListener.NETWORK_STATE_DISCONNECTING, null);
+            } else if(networkInfo.getState() == NetworkInfo.State.UNKNOWN) {
+                Log.d(conf.Log.LOG_NAME, this.getClass() + " onReceive  : 111111111 " );
+                mIWiFiStatusListener.OnChangedStatus(mIWiFiStatusListener.NETWORK_STATE_DISCONNECTED, null);
+            } else if(networkInfo.getState() == NetworkInfo.State.SUSPENDED) {
+                Log.d(conf.Log.LOG_NAME, this.getClass() + " onReceive  : 111111111 222222222" );
+                mIWiFiStatusListener.OnChangedStatus(mIWiFiStatusListener.NETWORK_STATE_DISCONNECTED, null);
             }
+        }else if(strAction.equals(ConnectivityManager.CONNECTIVITY_ACTION)){
+            Log.d(conf.Log.LOG_NAME, this.getClass() + " onReceive  :  " + intent.getStringExtra(ConnectivityManager.EXTRA_EXTRA_INFO));
         }
     }
 }

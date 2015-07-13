@@ -2,6 +2,7 @@ package main;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,79 +21,89 @@ import android.widget.ToggleButton;
 
 import com.test.mihye.R;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import Event.OnBluetoothEventListener;
 import Interface.IBLConnectLinstener;
+import Managers.bluetooth.BluetoothAcceptTask;
+import Managers.bluetooth.BluetoothConnectTask;
+import Managers.bluetooth.BluetoothConnectedTask;
 import Managers.bluetooth.BluetoothDataManager;
 
 
 public class BluetoothMainActivity extends Activity implements View.OnClickListener, Handler.Callback, OnBluetoothEventListener, IBLConnectLinstener {
 
     /**
-     * ê²€ìƒ‰ë²„íŠ¼
+     * °Ë»ö¹öÆ°
      */
     private Button mButton = null;
 
     /**
-     * í† ê¸€ë²„íŠ¼
+     * Åä±Û¹öÆ°
      */
     private ToggleButton mToggleButton = null;
 
     /**
-     * ë¦¬ìŠ¤íŠ¸ë·°
+     * ¸®½ºÆ®ºä
      */
     private ListView mListview = null;
 
     /**
-     * ê¸°ê¸° ê²€ìƒ‰ ë¦¬ìŠ¤íŠ¸ë·°
+     * ±â±â °Ë»ö ¸®½ºÆ®ºä
      */
     private ListView mSeartchListview = null;
 
     /**
-     * ë“±ë¡ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ ì–´ëí„°
+     * µî·ÏµÈ ±â±â ¸®½ºÆ® ¾îµªÅÍ
      */
     private ArrayAdapter<String> mArrayAdapter = null;
     /**
-     * ê²€ìƒ‰ í›„ ë¦¬ìŠ¤íŠ¸ ì–´ëí„°
+     * °Ë»ö ÈÄ ¸®½ºÆ® ¾îµªÅÍ
      */
     private ArrayAdapter<String> mSearchArrayAdapter = null;
 
     /**
-     * ë“±ë¡ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸
+     * µî·ÏµÈ ±â±â ¸®½ºÆ®
      */
     private ArrayList<String> mArrayList = null;
     /**
-     * ê²€ìƒ‰ í›„ ë¦¬ìŠ¤íŠ¸
+     * °Ë»ö ÈÄ ¸®½ºÆ®
      */
     private ArrayList<String> mSearchArrayList = null;
 
     /**
-     * í•¸ë“¤ëŸ¬
+     * ÇÚµé·¯
      */
     private Handler mHandler = null;
 
     /**
-     * ë¡œë”© ì—¬ë¶€
+     * ·Îµù ¿©ºÎ
      */
     private boolean mListLodaing = false;
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ë°ì´íƒ€ ë§¤ë‹ˆì €
+     * ºí·çÅõ½º µ¥ÀÌÅ¸ ¸Å´ÏÀú
      */
     private BluetoothDataManager mBluetoothMgr = null;
 
     /**
-     * í† ê¸€ ë²„íŠ¼
+     * Åä±Û ¹öÆ°
      */
     private boolean mToggleStatus = false;
 
     /**
-     * íŒŒì¼ ì „ì†¡ ìƒëŒ€
+     * ÆÄÀÏ Àü¼Û »ó´ë
      */
     private String mServerInfo = null;
 
+
+    private BluetoothAcceptTask mBluetoothAccpetionTask = null;
+    private BluetoothConnectedTask mBluetoothConnectedTask = null;
+    private BluetoothConnectTask mBluetoothConnectTask = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,30 +112,34 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
 
         mBluetoothMgr = new BluetoothDataManager(this, this);
         mHandler = new Handler(this);
-        // ë²„íŠ¼ ì´ˆê¸°í™”
+        // ¹öÆ° ÃÊ±âÈ­
         mButton = (Button) findViewById(R.id.bluetooth_main_seartchBtn);
         mButton.setOnClickListener(this);
         mToggleButton = (ToggleButton) findViewById(R.id.bluetooth_main_toggleButton);
         mToggleButton.setOnClickListener(this);
-        // ë¦¬ìŠ¤íŠ¸ë·° ì´ˆê¸°í™”
+        // ¸®½ºÆ®ºä ÃÊ±âÈ­
         mListview = (ListView) findViewById(R.id.bluetooth_main_pairedDevices_listview);
         registerForContextMenu(mListview);
         mSeartchListview = (ListView) findViewById(R.id.bluetooth_main_listview);
         registerForContextMenu(mSeartchListview);
 
         mArrayList = new ArrayList<String>();
-        //ë²„íŠ¼ ì´ˆê¸°í™”
+        //¹öÆ° ÃÊ±âÈ­
         setButton();
+
+        //¼­¹ö¼ÒÄÏÀ¸·Î ¿­¾î³õ°í ±â´Ù¸®±â
+        mBluetoothAccpetionTask = new BluetoothAcceptTask(mBluetoothMgr.getmBluetoothAdapter(), this);
+        mBluetoothAccpetionTask.execute();
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         if (v.getId() == R.id.bluetooth_main_pairedDevices_listview) {
-            menu.add(0, CONTEXT_MENU_REMOVE_DEVICE, Menu.NONE, "ë“±ë¡ í•´ì œ");
-            menu.add(0, CONTEXT_MENU_SEND_DEVICE, Menu.NONE, "íŒŒì¼ ì „ì†¡");
+            menu.add(0, CONTEXT_MENU_REMOVE_DEVICE, Menu.NONE, "µî·Ï ÇØÁ¦");
+            menu.add(0, CONTEXT_MENU_SEND_DEVICE, Menu.NONE, "ÆÄÀÏ Àü¼Û");
         } else if (v.getId() == R.id.bluetooth_main_listview) {
-            menu.add(0, CONTEXT_MENU_PAIRING_DEVICE, Menu.NONE, "ë“±ë¡");
+            menu.add(0, CONTEXT_MENU_PAIRING_DEVICE, Menu.NONE, "µî·Ï");
         }
     }
 
@@ -132,7 +147,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo contextMenuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch (item.getItemId()) {
-            case CONTEXT_MENU_REMOVE_DEVICE://ë“±ë¡í•´ì œ
+            case CONTEXT_MENU_REMOVE_DEVICE://µî·ÏÇØÁ¦
                 String mac = mArrayList.get(contextMenuInfo.position).split("\n")[1];
                 boolean isUnpair = mBluetoothMgr.setUnpairDevice(mac);
                 if (isUnpair) {
@@ -140,14 +155,14 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
                     mArrayAdapter.notifyDataSetChanged();
                 }
                 break;
-            case CONTEXT_MENU_PAIRING_DEVICE://ë“±ë¡
+            case CONTEXT_MENU_PAIRING_DEVICE://µî·Ï
                 mac = mSearchArrayList.get(contextMenuInfo.position).split("\n")[1];
                 boolean isPair = mBluetoothMgr.setPairingDevice(mac);
                 if (!isPair) {
-                    Toast.makeText(getApplicationContext(), "í˜ì–´ë§í•œ +" + mac + " : ë“±ë¡ì•ˆë¨", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Æä¾î¸µÇÑ +" + mac + " : µî·Ï¾ÈµÊ", Toast.LENGTH_LONG).show();
                 }
                 break;
-            case CONTEXT_MENU_SEND_DEVICE://íŒŒì¼ ì „ì†¡
+            case CONTEXT_MENU_SEND_DEVICE://ÆÄÀÏ Àü¼Û
                 mServerInfo = mArrayList.get(contextMenuInfo.position);
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
@@ -168,20 +183,20 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bluetooth_main_seartchBtn: // ì£¼ë³€ê¸°ê¸° ê²€ìƒ‰ ë²„íŠ¼
-                if (!mListLodaing) {  //ê²€ìƒ‰
+            case R.id.bluetooth_main_seartchBtn: // ÁÖº¯±â±â °Ë»ö ¹öÆ°
+                if (!mListLodaing) {  //°Ë»ö
                     startDeviceScan();
-                } else {//ì¤‘ì§€
+                } else {//ÁßÁö
                     stopDeviceScan();
                 }
                 break;
-            case R.id.bluetooth_main_toggleButton:   // í† ê¸€ ë²„íŠ¼
-                if (!mToggleStatus) {//ì¼œì§
+            case R.id.bluetooth_main_toggleButton:   // Åä±Û ¹öÆ°
+                if (!mToggleStatus) {//ÄÑÁü
                     mToggleStatus = true;
                     mToggleButton.setChecked(mToggleStatus);
                     mBluetoothMgr.setBluetoothStatus(true);
                     findViewById(R.id.bluetooth_layout).setVisibility(View.VISIBLE);
-                } else {//êº¼ì§
+                } else {//²¨Áü
                     setBluetoothOFF();
                 }
                 break;
@@ -191,7 +206,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     @Override
     public boolean handleMessage(Message msg) {
         switch (msg.what) {
-            case SET_ADDED_IST:// í˜ì–´ë§ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸
+            case SET_ADDED_IST:// Æä¾î¸µµÈ ±â±â ¸®½ºÆ®
                 ArrayList<String> dataList = (ArrayList<String>) msg.obj;
                 if (dataList != null) {
                     mArrayList = (ArrayList<String>) msg.obj;
@@ -199,7 +214,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
                     mListview.setAdapter(mArrayAdapter);
                 }
                 break;
-            case SEARCH_DEVICES_LIST:// ì£¼ë³€ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ ì¶”ê°€
+            case SEARCH_DEVICES_LIST:// ÁÖº¯ ±â±â ¸®½ºÆ® Ãß°¡
                 String data = (String) msg.obj;
                 if (mSearchArrayList != null) {
                     mSearchArrayList.add(data);
@@ -211,32 +226,66 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
                 mSearchArrayAdapter.notifyDataSetChanged();
                 mSeartchListview.setAdapter(mSearchArrayAdapter);
                 break;
-            case INIT_LISTVIEW:// êº¼ì§ì‹œ ë¦¬ìŠ¤íŠ¸ ì´ˆê¸°í™”
+            case INIT_LISTVIEW:// ²¨Áü½Ã ¸®½ºÆ® ÃÊ±âÈ­
                 setInitListview();
                 break;
-            case COMPLE_SEARCH_DEVICES:// ì£¼ë³€ ê²€ìƒ‰ ê¸°ê¸° ì™„ë£Œ
-                mButton.setText("ì°¾ê¸°");
+            case COMPLE_SEARCH_DEVICES:// ÁÖº¯ °Ë»ö ±â±â ¿Ï·á
+                mButton.setText("Ã£±â");
                 mListLodaing = false;
                 break;
-            case BLUETOOTH_OFF:// ë¸”ë£¨íˆ¬ìŠ¤ ìƒíƒœ êº¼ì§
+            case BLUETOOTH_OFF:// ºí·çÅõ½º »óÅÂ ²¨Áü
                 setBluetoothOFF();
                 break;
-            case BLUETOOTH_ON://ë¸”ë£¨íˆ¬ìŠ¤ ìƒíƒœ ì¼œì§
+            case BLUETOOTH_ON://ºí·çÅõ½º »óÅÂ ÄÑÁü
                 setButton();
                 break;
-            case SEND_FILE: // íŒŒì¼ ì „ì†¡
+            case SEND_FILE: // ÆÄÀÏ Àü¼Û
                 String name = mServerInfo.split("\n")[0];
                 String mac = mServerInfo.split("\n")[1];
-
                 Uri urlData = (Uri) msg.obj;
                 System.out.println("@@@ fileUrl : " + urlData.getPath());
-
                 File file = new File(urlData.getPath());
                 BluetoothDevice device = mBluetoothMgr.getBluetoothDevice(mac);
+                if (mBluetoothConnectTask == null) {
+                    System.out.println("@@ BluetoothConnectTask is Null ");
+                    mBluetoothConnectTask = new BluetoothConnectTask(device, mBluetoothMgr.getmBluetoothAdapter());
+                    mBluetoothConnectTask.execute();
+                }else{
+                    System.out.println("@@ BluetoothConnectTask is not Null ");
+                }
 
+                BluetoothSocket socket = mBluetoothConnectTask.getSocket();
+                System.out.println("@@ BluetoothConnectTask socket :  "+ socket);
+                if (socket != null) {
+                    mBluetoothConnectedTask = new BluetoothConnectedTask(socket, this);
+//                    mBluetoothConnectedTask.execute();
+                    if (mBluetoothConnectedTask.getOutputStream()) {
+                        System.out.println("@@ BluetoothConnectTask ÆÄÀÏ Àü¼Û");
+                        String strdata = "TEST ÀÔ´Ï´Ù !!!";
+                        mBluetoothConnectedTask.write(strdata.getBytes());
+                    }else{
+                        System.out.println("@@ BluetoothConnectTask getOutputStream false");
+                    }
+                }
+                break;
+            case 1000:
+                String contents = (String)msg.obj;
+                Toast.makeText(getApplicationContext(), contents, Toast.LENGTH_SHORT).show();
                 break;
         }
         return false;
+    }
+
+    public byte[] getBytes(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+        int bufferSize = 1024;
+        byte[] buffer = new byte[bufferSize];
+
+        int len = 0;
+        while ((len = inputStream.read(buffer)) != -1) {
+            byteBuffer.write(buffer, 0, len);
+        }
+        return byteBuffer.toByteArray();
     }
 
     @Override
@@ -246,10 +295,10 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     }
 
     /**
-     * ì´ˆê¸°ë²„íŠ¼ ì„¤ì • ë©”ì†Œë“œ
+     * ÃÊ±â¹öÆ° ¼³Á¤ ¸Ş¼Òµå
      */
     private void setButton() {
-        //í˜„ì¬ ë¸”ë£¨íˆ¬ìŠ¤ ìƒíƒœì— ë”°ë¼ í† ê¸€ë²„íŠ¼ ì„¤ì •
+        //ÇöÀç ºí·çÅõ½º »óÅÂ¿¡ µû¶ó Åä±Û¹öÆ° ¼³Á¤
         boolean isStauts = mBluetoothMgr.getBlutoothAdpaterStatus();
         if (isStauts) {
             mToggleStatus = true;
@@ -263,28 +312,28 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ë””ë°”ì´ìŠ¤ ê²€ìƒ‰ ì‹œì‘ ë©”ì†Œë“œ
+     * ºí·çÅõ½º µğ¹ÙÀÌ½º °Ë»ö ½ÃÀÛ ¸Ş¼Òµå
      */
     private void startDeviceScan() {
         mListLodaing = true;
         mBluetoothMgr.setBluetoothSearchStatus(true);
-        mButton.setText("ì¤‘ì§€");
+        mButton.setText("ÁßÁö");
         mSearchArrayList = new ArrayList<String>();
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ ë””ë°”ì´ìŠ¤ ê²€ìƒ‰ ì¤‘ì§€ ë©”ì†Œë“œ
+     * ºí·çÅõ½º µğ¹ÙÀÌ½º °Ë»ö ÁßÁö ¸Ş¼Òµå
      */
     private void stopDeviceScan() {
         mBluetoothMgr.setBluetoothSearchStatus(false);
         if (mBluetoothMgr.getBlutoothAdpaterDiscoveringStatus() == false) {
             mListLodaing = false;
         }
-        mButton.setText("ì°¾ê¸°");
+        mButton.setText("Ã£±â");
     }
 
     /**
-     * ë¸”ë£¨íˆ¬ìŠ¤ êº¼ì§ ë©”ì†Œë“œ
+     * ºí·çÅõ½º ²¨Áü ¸Ş¼Òµå
      */
     private void setBluetoothOFF() {
         mToggleStatus = false;
@@ -294,7 +343,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     }
 
     /**
-     * ë¦¬ìŠ¤íŠ¸ë·° ì´ˆê¸°í™” ë©”ì†Œë“œ
+     * ¸®½ºÆ®ºä ÃÊ±âÈ­ ¸Ş¼Òµå
      */
     private void setInitListview() {
         if (mArrayList != null) {
@@ -303,66 +352,66 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
         if (mSearchArrayList != null) {
             mSearchArrayList.clear();
         }
-        mButton.setText("ì°¾ê¸°");
+        mButton.setText("Ã£±â");
         mListLodaing = false;
         findViewById(R.id.bluetooth_layout).setVisibility(View.INVISIBLE);
     }
 
     /***********************************************
      *
-     * ì»¨í…ìŠ¤íŠ¸ ë©”ë‰´ ì •ì˜ê°’
+     * ÄÁÅØ½ºÆ® ¸Ş´º Á¤ÀÇ°ª
      *
      *********************************************/
 
     /**
-     * ë©”ë‰´ 1- í˜ì–´ë§ ë“±ë¡
+     * ¸Ş´º 1- Æä¾î¸µ µî·Ï
      */
     private static final int CONTEXT_MENU_PAIRING_DEVICE = 1;
 
     /**
-     * ë©”ë‰´ 2- ë“±ë¡ í•´ì œ
+     * ¸Ş´º 2- µî·Ï ÇØÁ¦
      */
     private static final int CONTEXT_MENU_REMOVE_DEVICE = 2;
 
     /**
-     * ë©”ë‰´ 3- íŒŒì¼ ì „ì†¡
+     * ¸Ş´º 3- ÆÄÀÏ Àü¼Û
      */
     private static final int CONTEXT_MENU_SEND_DEVICE = 3;
 
     /**
-     * ë¦¬ìŠ¤íŠ¸ ë·° ì´ˆê¸°í™”
+     * ¸®½ºÆ® ºä ÃÊ±âÈ­
      */
     private static final int INIT_LISTVIEW = 4;
 
     /**
-     * íŒŒì¼ ì „ì†¡
+     * ÆÄÀÏ Àü¼Û
      */
     private static final int SEND_FILE = 5;
 
     /**
-     * íŒŒì¼ ê°€ì ¸ì˜¤ê¸°
+     * ÆÄÀÏ °¡Á®¿À±â
      */
     private static final int GET_FILE = 6;
 
     @Override
     /**
-     * ì´ë²¤íŠ¸ ë©”ì‹œì§€ ì²˜ë¦¬ ë©”ì†Œë“œ
+     * ÀÌº¥Æ® ¸Ş½ÃÁö Ã³¸® ¸Ş¼Òµå
      */
     public void onAction(int what, Object obj) {
         switch (what) {
-            case SET_ADDED_IST:// í˜ì–´ë§ëœ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸
+            case SET_ADDED_IST:// Æä¾î¸µµÈ ±â±â ¸®½ºÆ®
                 mHandler.sendMessage(mHandler.obtainMessage(SET_ADDED_IST, obj));
                 break;
-            case SEARCH_DEVICES_LIST:// ì£¼ë³€ ê¸°ê¸° ë¦¬ìŠ¤íŠ¸ ì¶”ê°€
+            case SEARCH_DEVICES_LIST:// ÁÖº¯ ±â±â ¸®½ºÆ® Ãß°¡
                 mHandler.sendMessage(mHandler.obtainMessage(SEARCH_DEVICES_LIST, obj));
                 break;
-            case COMPLE_SEARCH_DEVICES://ì™„ë£Œ
+            case COMPLE_SEARCH_DEVICES://¿Ï·á
                 mHandler.sendMessage(mHandler.obtainMessage(COMPLE_SEARCH_DEVICES, obj));
                 break;
-            case BLUETOOTH_OFF://ë¸”ë£¨íˆ¬ìŠ¤ OFF
+            case BLUETOOTH_OFF://ºí·çÅõ½º OFF
                 mHandler.sendEmptyMessage(BLUETOOTH_OFF);
                 break;
-            case BLUETOOTH_ON://ë¸”ë£¨íˆ¬ìŠ¤ ON
+            case BLUETOOTH_ON://ºí·çÅõ½º ON
                 mHandler.sendEmptyMessage(BLUETOOTH_ON);
                 break;
         }
@@ -372,11 +421,26 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
     public void onReceiveAction(int what, Object obj) {
         switch (what) {
             case RECEIVE_ERROR:
-                System.out.println("@@ ë¸”ë£¨íˆ¬ìŠ¤ ë°ì´íƒ€ ì „ì†¡ ê²°ê³¼ Not Okay: " + (String) obj);
+                System.out.println("@@ ºí·çÅõ½º µ¥ÀÌÅ¸ Àü¼Û °á°ú Not Okay: " + (String) obj);
                 break;
 
-            case RECEIVE_MESSAGE:
-                System.out.println("@@ ë¸”ë£¨íˆ¬ìŠ¤ ë°ì´íƒ€ ì „ì†¡ ê²°ê³¼ ì˜¤ì¼€ì´");
+            case RECEIVE_OK:
+                byte[] readBuf = (byte[]) obj;
+                System.out.println("@@ ºí·çÅõ½º µ¥ÀÌÅ¸ Àü¼Û °á°ú ¿ÀÄÉÀÌ");
+                break;
+
+            case SEND_USER:
+                System.out.println("@@ ºí·çÅõ½º µ¥ÀÌÅ¸ Àü¼ÛÀº Çß¾î¿ä");
+                if (mBluetoothConnectedTask != null) {
+                    if (mBluetoothConnectedTask.getInputStream()) {
+                        mBluetoothConnectedTask.execute();
+                    }else{
+                        mHandler.sendMessage(mHandler.obtainMessage(1000,"mBluetoothConnectedTask inputStream is Null"));
+                    }
+                } else {
+                    mHandler.sendMessage(mHandler.obtainMessage(1000,"mBluetoothConnectedTask is Null"));
+                }
+                mHandler.sendMessage(mHandler.obtainMessage(1000,"mBluetoothConnectedTask Àü¼Û¹ŞÀ½ "));
                 break;
         }
     }

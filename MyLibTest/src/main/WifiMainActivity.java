@@ -96,6 +96,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
      */
     private WifiMonitor mWifiMonitor;
 
+
     @Override
     /***
      * 액티비티 생성 메소드
