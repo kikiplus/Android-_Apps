@@ -105,7 +105,7 @@ public class BluetoothConnectedTask extends AsyncTask<Void, Void, Void> {
             outputStream.write(buffer);
             System.out.println("@@@ BluetoothConnectedTask write mOutStream 3: " + outputStream);
             // Share the sent message back to the UI Activity
-            mBlListener.onReceiveAction(mBlListener.SEND_USER, "전송완료");
+            mBlListener.onReceiveAction(mBlListener.SEND_OK, "전송완료");
         } catch (IOException e) {
             System.out.println("@@@ BluetoothConnectedTask write IOException");
         }
