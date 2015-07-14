@@ -12,51 +12,51 @@ import java.util.UUID;
  * @author grapegirl
  * @version 1.0
  * @Class Name : BluetoothServerConnectTask
- * @Description : ºí·çÅõ½º ±â±â µî·Ï Çã¿ë Å¬·¡½º(Server)
+ * @Description : ë¸”ë£¨íˆ¬ìŠ¤ ê¸°ê¸° ë“±ë¡ í—ˆìš© í´ë˜ìŠ¤(Server)
  * @since 2015-06-26.
  */
 public class BluetoothConnectTask extends AsyncTask<Void, Void, Void> {
 
     /**
-     * ¼ÒÄÏ
+     * ì†Œì¼“
      */
     private final BluetoothSocket mSocket;
 
     /**
-     * ±â±â
+     * ê¸°ê¸°
      */
     private final BluetoothDevice mDevice;
 
     private BluetoothAdapter mBluetoothAdapter;
 
     /**
-     * ¿¬°áÇÏ·Á´Â ±â±â UUID
+     * ì—°ê²°í•˜ë ¤ëŠ” ê¸°ê¸° UUID
      */
     private static final UUID SERVER_UUID = UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66");
 
     /**
-     * »ı¼ºÀÚ
-     * @param device ºí·çÅõ½º µğ¹ÙÀÌ½º
-     * @param bluetoothAdapter ¾îµªÅÍ
+     * ìƒì„±ì
+     * @param device ë¸”ë£¨íˆ¬ìŠ¤ ë””ë°”ì´ìŠ¤
+     * @param bluetoothAdapter ì–´ëí„°
      */
     public BluetoothConnectTask(BluetoothDevice device, BluetoothAdapter bluetoothAdapter) {
-        System.out.println("@@@ BluetoothConnectTask »ı¼ºÀÚ " );
+        System.out.println("@@@ BluetoothConnectTask ìƒì„±ì " );
         BluetoothSocket tmp = null;
         mDevice = device;
         mBluetoothAdapter = bluetoothAdapter;
         try {
-            // MY_UUID is the app¡¯s UUID string, also used by the server code
+            // MY_UUID is the appâ€™s UUID string, also used by the server code
             tmp = device.createInsecureRfcommSocketToServiceRecord(SERVER_UUID);
         } catch (IOException e) {
-            System.out.println("@@@ BluetoothConnectTask »ı¼ºÀÚ IOException");
+            System.out.println("@@@ BluetoothConnectTask ìƒì„±ì IOException");
         }
         mSocket = tmp;
-        System.out.println("@@@ BluetoothConnectTask »ı¼ºÀÚ ³¡" );
+        System.out.println("@@@ BluetoothConnectTask ìƒì„±ì ë" );
     }
 
     @Override
     protected Void doInBackground(Void... params) {
-        System.out.println("@@@ BluetoothConnectTask doInBackground ½ÃÀÛ");
+        System.out.println("@@@ BluetoothConnectTask doInBackground ì‹œì‘");
         mBluetoothAdapter.cancelDiscovery();
         try{
             mSocket.connect();
@@ -70,13 +70,13 @@ public class BluetoothConnectTask extends AsyncTask<Void, Void, Void> {
                 return null;
             }
         }
-        System.out.println("@@@ BluetoothConnectTask doInBackground ³¡" );
+        System.out.println("@@@ BluetoothConnectTask doInBackground ë" );
         return null;
     }
 
 
     /**
-     * ¼­¹ö ¼ÒÄÏ close ¸Ş¼Òµå
+     * ì„œë²„ ì†Œì¼“ close ë©”ì†Œë“œ
      */
     public void cancle(){
         try{
@@ -87,8 +87,8 @@ public class BluetoothConnectTask extends AsyncTask<Void, Void, Void> {
     }
 
     /**
-     * ¼ÒÄÏ ¹İÈ¯ ¸Ş¼Òµå
-     * @return ¼ÒÄÏ
+     * ì†Œì¼“ ë°˜í™˜ ë©”ì†Œë“œ
+     * @return ì†Œì¼“
      */
     public BluetoothSocket getSocket(){
         return mSocket;

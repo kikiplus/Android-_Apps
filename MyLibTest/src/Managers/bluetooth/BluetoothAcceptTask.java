@@ -15,18 +15,18 @@ import Interface.IBLConnectLinstener;
  * @author grapegirl
  * @version 1.0
  * @Class Name : BluetoothConnectTask
- * @Description : ºí·çÅõ½º ±â±â µî·Ï ¿äÃ» ¼ö¶ô Å¬·¡½º
+ * @Description : ë¸”ë£¨íˆ¬ìŠ¤ ê¸°ê¸° ë“±ë¡ ìš”ì²­ ìˆ˜ë½ í´ë˜ìŠ¤
  * @since 2015-06-26.
  */
 public class BluetoothAcceptTask extends AsyncTask<Void, Void, Void> {
 
     /**
-     * ¼­¹ö¼ÒÄÏ
+     * ì„œë²„ì†Œì¼“
      */
     private final BluetoothServerSocket mServerSocket;
 
     /**
-     * ÀÌ¸§
+     * ì´ë¦„
      */
     private static final String SERVER_NAME = "BluetoothChat";
 
@@ -36,17 +36,17 @@ public class BluetoothAcceptTask extends AsyncTask<Void, Void, Void> {
     private static final UUID SERVER_UUID = UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66");
 
     /**
-     * ºí·çÅõ½º Åë½Å ÀÌº¥Æ® ¸®½º³Ê
+     * ë¸”ë£¨íˆ¬ìŠ¤ í†µì‹  ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ
      */
     private IBLConnectLinstener mBlListener = null;
 
 
     /**
-     * ºí·çÅõ½º ¿¬°á Task
+     * ë¸”ë£¨íˆ¬ìŠ¤ ì—°ê²° Task
      */
     private BluetoothConnectedTask mConnectedThread;
     /**
-     * »óÅÂ
+     * ìƒíƒœ
      */
     private int mState = -1;
 
@@ -56,76 +56,76 @@ public class BluetoothAcceptTask extends AsyncTask<Void, Void, Void> {
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
 
     /**
-     * »ı¼ºÀÚ
+     * ìƒì„±ì
      *
      * @param bluetoothAdapter
      * @param mBlConnectionListener
      */
     public BluetoothAcceptTask(BluetoothAdapter bluetoothAdapter, IBLConnectLinstener mBlConnectionListener) {
-        System.out.println("@@@ BluetoothAcceptTask »ı¼ºÀÚ ");
+        System.out.println("@@@ BluetoothAcceptTask ìƒì„±ì ");
         mBlListener = mBlConnectionListener;
         BluetoothServerSocket serverSocket = null;
         try {
             serverSocket = bluetoothAdapter.listenUsingRfcommWithServiceRecord(SERVER_NAME, SERVER_UUID);
         } catch (IOException e) {
-            System.out.println("@@ BluetoothAcceptTask »ı¼ºÀÚ IOException");
+            System.out.println("@@ BluetoothAcceptTask ìƒì„±ì IOException");
         }
         mServerSocket = serverSocket;
         mState = STATE_NONE;
-        System.out.println("@@@ BluetoothAcceptTask »ı¼ºÀÚ ³¡");
+        System.out.println("@@@ BluetoothAcceptTask ìƒì„±ì ë");
     }
 
     @Override
     protected Void doInBackground(Void... params) {
-        System.out.println("@@@ BluetoothAcceptTask doInBackground ½ÃÀÛ ");
+        System.out.println("@@@ BluetoothAcceptTask doInBackground ì‹œì‘ ");
         BluetoothSocket socket = null;
 
         // Listen to the server socket if we're not connected
-        while (mState != STATE_CONNECTED) {
+//        while (mState != STATE_CONNECTED) {
             try {
                 // This is a blocking call and will only return on a
                 // successful connection or an exception
                 socket = mServerSocket.accept();
             } catch (IOException e) {
                 System.out.println("@@@ BluetoothAcceptTask doInBackground  IOException");
-                break;
+//                break;
             }
 
             // If a connection was accepted
-            if (socket != null) {
-                switch (mState) {
-                    case STATE_LISTEN:
-                    case STATE_CONNECTING:
-                        // Situation normal. Start the connected thread.
+//            if (socket != null) {
+//                switch (mState) {
+//                    case STATE_LISTEN:
+//                    case STATE_CONNECTING:
+//                        // Situation normal. Start the connected thread.
                         connected(socket, socket.getRemoteDevice());
-                        break;
-                    case STATE_NONE:
-                    case STATE_CONNECTED:
-                        // Either not ready or already connected. Terminate new socket.
-                        try {
-                            socket.close();
-                        } catch (IOException e) {
-                            System.out.println("@@@ BluetoothAcceptTask doInBackground  IOException 2");
-                        }
-                        break;
-                }
-            }
-        }
-        System.out.println("@@@ BluetoothAcceptTask doInBackground ³¡ ");
+//                        break;
+//                    case STATE_NONE:
+//                    case STATE_CONNECTED:
+//                        // Either not ready or already connected. Terminate new socket.
+//                        try {
+//                            socket.close();
+//                        } catch (IOException e) {
+//                            System.out.println("@@@ BluetoothAcceptTask doInBackground  IOException 2");
+//                        }
+//                        break;
+//                }
+//            }
+//        }
+        System.out.println("@@@ BluetoothAcceptTask doInBackground ë ");
         return null;
     }
 
 
     private void connected(BluetoothSocket socket, BluetoothDevice
             device) {
-
         mConnectedThread = new BluetoothConnectedTask(socket, mBlListener);
         mState = STATE_CONNECTED;
+
     }
 
 
     /**
-     * Å¬¶óÀÌ¾ğÆ® ¼ÒÄÏ close ¸Ş¼Òµå
+     * í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ close ë©”ì†Œë“œ
      */
     public void cancle() {
         try {
@@ -136,8 +136,8 @@ public class BluetoothAcceptTask extends AsyncTask<Void, Void, Void> {
     }
 
     /**
-     * »óÅÂ º¯°æ ¸Ş¼Òµå
-     * @param sts »óÅÂ
+     * ìƒíƒœ ë³€ê²½ ë©”ì†Œë“œ
+     * @param sts ìƒíƒœ
      */
     public void setStats(int sts){
         mState = sts;

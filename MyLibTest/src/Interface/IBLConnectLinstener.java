@@ -21,8 +21,13 @@ public interface IBLConnectLinstener {
     public final int RECEIVE_OK = 0;
 
     /**
-     * 리시브 전송중
+     *  전송 성공
      */
-    public final int SEND_USER = 1;
+    public final int SEND_OK = 1;
+
+    /**
+     * 에러
+     */
+    public final int MESSAGE_ERROR = 2;
 
 }

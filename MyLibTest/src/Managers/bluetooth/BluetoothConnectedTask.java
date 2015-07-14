@@ -1,5 +1,6 @@
 package Managers.bluetooth;
 
+import android.accounts.OnAccountsUpdateListener;
 import android.bluetooth.BluetoothSocket;
 import android.os.AsyncTask;
 
@@ -13,40 +14,40 @@ import Interface.IBLConnectLinstener;
  * @author grapegirl
  * @version 1.0
  * @Class Name : BluetoothConnectTask
- * @Description : ºí·çÅõ½º ±â±â µî·Ï ¿äÃ» ¼ö¶ô Å¬·¡½º
+ * @Description : ë¸”ë£¨íˆ¬ìŠ¤ ê¸°ê¸° ë“±ë¡ ìš”ì²­ ìˆ˜ë½ í´ë˜ìŠ¤
  * @since 2015-06-26.
  */
 public class BluetoothConnectedTask extends AsyncTask<Void, Void, Void> {
 
     /**
-     * ¼ÒÄÏ
+     * ì†Œì¼“
      */
     private final BluetoothSocket mSocket;
 
     /**
-     * ºí·çÅõ½º Åë½Å ÀÌº¥Æ® ¸®½º³Ê
+     * ë¸”ë£¨íˆ¬ìŠ¤ í†µì‹  ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ
      */
     private IBLConnectLinstener mBlListener = null;
 
     /**
-     * ºí·çÅõ½º ÀÎÇ²½ºÆ®¸²
+     * ë¸”ë£¨íˆ¬ìŠ¤ ì¸í’‹ìŠ¤íŠ¸ë¦¼
      */
     private final InputStream mInStream;
 
     /**
-     * ºí·çÅõ½º ¾Æ¿ôÇ² ½ºÆ®¸²
+     * ë¸”ë£¨íˆ¬ìŠ¤ ì•„ì›ƒí’‹ ìŠ¤íŠ¸ë¦¼
      */
     private final OutputStream mOutStream;
 
 
     /**
-     * »ı¼ºÀÚ
+     * ìƒì„±ì
      *
      * @param bluetoothSocket
      * @param mBlConnectionListener
      */
     public BluetoothConnectedTask(BluetoothSocket bluetoothSocket, IBLConnectLinstener mBlConnectionListener) {
-        System.out.println("@@@ BluetoothConnectedTask »ı¼ºÀÚ ");
+        System.out.println("@@@ BluetoothConnectedTask ìƒì„±ì ");
         mSocket = bluetoothSocket;
         mBlListener = mBlConnectionListener;
 
@@ -56,16 +57,16 @@ public class BluetoothConnectedTask extends AsyncTask<Void, Void, Void> {
             inputStream = bluetoothSocket.getInputStream();
             outputStream = bluetoothSocket.getOutputStream();
         } catch (IOException e) {
-            System.out.println("@@ BluetoothConnectedTask »ı¼ºÀÚ IOException");
+            System.out.println("@@ BluetoothConnectedTask ìƒì„±ì IOException");
         }
         mInStream = inputStream;
         mOutStream = outputStream;
-        System.out.println("@@@ BluetoothConnectedTask »ı¼ºÀÚ ³¡");
+        System.out.println("@@@ BluetoothConnectedTask ìƒì„±ì ë");
     }
 
     @Override
     protected Void doInBackground(Void... params) {
-        System.out.println("@@@ BluetoothConnectedTask doInBackground ½ÃÀÛ");
+        System.out.println("@@@ BluetoothConnectedTask doInBackground ì‹œì‘");
         byte[] buffer = new byte[1024];
         int bytes;
 
@@ -76,50 +77,57 @@ public class BluetoothConnectedTask extends AsyncTask<Void, Void, Void> {
                 bytes = mInStream.read(buffer);
 
                 // Send the obtained bytes to the UI Activity
-                mBlListener.onReceiveAction(mBlListener.RECEIVE_OK, bytes);
             } catch (IOException e) {
                 System.out.println("@@@ BluetoothConnectedTask doInBackground IOException");
                 break;
             }
         }
-        System.out.println("@@@ BluetoothConnectedTask doInBackground ³¡");
+        mBlListener.onReceiveAction(mBlListener.RECEIVE_OK, null);
+        System.out.println("@@@ BluetoothConnectedTask doInBackground ë");
         return null;
     }
 
 
     /**
-     * ¿¬°áµÈ ½ºÆ®¸²À¸·Î ¾²±â
+     * ì—°ê²°ëœ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ì“°ê¸°
      */
     public void write(byte[] buffer) {
+        OutputStream outputStream;
         try {
+            outputStream = mSocket.getOutputStream();
             System.out.println("@@@ BluetoothConnectedTask write buffer : " + buffer);
-            System.out.println("@@@ BluetoothConnectedTask write mOutStream : " + mOutStream);
-            mOutStream.write(buffer);
+            System.out.println("@@@ BluetoothConnectedTask write mOutStream : " + outputStream);
 
+            buffer[buffer.length-1] = 0;
+            System.out.println("@@@ BluetoothConnectedTask write buffer 2: " + buffer.length);
+
+
+            outputStream.write(buffer);
+            System.out.println("@@@ BluetoothConnectedTask write mOutStream 3: " + outputStream);
             // Share the sent message back to the UI Activity
-            mBlListener.onReceiveAction(mBlListener.SEND_USER, buffer);
+            mBlListener.onReceiveAction(mBlListener.SEND_USER, "ì „ì†¡ì™„ë£Œ");
         } catch (IOException e) {
             System.out.println("@@@ BluetoothConnectedTask write IOException");
         }
     }
 
     /**
-     * ¾Æ¿ôÇ²½ºÆ®¸² Á¸Àç ¿©ºÎ ¹İÈ¯
-     * @return »óÅÂ°ª
+     * ì•„ì›ƒí’‹ìŠ¤íŠ¸ë¦¼ ì¡´ì¬ ì—¬ë¶€ ë°˜í™˜
+     * @return ìƒíƒœê°’
      */
     public  boolean getOutputStream(){
         return mOutStream != null ? true : false;
     }
 
     /**
-     * ÀÎÇ²½ºÆ®¸² Á¸Àç ¿©ºÎ ¹İÈ¯
-     * @return »óÅÂ°ª
+     * ì¸í’‹ìŠ¤íŠ¸ë¦¼ ì¡´ì¬ ì—¬ë¶€ ë°˜í™˜
+     * @return ìƒíƒœê°’
      */
     public boolean getInputStream(){
         return mInStream != null ? true : false;
     }
     /**
-     * Å¬¶óÀÌ¾ğÆ® ¼ÒÄÏ close ¸Ş¼Òµå
+     * í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ close ë©”ì†Œë“œ
      */
     public void cancle() {
         try {
