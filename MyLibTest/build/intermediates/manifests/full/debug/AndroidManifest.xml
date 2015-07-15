@@ -38,17 +38,6 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
 
-        <!-- 블루투스 테스트 -->
-        <activity
-            android:name="main.BluetoothMainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
         <!-- 가로모드 테스트 -->
         <!-- <activity -->
         <!-- android:name="main.TransModeTestActivity" -->
@@ -146,15 +135,15 @@
 
 
         <!-- 카드뷰 -->
-        <!-- <activity -->
-        <!-- android:name="main.CardViewActivity" -->
-        <!-- android:label="@string/app_name"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN"/> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
+        <activity
+            android:name="main.CardViewActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- 리사이클러뷰 -->
         <!-- <activity -->
@@ -181,6 +170,18 @@
         <!-- WIFi 리스트 및 접속 -->
         <!-- <activity -->
         <!-- android:name="main.WifiMainActivity" -->
+        <!-- > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 블루투스 테스트 -->
+        <!-- <activity -->
+        <!-- android:name="main.BluetoothMainActivity" -->
+        <!-- android:label="@string/app_name" -->
         <!-- > -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN"/> -->

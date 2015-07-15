@@ -5,8 +5,10 @@ package Managers;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 
 import java.io.ByteArrayOutputStream;
 
@@ -59,5 +61,17 @@ public class ImageManager {
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
         byte[] byteArray = stream.toByteArray();
         return byteArray;
+    }
+
+    /**
+     * 뷰로부터 비트맵 이미지를 생성하여 반환하는 메소드
+     * @param  view 뷰
+     * @return 비트맵 이미지
+     */
+    public Bitmap getBitmapFromView(View view){
+        Bitmap bitmap = Bitmap.createBitmap( view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888 );
+        Canvas canvas = new Canvas( bitmap );
+        view.draw( canvas );
+        return bitmap;
     }
 }
