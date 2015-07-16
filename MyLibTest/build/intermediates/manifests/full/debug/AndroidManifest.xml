@@ -144,6 +144,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="main.CardSubViewActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
 
         <!-- 리사이클러뷰 -->
         <!-- <activity -->

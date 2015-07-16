@@ -109,6 +109,14 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:137:17
 	android:name
 		ADDED from AndroidManifest.xml:137:27
+activity#main.CardSubViewActivity
+ADDED from AndroidManifest.xml:141:9
+	android:label
+		ADDED from AndroidManifest.xml:144:13
+	android:theme
+		ADDED from AndroidManifest.xml:143:13
+	android:name
+		ADDED from AndroidManifest.xml:142:13
 activity#android.support.v7.widget.TestActivity
 ADDED from com.android.support:recyclerview-v7:21.0.3:18:9
 	android:label

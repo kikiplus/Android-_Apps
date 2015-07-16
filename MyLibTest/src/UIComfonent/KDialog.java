@@ -1,13 +1,12 @@
-/**
- * 
- */
 package UIComfonent;
 
-import android.R;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
+import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+
+import Event.OnPopupEventListener;
 
 /***
  * 
@@ -17,29 +16,64 @@ import android.content.DialogInterface;
  * @author grapegirl
  * @version 1.0
  */
-public class KDialog implements android.content.DialogInterface.OnClickListener {
+public abstract class KDialog implements View.OnClickListener {
 
-	/** 다이얼로그 빌드 */
-	private AlertDialog.Builder mDialog = null;
+	/** 다이얼로그 */
+	private Dialog mDialog = null;
 
-	/** 버튼 */
-	private int[] mButtons;
+	/** 컨텍스트 */
+	protected Context mContext = null;
+
+	/** 다이얼로그 뷰*/
+	protected View mDialogView = null;
+
+	/** 다이얼로그 버튼리스너 */
+	protected OnPopupEventListener mPopupEventListener = null;
 
 	/**
-	 * 생성자
+	 * 생성자 - 다이얼로그 생성
+	 * @param context
+	 * @param title
+	 * @param contentView
 	 */
-	public KDialog(Context context, String title, String message) {
-		mDialog = new Builder(context);
-		mDialog.setTitle(title);
-		mDialog.setMessage(message);
-
-		mDialog.setPositiveButton(R.string.ok, (android.content.DialogInterface.OnClickListener) this);
-		mDialog.setNegativeButton(R.string.cancel, (android.content.DialogInterface.OnClickListener) this);
-
-		mDialog.show();
+	public KDialog(Context context, String title, int contentView, OnPopupEventListener  popupEventListener) {
+		mContext = context;
+		mPopupEventListener = popupEventListener;
+		mDialog = new Dialog(mContext);
+		mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//뷰 생성
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService
+				(Context.LAYOUT_INFLATER_SERVICE);
+		mDialogView = inflater.inflate(contentView, null);
+		mDialog.setContentView(mDialogView);
+		initDialog();
 	}
 
-	@Override
-	public void onClick(DialogInterface dialog, int which) {
+	/**
+	 * 다이얼로그 초기화 메소드
+	 */
+	protected abstract void initDialog();
+
+	/**
+	 * 다이얼로그 해제 메소드
+	 */
+	protected abstract void destroyDialog();
+	/**
+	 * 다이얼로그 열기
+	 */
+	public void showDialog(){
+		if(mDialog != null){
+			mDialog.show();
+		}
+	}
+
+	/**
+	 * 다이얼로그 닫기
+	 */
+	public void closeDialog(){
+		if(mDialog != null){
+			destroyDialog();
+			mDialog.dismiss();
+		}
 	}
 }
