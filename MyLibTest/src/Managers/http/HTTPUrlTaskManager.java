@@ -6,6 +6,8 @@ package Managers.http;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.apache.http.NameValuePair;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,6 +18,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 import Interface.IHttpReceive;
 
@@ -80,6 +83,8 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
             httpURLConnection.setDoInput(true);
             httpURLConnection.setUseCaches(false);
             httpURLConnection.setDefaultUseCaches(false);
+
+
 
             if(isPost){//Post 방식으로 데이타 전달시
                 OutputStream outputStream = httpURLConnection.getOutputStream();
