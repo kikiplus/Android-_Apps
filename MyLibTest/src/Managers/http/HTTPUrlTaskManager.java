@@ -84,8 +84,6 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
             httpURLConnection.setUseCaches(false);
             httpURLConnection.setDefaultUseCaches(false);
 
-
-
             if(isPost){//Post 방식으로 데이타 전달시
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 if(params != null){

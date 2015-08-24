@@ -62,6 +62,7 @@
 
 
         <!-- 네비게이션 드로어 테스트 -->
+        <!-- <activity -->
         <!-- android:name="main.NavigationDrawerActivity" -->
         <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
         <!-- <intent-filter> -->
@@ -135,20 +136,23 @@
 
 
         <!-- 카드뷰 -->
-        <activity
-            android:name="main.CardViewActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!-- <activity -->
+        <!-- android:name="main.CardViewActivity" -->
+        <!-- android:label="@string/app_name"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="main.CardSubViewActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" >
-        </activity>
+
+        <!-- <activity -->
+        <!-- android:name="main.CardSubViewActivity" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light.Dialog" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- > -->
+        <!-- </activity> -->
+
 
         <!-- 리사이클러뷰 -->
         <!-- <activity -->
@@ -184,15 +188,15 @@
 
 
         <!-- 블루투스 테스트 -->
-        <!-- <activity -->
-        <!-- android:name="main.BluetoothMainActivity" -->
-        <!-- android:label="@string/app_name" -->
-        <!-- > -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN"/> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
+        <activity
+            android:name="main.BluetoothMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="android.support.v7.widget.TestActivity"
             android:label="RecyclerViewTestActivity" />
