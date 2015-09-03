@@ -23,123 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbd78478-072d-4d4c-9c0b-d9b62e93c3c7" name="Default" comment="">
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\Bean\PostData.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\Bean\StationData.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\Bean\WiFiAP$1.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\Bean\WiFiAP.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\Managers\DBManager.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\main\AlramActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\main\AlramMainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\classes\debug\main\DBHandlerActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\dex-cache\cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\dex\debug\classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\classes-95117817e1bfa40140cf8c9b0e6860ea0e6a575f.jar" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\classes-a2878c6f8c63f83d32cad4f4d98d380d898ceffc.jar" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-613369a76e81e60267a7c217d196ae9648d69fb8.jar" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-13754cdffccbccdd833468915e5c1dd010ef1d95.jar" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\outputs\apk\MyLibTest-debug-unaligned.apk" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\build\outputs\apk\MyLibTest-debug.apk" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Bean\Book.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Bean\PostData.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Bean\StationData.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Bean\ViewItem.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Bean\WiFiAP.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Event\OnBluetoothEventListener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Event\OnButtonSelectedListener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Event\OnListItemSelectedListener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Event\OnPopupEventListener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\IBLConnectLinstener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\IHttpReceive.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\INetException.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\IServerResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\IWiFiScanLinstener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Interface\IWiFiStatusListener.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\DBManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\FileControlMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\FileMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\ImageManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\SMSSendManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\WifiMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\WifiMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetooth\BluetoothAcceptTask.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetooth\BluetoothConnectTask.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetooth\BluetoothConnectedTask.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetooth\BluetoothDataManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\http\ApacheFileDownloadManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\http\ApacheFileUploadManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\http\HTTPUrlTaskManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\http\HttpUrlFileDownloadManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\http\HttpUrlFileUploadManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\socket\SocketAsynTaskManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\socket\SocketManager.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\ArrayListFragement.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\BasicPoup.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\BasicTab.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\BasicTab2.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\BasicTab3.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\EditDialog.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\KDialog.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIComfonent\ProgressBar.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIFrame\DetailFragement.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIFrame\ParentPopup.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\UIFrame\TitleFragement.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\ViewAdapter\ListAdpater.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\ViewAdapter\RecyclerAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\ViewAdapter\ReverseListAdpater.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\ViewAdapter\TabPageAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\ViewAdapter\WifiListAdpater.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\conf\Log.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\AlramActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\AlramMainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\BluetoothMainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\CardSubViewActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\CardViewActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\DBHandlerActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\FileUploadActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\GridLayoutActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\HTTPUrlConnectionActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\JobInfoActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\ListActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\ListFragementTest.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\MainMenuActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\NavigationDrawerActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\NotifivationActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\PopupActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\RecyclerViewActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\SmsTestActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\SocketTestMainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\TabActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\ToolBarActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\TransModeMainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\TutorialActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\main\WifiMainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\receiver\AlramReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="W:\workspace\Git\Android_Apps\MyLibTest\src\service\MyJobService.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/resources/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/AppUtils.java" afterPath="$PROJECT_DIR$/src/Utils/AppUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/MemoryUtils.java" afterPath="$PROJECT_DIR$/src/Utils/MemoryUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/ContextUtils.java" afterPath="$PROJECT_DIR$/src/Utils/ContextUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLibTest.iml" afterPath="$PROJECT_DIR$/MyLibTest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/SortUtils.java" afterPath="$PROJECT_DIR$/src/Utils/SortUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/debug/layout/activity_popup_test.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/layout/activity_popup_test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_popup_test.xml" afterPath="$PROJECT_DIR$/res/layout/activity_popup_test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/debug/menu/menu_main.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/menu/menu_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/res/menu/menu_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/proguard.txt" afterPath="$PROJECT_DIR$/bin/proguard.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/transversemode_main_layout.xml" afterPath="$PROJECT_DIR$/res/layout-land/transversemode_main_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyLibTest.iws" />
@@ -168,46 +58,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IBLConnectLinstener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/IBLConnectLinstener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IHttpReceive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/IHttpReceive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="INetException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/INetException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IServerResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/IServerResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IWiFiScanLinstener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Listener/IWiFiScanLinstener.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -228,41 +78,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnBluetoothEventListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OnBluetoothEventListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Listener/UIEvent/OnBluetoothEventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28423476">
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedPreferenceUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/SharedPreferenceUtils.java">
+      <file leaf-file-name="JAppInfoInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JAppInfoInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1239#1240#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSharedPreferInterface.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JSharedPreferInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25707257">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContextUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/ContextUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnListItemSelectedListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/UIEvent/OnListItemSelectedListener.java">
+      <file leaf-file-name="IScriptReceive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/IScriptReceive.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnPopupEventListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Listener/UIEvent/OnPopupEventListener.java">
+      <file leaf-file-name="JAlertInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JAlertInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JFileAttachInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JFileAttachInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JLoadUrlInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JLoadUrlInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -938,13 +838,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Bean/WiFiAP.java" />
-        <option value="$PROJECT_DIR$/res/layout/listview_wifi_line.xml" />
-        <option value="$PROJECT_DIR$/src/ViewAdapter/wifiListAdpater.java" />
-        <option value="$PROJECT_DIR$/res/layout/listview_line.xml" />
-        <option value="$PROJECT_DIR$/src/ViewAdapter/WifiListAdpater.java" />
-        <option value="$PROJECT_DIR$/res/layout/wifi_dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/UIComfonent/ProgressBar.java" />
         <option value="$PROJECT_DIR$/res/layout/dialog_layout.xml" />
         <option value="$PROJECT_DIR$/src/Event/OnButtonSelectedListener.java" />
@@ -989,6 +882,13 @@
         <option value="$PROJECT_DIR$/src/Listener/Interface/IWiFiStatusListener.java" />
         <option value="$PROJECT_DIR$/src/Listener/Interface/IHttpReceive.java" />
         <option value="$PROJECT_DIR$/src/Listener/UIEvent/OnBluetoothEventListener.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/IScriptReceive.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/JAlertInterface.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/JFileAttachInterface.java" />
+        <option value="$PROJECT_DIR$/src/Utils/ContextUtils.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/JLoadUrlInterface.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/JAppInfoInterface.java" />
+        <option value="$PROJECT_DIR$/src/Listener/JsInterface/JSharedPreferInterface.java" />
       </list>
     </option>
   </component>
@@ -1006,10 +906,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1912" />
+    <option name="y" value="48" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1053,20 +953,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLibTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1085,19 +971,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MyLibTest">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1133,8 +1018,22 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1151,9 +1050,114 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Listener" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Listener" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JsInterface" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyLibTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MyLibTest">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MyLibTest">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MyLibTest">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MyLibTest">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MyLibTest">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1176,18 +1180,18 @@
       <recent name="com.test.mihye" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\Listener" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\res\layout" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetoothchat" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers" />
       <recent name="W:\workspace\Git\Android_Apps\MyLibTest\res\layout-land" />
-      <recent name="W:\workspace\Git\Android_Apps\MyLibTest\src\Managers\bluetooth" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Listener.JsInterface" />
       <recent name="main" />
       <recent name="Managers.bluetooth" />
       <recent name="Interface" />
       <recent name="Event" />
-      <recent name="UIComfonent" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.MyLibTest">
@@ -1456,8 +1460,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="48" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36414254" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1467,25 +1471,25 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.041577823" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32628062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5463183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20824054" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17371938" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24757281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32628062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17371938" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1516,55 +1520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/Activity/WifiMainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66117644">
-          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="369" column="18" selection-start-line="369" selection-start-column="18" selection-end-line="369" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/AsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="533" column="53" selection-start-line="533" selection-start-column="53" selection-end-line="533" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Managers/bluetooth/BluetoothDataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48861283">
-          <caret line="322" column="17" selection-start-line="322" selection-start-column="17" selection-end-line="322" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Managers/bluetooth/BluetoothConnectTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Managers/bluetooth/BluetoothAcceptTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Activity/BluetoothMainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="433" column="24" selection-start-line="433" selection-start-column="24" selection-end-line="433" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Managers/bluetooth/BluetoothConnectedTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9676985">
@@ -1630,14 +1585,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/cardview_main_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.053639848">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/UIComfonent/BasicTab.java">
@@ -1676,14 +1630,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/cardview_sub_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20556414">
           <caret line="7" column="44" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="44" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/UIComfonent/EditDialog.java">
@@ -1705,7 +1658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1713,7 +1665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1721,7 +1672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1729,7 +1679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1737,7 +1686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06126482">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1745,7 +1693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1753,7 +1700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1761,7 +1707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1769,7 +1714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1777,7 +1721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="14" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1803,7 +1746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1819,7 +1761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35146442">
           <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1827,7 +1768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,9 +1845,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Listener/UIEvent/OnBluetoothEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28423476">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/ContextUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JFileAttachInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JAppInfoInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JAlertInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/IScriptReceive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JLoadUrlInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener/JsInterface/JSharedPreferInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25707257">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

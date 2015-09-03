@@ -19,4 +19,8 @@ public class ContextUtils {
      */
     public static final String KEY_PREFER_NAME = "APP_PRF_NAME";
 
+    /**
+     * 프리퍼런스 ( 언어 )
+     */
+    public static final String KEY_LANGAUGE = "KEY_LANGAUGE";
 }
