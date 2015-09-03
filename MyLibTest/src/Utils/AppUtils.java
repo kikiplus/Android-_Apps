@@ -1,12 +1,20 @@
 package Utils;
 
+import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.util.Log;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import Utils.ContextUtils;
 
 /**
  * @author grapegirl
@@ -19,30 +27,28 @@ public class AppUtils {
 
     /**
      * 사용자 정보 출력 메소드
-     *
      * @param context 컨텍스트
      */
-    public static void PrintUserPhoneInfo(Context context) {
+    public static void printUserPhoneInfo(Context context){
         Locale locale = context.getResources().getConfiguration().locale;
         String displayCountry = locale.getDisplayCountry();
         String country = locale.getCountry();
         String launage = locale.getLanguage();
 
-        System.out.println("displayCountry => " + displayCountry);
-        System.out.println("County => " + country);
-        System.out.println("launage => " + launage);
+        Log.d(ContextUtils.LOG, "displayCountry => " + displayCountry);
+        Log.d(ContextUtils.LOG, "County => " + country);
+        Log.d(ContextUtils.LOG, "launage => " + launage);
     }
 
     /**
      * 현재 사용자에 설정된 언어 가져오기
-     *
      * @param context 컨텍스트
      * @return 언어 정보
      */
-    public static String getUserPhoneLanuage(Context context) {
+    public static String getUserPhoneLanuage(Context context){
         Locale locale = context.getResources().getConfiguration().locale;
         String launage = locale.getLanguage();
-        return launage;
+        return  launage;
     }
 
     /***
@@ -79,6 +85,18 @@ public class AppUtils {
     }
 
     /**
+     * 언어 설정 메소드
+     * @param context 컨텍스트
+     * @param locale 국가
+     */
+    public static void setLocale(Context context, Locale locale){
+        Locale.setDefault(locale);
+
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
+    }
+    /**
      * 현재 사용자에 설정된 시간정보 가져오기
      * @return 시간 정보
      */
@@ -92,5 +110,59 @@ public class AppUtils {
         df.setTimeZone(timeZone);
 
         return  df.format(date);
+    }
+
+
+    /**
+     * 서비스가 실행중인지 반환하는 메소드
+     * @param context 컨텍스트
+     * @param serviceName 서비스명
+     * @return 실행중이면 true, 아니면 false
+     */
+    public static boolean getRunningService(Context context, String serviceName){
+        ActivityManager manager = (ActivityManager) context.getSystemService(Activity.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceName.equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 앱 버전 코드 반환 메소드
+     * @param context 컨텍스트
+     * @return 앱 버전(int형) 예외상황 -1값 반환
+     *
+     */
+    public static int getVersionCode(Context context){
+        PackageManager packageManager = context.getPackageManager();
+        String pkgName = context.getPackageName();
+        int versionCode;
+        try{
+            PackageInfo packageInfo = (PackageInfo)packageManager.getPackageInfo(pkgName, 0);
+            versionCode =  packageInfo.versionCode;
+        }catch(PackageManager.NameNotFoundException e){
+            versionCode = -1;
+        }
+        return  versionCode;
+    }
+
+    /**
+     * 앱 버전 네임 반환 메소드
+     * @param context 컨텍스트
+     * @return 앱 버전 네임(string형) 예외상황 null 반환
+     */
+    public static String getVersionName(Context context){
+        PackageManager packageManager = context.getPackageManager();
+        String pkgName = context.getPackageName();
+        String versionName;
+        try{
+            PackageInfo packageInfo = (PackageInfo)packageManager.getPackageInfo(pkgName, 0);
+            versionName =  packageInfo.versionName;
+        }catch(PackageManager.NameNotFoundException e){
+            versionName = null;
+        }
+        return  versionName;
     }
 }

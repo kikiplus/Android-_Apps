@@ -18,10 +18,10 @@ public class MemoryUtils {
      * @param context 컨텍스트
      */
     public static void printMemory(Context context){
-        Log.d(conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
-        Log.d(conf.Log.LOG_NAME, context.getClass()+ "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
-        Log.d(conf.Log.LOG_NAME, context.getClass()+ "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
-        Log.d(conf.Log.LOG_NAME, context.getClass()+ "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
-        Log.d(conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
+        Log.d(Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
+        Log.d(Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
+        Log.d(Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
+        Log.d(Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
+        Log.d(Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
     }
 }

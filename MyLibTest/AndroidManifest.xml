@@ -43,7 +43,7 @@
 
         <!-- 가로모드 테스트 -->
         <!--<activity-->
-        <!--android:name="main.TransModeTestActivity"-->
+        <!--android:name="view.main.TransModeTestActivity"-->
         <!--android:screenOrientation="landscape"-->
         <!--android:theme="@android:style/Theme.Holo.Light">-->
         <!--<intent-filter>-->
@@ -54,7 +54,7 @@
 
         <!-- 리스트 프래그먼트 테스트 -->
         <!--<activity-->
-        <!--android:name="main.ListFragementTest"-->
+        <!--android:name="view.main.ListFragementTest"-->
         <!--android:theme="@android:style/Theme.Holo">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -63,7 +63,7 @@
         <!--</activity>-->
 
         <!-- 네비게이션 드로어 테스트-->
-        <!--android:name="main.NavigationDrawerActivity"-->
+        <!--android:name="view.main.NavigationDrawerActivity"-->
         <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN" />-->
@@ -72,36 +72,36 @@
         <!--</activity>-->
 
         <!-- 알람 매니저 테스트-->
-        <!--<activity android:name="main.AlramMainActivity">-->
+        <!--<activity android:name="view.main.AlramMainActivity">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN" />-->
         <!--<category android:name="android.intent.category.LAUNCHER" />-->
         <!--</intent-filter>-->
         <!--</activity>-->
-        <!--<activity android:name="main.AlramActivity">-->
+        <!--<activity android:name="view.main.AlramActivity">-->
         <!--<intent-filter>-->
-        <!--<action android:name="com.kiki.mihye.main.alram" />-->
+        <!--<action android:name="com.kiki.mihye.view.main.alram" />-->
         <!--<category android:name="android.intent.category.DEFAULT" />-->
         <!--</intent-filter>-->
         <!--</activity>-->
 
         <!-- 브로드캐스트 리시버로 알람 수신 받기 -->
-        <!--<receiver android:name="receiver.AlramReceiver"></receiver>-->
+        <!--<Logic.receiver android:name="Logic.receiver.AlramReceiver"></Logic.receiver>-->
 
         <!-- JobInfo 클래스 및 job Service 실행-->
-        <!--<activity android:name="main.JobInfoActivity">-->
+        <!--<activity android:name="view.main.JobInfoActivity">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
         <!--<category android:name="android.intent.category.LAUNCHER"/>-->
         <!--</intent-filter>-->
         <!--</activity>-->
-        <!--<service-->
-        <!--android:name="service.MyJobService"-->
+        <!--<Logic.service-->
+        <!--android:name="Logic.service.MyJobService"-->
         <!--android:exported="true"-->
         <!--android:permission="android.permission.BIND_JOB_SERVICE"/>-->
 
         <!-- 튜토리얼 테스트 -->
-        <!--<activity android:name="main.TutorialActivity"-->
+        <!--<activity android:name="view.main.TutorialActivity"-->
         <!--android:label="@string/tutorial_app_name">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -110,7 +110,7 @@
         <!--</activity>-->
 
         <!-- HTTP 통신(post,get)방식 -->
-        <!--<activity android:name="main.HTTPUrlConnectionActivity"-->
+        <!--<activity android:name="view.main.HTTPUrlConnectionActivity"-->
         <!--android:label="@string/app_name">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -120,7 +120,7 @@
 
         <!-- 파일 전송 -->
         <!--<activity-->
-        <!--android:name="main.FileUploadActivity"-->
+        <!--android:name="view.main.FileUploadActivity"-->
         <!--android:label="@string/app_name">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -130,7 +130,7 @@
 
         <!-- 카드뷰 -->
         <activity
-            android:name="main.CardViewActivity"
+            android:name="View.Activity.CardViewActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -139,7 +139,7 @@
         </activity>
 
         <activity
-            android:name="main.CardSubViewActivity"
+            android:name="View.Activity.CardSubViewActivity"
             android:theme="@android:style/Theme.Holo.Light.Dialog"
             android:label="@string/app_name"
             >
@@ -147,7 +147,7 @@
 
         <!-- 리사이클러뷰 -->
         <!--<activity-->
-        <!--android:name="main.RecyclerViewActivity"-->
+        <!--android:name="view.main.RecyclerViewActivity"-->
         <!--android:label="@string/app_name">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -157,7 +157,7 @@
 
         <!-- 노티피케이션 -->
         <!--<activity-->
-        <!--android:name="main.NotifivationActivity"-->
+        <!--android:name="view.main.NotifivationActivity"-->
         <!--android:label="@string/app_name">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -167,7 +167,7 @@
 
         <!-- WIFi 리스트 및 접속-->
         <!--<activity-->
-        <!--android:name="main.WifiMainActivity"-->
+        <!--android:name="view.main.WifiMainActivity"-->
         <!-->-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -177,7 +177,7 @@
 
         <!-- 블루투스 테스트-->
         <!--<activity-->
-        <!--android:name="main.BluetoothMainActivity"-->
+        <!--android:name="view.main.BluetoothMainActivity"-->
         <!--android:label="@string/app_name"-->
         <!-->-->
         <!--<intent-filter>-->

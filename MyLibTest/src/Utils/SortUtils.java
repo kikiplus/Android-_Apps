@@ -3,7 +3,7 @@ package Utils;
 import java.text.Collator;
 import java.util.Comparator;
 
-import Bean.PostData;
+import View.Bean.PostData;
 
 /***
  * @Class Name : SortUtils
