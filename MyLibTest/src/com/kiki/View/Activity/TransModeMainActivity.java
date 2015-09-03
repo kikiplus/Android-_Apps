@@ -1,0 +1,22 @@
+package com.kiki.View.Activity;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.kiki.View.R;
+
+/**
+ * @author grapegirl
+ * @version 1.0
+ * @Class Name :TransModeTest
+ * @Description : 가로모드 테스트
+ * @since 2015-06-28.
+ */
+public class TransModeMainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.transversemode_main_layout);
+    }
+}
