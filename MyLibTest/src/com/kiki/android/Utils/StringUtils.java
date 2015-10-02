@@ -3,8 +3,12 @@
  */
 package com.kiki.android.Utils;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -63,5 +67,63 @@ public class StringUtils {
 		}
 		System.out.println("@@ getHTTPPostSendData :  " + sb.toString());
 		return sb.toString();
+	}
+
+	/***
+	 * 버전정보 비교 메소드
+	 *
+	 * @param srcVersion 버전
+	 * @param newVersion 서버에서 내려오는 버전
+	 * @return 버전 비교값(0이면 같음, 1이면 서버에서 내려오는 버전이 크다, -1이면 서버에서 이전버전이 내려옴)
+	 */
+	public static final int compareVersion(String srcVersion, String newVersion) {
+		Integer[] arrSrc = getIntegrArrayFromStringArray(srcVersion.split("\\."));
+		Integer[] arrNew = getIntegrArrayFromStringArray(newVersion.split("\\."));
+
+		if (arrSrc.length != arrNew.length) {
+			return 1;
+		}
+
+		for (int i = 0, n = arrSrc.length; i < n; i++) {
+			if (arrNew[i] > arrSrc[i]) {
+				return 1;
+			} else if (arrNew[i] < arrSrc[i]) {
+				return -1;
+			}
+		}
+		return 0;
+
+	}
+
+	/***
+	 * String 배열을 integer 배열로 변환 메소드
+	 *
+	 * @param arr 변환할 String 배열
+	 * @return 변환된 integer 배열
+	 * @throws NumberFormatException
+	 */
+	public static final Integer[] getIntegrArrayFromStringArray(String[] arr) throws NumberFormatException {
+		List<Integer> list = new ArrayList<Integer>();
+		for (String str : arr) {
+			list.add(Integer.parseInt(str));
+		}
+		return list.toArray(new Integer[list.size()]);
+	}
+
+
+	public static final String STRING_TIME_PATTERN = "yyyy-MM-dd";
+	public static final String STRING_DATETIME_PATTERN = "HH";
+
+	/**
+	 * 현재시간 패턴으로 가져오기
+	 *
+	 * @param pettern 패턴
+	 * @param time    현지시간 long
+	 * @return 현재시간
+	 */
+	public static String getTime(String pettern, String time) {
+		long ltime = Long.parseLong(time);
+		SimpleDateFormat format = new SimpleDateFormat(pettern);
+		return format.format(new Date(ltime));
 	}
 }
