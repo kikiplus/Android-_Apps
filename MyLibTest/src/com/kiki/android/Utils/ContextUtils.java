@@ -10,9 +10,10 @@ package com.kiki.android.Utils;
 public class ContextUtils {
 
     /**
-     *  프로젝트 로그
+     * 운영 배포시 false
+     * 개발 로그 true시 보임
      */
-    public static final String LOG = "ITW";
+    public static boolean VIEW_LOG = true;
 
     /**
      * 프리퍼런스 이름
