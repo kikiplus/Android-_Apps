@@ -1,9 +1,9 @@
 package com.kiki.android.Utils;
 
 /***
- * @author 컨버전스스퀘어
+ * @author grapegirl
  * @version 1.0
- * @Class Name : CSLog.java
+ * @Class Name : KLog.java
  * @Description : Log 클래스
  * @since 2015.10.07
  */
