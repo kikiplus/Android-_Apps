@@ -102,7 +102,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wifi_main_layout);
+        //setContentView(R.layout.wifi_main_layout);
 
         //와이파이 모니터 객체 생성 및 리시버 등록
         mWifiMonitor = new WifiMonitor(this);
@@ -112,10 +112,10 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
         receiverFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mWifiMonitor, receiverFilter);
 
-        mListView = (ListView) findViewById(R.id.wifi_main_listview);
+        //mListView = (ListView) findViewById(R.id.wifi_main_listview);
         registerForContextMenu(mListView);
-        mButton = (Button) findViewById(R.id.wifi_main_button);
-        mButton.setOnClickListener(this);
+       // mButton = (Button) findViewById(R.id.wifi_main_button);
+       // mButton.setOnClickListener(this);
 
         mHandler = new Handler(this);
         mWifiMgr = new WifiMgr(getApplicationContext(), this);
@@ -129,10 +129,10 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         System.out.println("@@ view id : " + v.getId());
         super.onCreateContextMenu(menu, v, menuInfo);
-        if (v.getId() == R.id.wifi_main_listview) {
-            menu.add(0, CONNECT_AP, Menu.NONE, "AP 연결");
-            menu.add(0, DISCONNET_AP, Menu.NONE, "AP 해제");
-        }
+//        if (v.getId() == R.id.wifi_main_listview) {
+//            menu.add(0, CONNECT_AP, Menu.NONE, "AP 연결");
+//            menu.add(0, DISCONNET_AP, Menu.NONE, "AP 해제");
+//        }
     }
 
     @Override
@@ -209,8 +209,8 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
         switch (msg.what) {
             case 0:// wifi 결과 표시
                 Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + " handleMessage ");
-                mListAdpater = new WifiListAdpater(this, R.layout.listview_wifi_line, mWifitData);
-                mListView.setAdapter(mListAdpater);
+               // mListAdpater = new WifiListAdpater(this, R.layout.listview_wifi_line, mWifitData);
+               // mListView.setAdapter(mListAdpater);
                 break;
             case 1://비밀번호 입력완료시 접속
                 String password = (String) msg.obj;

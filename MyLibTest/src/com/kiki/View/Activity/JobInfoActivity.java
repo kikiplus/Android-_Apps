@@ -26,7 +26,7 @@ public class JobInfoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jobinfo_main_layout);
+        //setContentView(R.layout.jobinfo_main_layout);
 
         if(Build.VERSION.SDK_INT > 21 ){
             Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + " @@ JobInfo 실행 ");

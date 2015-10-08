@@ -31,7 +31,7 @@ import java.util.TimeZone;
  * @Description : 앱 관련 유틸 클래스
  * @since 2015-08-03.
  */
-public class    AppUtils {
+public class AppUtils {
 
     /**
      * 사용자 정보 출력 메소드
@@ -43,10 +43,6 @@ public class    AppUtils {
         String displayCountry = locale.getDisplayCountry();
         String country = locale.getCountry();
         String launage = locale.getLanguage();
-
-        Log.d(ContextUtils.LOG, "displayCountry => " + displayCountry);
-        Log.d(ContextUtils.LOG, "County => " + country);
-        Log.d(ContextUtils.LOG, "launage => " + launage);
     }
 
     /**
@@ -293,10 +289,31 @@ public class    AppUtils {
      *
      * @return 사용자 단말기 전화번호
      */
-    public static String getUserPhoneNumber(Context context)
-    {
+    public static String getUserPhoneNumber(Context context) {
         TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         String telPhoneNo = telephony.getLine1Number();
         return telPhoneNo;
+    }
+
+    /**
+     * 사용자 Device ID 반환 메소드
+     *
+     * @return 사용자 Device ID
+     */
+    public static String getUserDeviceID(Context context) {
+        TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String deviceId = telephony.getDeviceId();
+        return deviceId;
+    }
+
+    /**
+     * 사용자 전화국 통신사 정보 반환 메소드
+     *
+     * @return 사용자 단말 통신사
+     */
+    public static String getUserPhoneNetworkOperationName(Context context) {
+        TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String value = telephony.getNetworkOperatorName();
+        return value;
     }
 }

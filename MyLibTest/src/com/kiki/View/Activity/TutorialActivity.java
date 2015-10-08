@@ -46,19 +46,19 @@ public class TutorialActivity extends Activity implements View.OnTouchListener {
     /**
      * 라디오 아이템
      */
-    private int[] mCheckBox = {R.id.tutorial_main_checkbox1, R.id.tutorial_main_checkbox2, R.id.tutorial_main_checkbox3, R.id.tutorial_main_checkbox4, R.id.tutorial_main_checkbox5};
+//    private int[] mCheckBox = {R.id.tutorial_main_checkbox1, R.id.tutorial_main_checkbox2, R.id.tutorial_main_checkbox3, R.id.tutorial_main_checkbox4, R.id.tutorial_main_checkbox5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tutorial_main_layout);
+//        setContentView(R.layout.tutorial_main_layout);
 
-        MemoryUtils.printMemory(this);
-        mViewFlipper = (ViewFlipper) findViewById(R.id.tutorial_main_viewFlipper);
-        mViewFlipper.setOnTouchListener(this);
-        mCurrentPage = 0;
-        mMacPage = 5;
-        setViewImgData();
+//        MemoryUtils.printMemory(this);
+//        mViewFlipper = (ViewFlipper) findViewById(R.id.tutorial_main_viewFlipper);
+//        mViewFlipper.setOnTouchListener(this);
+//        mCurrentPage = 0;
+//        mMacPage = 5;
+//        setViewImgData();
     }
 
     @Override
@@ -93,8 +93,8 @@ public class TutorialActivity extends Activity implements View.OnTouchListener {
     private void MoveNextView() {
         if (mCurrentPage + 1 < mMacPage) {
             mCurrentPage++;
-            mViewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.apper_from_right));
-            mViewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disapper_from_left));
+//            mViewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.apper_from_right));
+//            mViewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disapper_from_left));
             mViewFlipper.showNext();
             setPageCheck();
         }
@@ -106,8 +106,8 @@ public class TutorialActivity extends Activity implements View.OnTouchListener {
     private void MovePreviousView() {
         if (mCurrentPage - 1 >= 0) {
             mCurrentPage--;
-            mViewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.apper_from_left));
-            mViewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disapper_from_right));
+//            mViewFlipper.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.apper_from_left));
+//            mViewFlipper.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disapper_from_right));
             mViewFlipper.showPrevious();
             setPageCheck();
         }
@@ -118,12 +118,12 @@ public class TutorialActivity extends Activity implements View.OnTouchListener {
      */
     private void setPageCheck(){
         for(int i=0; i<mMacPage; i++){
-            CheckBox checkBox = (CheckBox)findViewById(mCheckBox[i]);
-            if(i == mCurrentPage){
-                checkBox.setChecked(true);
-            }else{
-                checkBox.setChecked(false);
-            }
+//            CheckBox checkBox = (CheckBox)findViewById(mCheckBox[i]);
+//            if(i == mCurrentPage){
+//                checkBox.setChecked(true);
+//            }else{
+//                checkBox.setChecked(false);
+//            }
         }
     }
     /**

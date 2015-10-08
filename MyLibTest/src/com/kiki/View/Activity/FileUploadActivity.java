@@ -85,18 +85,18 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.fileupload_main_layout);
-        // 버튼 초기화
-        mSendBtn = (Button) findViewById(R.id.fileupload_main_sendButton);
-        mCametraBtn = (Button) findViewById(R.id.fileupload_main_cametraButton);
-        mDownLoadBtn = (Button) findViewById(R.id.fileupload_main_downloadButton);
-        mSendBtn.setOnClickListener(this);
-        mCametraBtn.setOnClickListener(this);
-        mDownLoadBtn.setOnClickListener(this);
-
-        //이미지뷰, 텍스트뷰 초기화
-        mImageView = (ImageView) findViewById(R.id.fileupload_main_imagview);
-        mTextView = (TextView) findViewById(R.id.fileupload_main_textview);
+//        setContentView(R.layout.fileupload_main_layout);
+//        // 버튼 초기화
+//        mSendBtn = (Button) findViewById(R.id.fileupload_main_sendButton);
+//        mCametraBtn = (Button) findViewById(R.id.fileupload_main_cametraButton);
+//        mDownLoadBtn = (Button) findViewById(R.id.fileupload_main_downloadButton);
+//        mSendBtn.setOnClickListener(this);
+//        mCametraBtn.setOnClickListener(this);
+//        mDownLoadBtn.setOnClickListener(this);
+//
+//        //이미지뷰, 텍스트뷰 초기화
+//        mImageView = (ImageView) findViewById(R.id.fileupload_main_imagview);
+//        mTextView = (TextView) findViewById(R.id.fileupload_main_textview);
 
         //핸들러, 프로그래스바 생성
         mHandler = new Handler(this);
@@ -107,28 +107,28 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             // 전송 버튼
-            case R.id.fileupload_main_sendButton:// 웹 전송 업로드
+        //    case R.id.fileupload_main_sendButton:// 웹 전송 업로드
                 //mProgressDialog.setDataLoadingDialog(true, "파일을 전송하고 있습니다.");
                 //ApacheFileUploadManager fileUploadTaskMangaer = new ApacheFileUploadManager(this);
                 //fileUploadTaskMangaer.execute("url", mBitmap, "test.jpg");
 
                 //HttpUrlFileUploadManager manager = new HttpUrlFileUploadManager(this);
                 //manager.execute("url", mBitmap, "test.jpg");
-                break;
-            case R.id.fileupload_main_cametraButton://사진찍기
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
-                }
-                break;
-            case R.id.fileupload_main_downloadButton: // 다운로드
+             //   break;
+            //case R.id.fileupload_main_cametraButton://사진찍기
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                if (intent.resolveActivity(getPackageManager()) != null) {
+//                    startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+//                }
+//                break;
+          //  case R.id.fileupload_main_downloadButton: // 다운로드
                 //mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
                 //HttpUrlFileDownloadManager fileDownloadManager = new HttpUrlFileDownloadManager(this);
                 //fileDownloadManager.execute("url", "filename.txt");
 
                 //ApacheFileDownloadManager fileDownloadManager = new ApacheFileDownloadManager(this);
                 //fileDownloadManager.execute("url","finame.txt");
-                break;
+                //break;
         }
     }
 

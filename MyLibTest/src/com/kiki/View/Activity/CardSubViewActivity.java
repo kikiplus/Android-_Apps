@@ -18,6 +18,6 @@ public class CardSubViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.cardview_sub_layout);
+        //setContentView(R.layout.cardview_sub_layout);
     }
 }

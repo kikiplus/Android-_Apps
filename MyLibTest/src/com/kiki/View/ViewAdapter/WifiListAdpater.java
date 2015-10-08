@@ -71,16 +71,16 @@ public class WifiListAdpater extends BaseAdapter {
 			LayoutInflater inflater = (LayoutInflater) m_Context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 			view = inflater.inflate( m_Res, null );
 		}
-		((TextView) view.findViewById(R.id.listview_wifi_line_Textview1)).setText(m_ListItem.get(position).toString());
-
-		String capability = m_ListItem.get(position).getCapability();
-		if(capability.contains("WEP")){
-			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("WEP");
-		}else if(capability.contains("WPA")){
-			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("WPA");
-		}else{
-			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("OPEN");
-		}
+//		((TextView) view.findViewById(R.id.listview_wifi_line_Textview1)).setText(m_ListItem.get(position).toString());
+//
+//		String capability = m_ListItem.get(position).getCapability();
+//		if(capability.contains("WEP")){
+//			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("WEP");
+//		}else if(capability.contains("WPA")){
+//			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("WPA");
+//		}else{
+//			((TextView) view.findViewById(R.id.listview_wifi_line_Textview2)).setText("OPEN");
+//		}
 		return view;
 	}
 

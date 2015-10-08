@@ -49,15 +49,15 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.http_main_layout);
-
-        //핸들러 및 프로그래스바 설정
-        mHandler = new Handler(this);
-        mProgressDialog = new ProgressBar(this);
-        // 버튼, 텍스트 뷰 설정
-        mButton = (Button) findViewById(R.id.http_main_button);
-        mButton.setOnClickListener(this);
-        mTextView = (TextView) findViewById(R.id.http_main_textview);
+//        setContentView(R.layout.http_main_layout);
+//
+//        //핸들러 및 프로그래스바 설정
+//        mHandler = new Handler(this);
+//        mProgressDialog = new ProgressBar(this);
+//        // 버튼, 텍스트 뷰 설정
+//        mButton = (Button) findViewById(R.id.http_main_button);
+//        mButton.setOnClickListener(this);
+//        mTextView = (TextView) findViewById(R.id.http_main_textview);
 
     }
 

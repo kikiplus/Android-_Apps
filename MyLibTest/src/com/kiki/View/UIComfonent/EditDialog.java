@@ -54,26 +54,26 @@ public class EditDialog {
         //뷰 생성
         LayoutInflater inflater = (LayoutInflater) context.getSystemService
                 (Context.LAYOUT_INFLATER_SERVICE);
-        final View innerView = inflater.inflate(R.layout.dialog_layout, null);
-        mDialog.setView(innerView);
-
-        //확인 버튼 선택시
-        mDialog.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int which) {
-                EditText editText = (EditText)innerView.findViewById(R.id.dialog_layout_edittext);
-                mEditString = editText.getText().toString();
-                mButtonListener.onButtonItemSelected(OnButtonSelectedListener.BUTTON_OK, mEditString);
-            }
-        });
-
-        //취소 버튼 선택시
-        mDialog.setNegativeButton(R.string.dialog_cancle, new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int which) {
-                mButtonListener.onButtonItemSelected(OnButtonSelectedListener.BUTTON_CANCLE, null);
-            }
-        });
+//        final View innerView = inflater.inflate(R.layout.dialog_layout, null);
+//        mDialog.setView(innerView);
+//
+//        //확인 버튼 선택시
+//        mDialog.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+//
+//            public void onClick(DialogInterface dialog, int which) {
+//                EditText editText = (EditText)innerView.findViewById(R.id.dialog_layout_edittext);
+//                mEditString = editText.getText().toString();
+//                mButtonListener.onButtonItemSelected(OnButtonSelectedListener.BUTTON_OK, mEditString);
+//            }
+//        });
+//
+//        //취소 버튼 선택시
+//        mDialog.setNegativeButton(R.string.dialog_cancle, new DialogInterface.OnClickListener() {
+//
+//            public void onClick(DialogInterface dialog, int which) {
+//                mButtonListener.onButtonItemSelected(OnButtonSelectedListener.BUTTON_CANCLE, null);
+//            }
+//        });
     }
 
     /***

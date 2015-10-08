@@ -24,17 +24,17 @@ public class RecyclerViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler_main_layout);
+        //setContentView(R.layout.recycler_main_layout);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_main_recyclerview);
-
-        RecyclerAdapter adapter = new RecyclerAdapter(this,createListItem(), R.layout.recycer_item_layout);
-        recyclerView.setAdapter(adapter);
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_main_recyclerview);
+//
+//        RecyclerAdapter adapter = new RecyclerAdapter(this,createListItem(), R.layout.recycer_item_layout);
+//        recyclerView.setAdapter(adapter);
 
         //리니어 레이아웃
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
+       // recyclerView.setLayoutManager(layoutManager);
 
         //그리드 레이아웃
         //GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
@@ -45,7 +45,7 @@ public class RecyclerViewActivity extends Activity {
         //layoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
         //recyclerView.setLayoutManager(layoutManager);
 
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        //recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
     private List<ViewItem> createListItem() {

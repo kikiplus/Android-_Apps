@@ -8,6 +8,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
 
 import com.kiki.android.Utils.ContextUtils;
+import com.kiki.android.Utils.KLog;
 import com.kiki.android.Utils.SharedPreferenceUtils;
 
 /***
@@ -32,18 +33,17 @@ public class SafetyRegistrationService extends IntentService {
 			synchronized ( TAG ) {
 				InstanceID instanceID = InstanceID.getInstance( this );
 				String token = instanceID.getToken( ContextUtils.KEY_PROJECT_ID, GoogleCloudMessaging.INSTANCE_ID_SCOPE, null );
-				Log.d(ContextUtils.LOG, "@@ SafetyRegistrationService token : " + token);
+				KLog.d(this.getClass().getSimpleName(), "@@ SafetyRegistrationService token : " + token);
 				SharedPreferenceUtils.write(this, ContextUtils.KEY_GCM_REGID, token);
 			}
 		} catch ( Exception e ) {
-			Log.d(ContextUtils.LOG, "SafetyRegistrationService 발급 Exception");
+			KLog.d(this.getClass().getSimpleName(), "SafetyRegistrationService 발급 Exception");
 		}
 	}
 
 	@Override
 	public void onDestroy() {
-//		super.onDestroy();
-		Log.d(ContextUtils.LOG, "SafetyRegistrationService onDestroy");
+		KLog.d(this.getClass().getSimpleName(), "SafetyRegistrationService onDestroy");
 	}
 
 	

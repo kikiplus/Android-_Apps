@@ -20,18 +20,18 @@ public class CardViewActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cardview_main_layout);
+        //setContentView(R.layout.cardview_main_layout);
 
-        Button button = (Button) findViewById(R.id.cardview_main_button);
-        button.setOnClickListener(this);
+        //Button button = (Button) findViewById(R.id.cardview_main_button);
+        //button.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.cardview_main_button:
-                Intent intent = new Intent(this, CardSubViewActivity.class);
-                startActivity(intent);
+           // case R.id.cardview_main_button:
+            //    Intent intent = new Intent(this, CardSubViewActivity.class);
+            //    startActivity(intent);
 //                KDialog kDialog = new KDialog(this, "테스트", R.layout.cardview_sub_layout) {
 //                    @Override
 //                    public void onClick(com.kiki.android.com.kiki.View v) {
@@ -49,7 +49,7 @@ public class CardViewActivity extends Activity implements View.OnClickListener{
 //                    }
 //                };
 //                kDialog.showDialog();
-                break;
+              //  break;
 
         }
     }

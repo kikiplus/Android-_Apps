@@ -76,8 +76,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
          */
         public ViewHoler(View itemView) {
             super(itemView);
-            imgageView = (ImageView)itemView.findViewById(R.id.recycler_item_imageview);
-            textView = (TextView)itemView.findViewById(R.id.recycler_item_textview);
+//            imgageView = (ImageView)itemView.findViewById(R.id.recycler_item_imageview);
+//            textView = (TextView)itemView.findViewById(R.id.recycler_item_textview);
         }
     }
 

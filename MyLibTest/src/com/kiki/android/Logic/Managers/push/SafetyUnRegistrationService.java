@@ -7,6 +7,7 @@ import android.util.Log;
 import com.google.android.gms.iid.InstanceID;
 
 import com.kiki.android.Utils.ContextUtils;
+import com.kiki.android.Utils.KLog;
 import com.kiki.android.Utils.SharedPreferenceUtils;
 
 /***
@@ -31,17 +32,17 @@ public class SafetyUnRegistrationService extends IntentService {
             synchronized (TAG) {
                 InstanceID instanceID = InstanceID.getInstance(this);
                 InstanceID.getInstance(this).deleteInstanceID();
-                Log.d(ContextUtils.LOG, "@@ SafetyUnRegistrationService token 해지 ");
+                KLog.d(this.getClass().getSimpleName(), "@@ SafetyUnRegistrationService token 해지 ");
                 SharedPreferenceUtils.write(this, ContextUtils.KEY_PROJECT_ID, null);
             }
         } catch (Exception e) {
-            Log.d(ContextUtils.LOG, "SafetyUnRegistrationService 해지 Exception");
+            KLog.d(this.getClass().getSimpleName(), "SafetyUnRegistrationService 해지 Exception");
         }
     }
 
     @Override
     public void onDestroy() {
 //		super.onDestroy();
-        Log.d(ContextUtils.LOG, "SafetyUnRegistrationService onDestroy");
+        KLog.d(this.getClass().getSimpleName(), "SafetyUnRegistrationService onDestroy");
     }
 }
