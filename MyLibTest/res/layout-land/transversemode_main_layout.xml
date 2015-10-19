@@ -3,7 +3,7 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="horizontal"
-    tool:context="com.kiki.android.com.kiki.View.Activity.Test.TransModeMainActivity">
+    tool:context="com.kiki.android.com.kiki.View.Activity.Activity.TransModeMainActivity">
 
     <fragment
         android:id="@+id/transversemode_titles"

@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestB;
 
 import android.app.Activity;
 import android.content.Context;

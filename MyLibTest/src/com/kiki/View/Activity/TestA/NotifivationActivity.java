@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 import android.view.View;
-
-import com.kiki.View.R;
 
 /**
  * @author grapegirl

@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,14 +6,12 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kiki.View.R;
 import com.kiki.View.UIComfonent.ProgressBar;
 import com.kiki.android.Listener.IHttpReceive;
 

@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-import com.kiki.View.R;
 import com.kiki.View.UIComfonent.ProgressBar;
 import com.kiki.android.Listener.IHttpReceive;
 import com.kiki.android.Logic.Managers.http.HttpUrlTaskManager;

@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="com.kikiplus.mylibtest.com.kiki.android.com.kiki.View.Activity.Test.ToolBarActivity">
+      tools:context="com.kikiplus.mylibtest.com.kiki.android.com.kiki.View.Activity.Activity.ToolBarActivity">
 
     <item
         android:id="@+id/menu_item1"

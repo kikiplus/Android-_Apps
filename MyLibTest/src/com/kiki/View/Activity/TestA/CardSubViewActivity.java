@@ -1,10 +1,8 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
-
-import com.kiki.View.R;
 
 /**
  * @author grapegirl

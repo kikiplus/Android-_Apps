@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.app.job.JobInfo;
@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.kiki.View.R;
 import com.kiki.android.Logic.service.MyJobService;
 
 /**

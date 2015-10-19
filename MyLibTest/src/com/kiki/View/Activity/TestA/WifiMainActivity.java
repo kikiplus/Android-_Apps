@@ -1,4 +1,4 @@
-package com.kiki.View.Activity.Test;
+package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
 import android.content.IntentFilter;
@@ -10,7 +10,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.ContextMenu;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,7 +18,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.kiki.View.Bean.WiFiAP;
-import com.kiki.View.R;
 import com.kiki.View.UIComfonent.EditDialog;
 import com.kiki.View.UIComfonent.ProgressBar;
 import com.kiki.View.ViewAdapter.WifiListAdpater;

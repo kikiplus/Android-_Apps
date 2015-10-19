@@ -21,7 +21,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/transmode_app_name">
         <activity
-            android:name="com.kiki.View.Activity.Test.TransModeMainActivity"
+            android:name="com.kiki.View.Activity.Activity.TransModeMainActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Holo.Light">
             <intent-filter>
