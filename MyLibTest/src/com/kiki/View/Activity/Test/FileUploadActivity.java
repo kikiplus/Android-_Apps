@@ -1,4 +1,4 @@
-package com.kiki.View.Activity;
+package com.kiki.View.Activity.Test;
 
 import android.app.Activity;
 import android.content.Intent;

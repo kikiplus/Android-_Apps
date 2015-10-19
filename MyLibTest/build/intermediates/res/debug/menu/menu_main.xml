@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="com.kikiplus.mylibtest.com.kiki.android.com.kiki.View.Activity.ToolBarActivity">
+      tools:context="com.kikiplus.mylibtest.com.kiki.android.com.kiki.View.Activity.Test.ToolBarActivity">
 
     <item
         android:id="@+id/menu_item1"
@@ -24,4 +24,4 @@
         android:title="@string/menu_item5" />
 
 </menu>
-<!-- From: file:/W:/workspace/Git/Android_Apps/MyLibTest/res/menu/menu_main.xml -->
+<!-- From: file:/D:/workspace/Android_Apps/MyLibTest/res/menu/menu_main.xml -->

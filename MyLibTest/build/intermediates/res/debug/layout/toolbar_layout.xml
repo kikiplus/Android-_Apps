@@ -16,4 +16,4 @@
         android:layout_below="@+id/toolbar_layout_toolbar"
         android:text="@string/hello_world" />
 </RelativeLayout>
-<!-- From: file:/W:/workspace/Git/Android_Apps/MyLibTest/res/layout/toolbar_layout.xml -->
+<!-- From: file:/D:/workspace/Android_Apps/MyLibTest/res/layout/toolbar_layout.xml -->

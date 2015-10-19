@@ -1,4 +1,4 @@
-package com.kiki.View.Activity;
+package com.kiki.View.Activity.Test;
 
 import android.content.res.Configuration;
 import android.graphics.Color;

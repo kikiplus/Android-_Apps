@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kiki.android.com.kiki.View.Activity.PopupActivity" >
+    tools:context="com.kiki.android.com.kiki.View.Activity.Test.PopupActivity" >
 
     <TextView
         android:id="@+id/textView1"
@@ -23,4 +23,4 @@
         android:layout_marginTop="35dp"
         android:text="Button" />
 
-</RelativeLayout><!-- From: file:/W:/workspace/Git/Android_Apps/MyLibTest/res/layout/activity_popup_test.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/Android_Apps/MyLibTest/res/layout/activity_popup_test.xml -->

@@ -1,4 +1,4 @@
-package com.kiki.View.Activity;
+package com.kiki.View.Activity.Test;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
