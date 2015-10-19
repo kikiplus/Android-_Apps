@@ -7,22 +7,8 @@
 //import android.os.Handler;
 //import android.os.Message;
 //
-//import com.congnavi.utils.AppUtils;
-//import com.congnavi.utils.CSLog;
-//import com.congnavi.utils.ConstUtils;
-//import com.congnavi.utils.sqlite.SQLQuery;
-//import com.facebook.AccessToken;
-//import com.facebook.CallbackManager;
-//import com.facebook.FacebookCallback;
-//import com.facebook.FacebookException;
-//import com.facebook.FacebookSdk;
-//import com.facebook.GraphRequest;
-//import com.facebook.GraphResponse;
-//import com.facebook.login.LoginManager;
-//import com.facebook.login.LoginResult;
-//import com.itw.android.activity.MainActivity;
-//import com.itw.android.data.Login;
-//import com.itw.android.data.SettingData;
+//import com.kiki.View.Bean.Login;
+//import com.kiki.android.Utils.KLog;
 //
 //import org.json.JSONObject;
 //
@@ -77,7 +63,7 @@
 //                    @Override
 //                    public void onCompleted(JSONObject object, GraphResponse response) {
 //                        try {
-//                            CSLog.d(this.getClass().getSimpleName(), object.toString());
+//                            KLog.d(this.getClass().getSimpleName(), object.toString());
 //
 //                            String id = object.getString("id");
 //                            String email = object.getString("email");
@@ -107,7 +93,7 @@
 //                            mHandler.sendEmptyMessage(LOGIN_OK);
 //
 //                        } catch (Exception e) {
-//                            CSLog.d(this.getClass().getSimpleName(), "@@ Exception : " + e.toString());
+//                            KLog.d(this.getClass().getSimpleName(), "@@ Exception : " + e.toString());
 //                            mHandler.sendEmptyMessage(LOGIN_FAIL);
 //                        }
 //                    }
@@ -121,13 +107,13 @@
 //
 //            @Override
 //            public void onCancel() {
-//                CSLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onCancel");
+//                KLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onCancel");
 //                mHandler.sendEmptyMessage(LOGIN_FAIL);
 //            }
 //
 //            @Override
 //            public void onError(FacebookException exception) {
-//                CSLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onError : " + exception.getMessage());
+//                KLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onError : " + exception.getMessage());
 //                mHandler.sendEmptyMessage(LOGIN_FAIL);
 //            }
 //        });
@@ -135,33 +121,33 @@
 //
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        CSLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onActivityResult" + requestCode + "::" + resultCode + "::" + data);
+//        KLog.d(this.getClass().getSimpleName(), "@@ FacebookLoginActivity onActivityResult" + requestCode + "::" + resultCode + "::" + data);
 //        super.onActivityResult(requestCode, resultCode, data);
 //        mCallbackManager.onActivityResult(requestCode, resultCode, data);
 //    }
 //
 //    @Override
 //    public boolean handleMessage(Message message) {
-//        SQLQuery sqlQuery = new SQLQuery();
+////        SQLQuery sqlQuery = new SQLQuery();
 //        switch (message.what) {
 //            case LOGIN_OK://로그인 성공
-//                mLoginData.setSNS(ConstUtils.KEY_LOGIN_FACEBOOK);
-//                SettingData settingData = sqlQuery.getUserSetting(this);
-//                mLoginData.setPushSetting(settingData.getPushSetting());
-//                mLoginData.setGCMToken(settingData.getGcmToken());
-//                mLoginData.setVersionCode(AppUtils.getVersionCode(this));
-//                mLoginData.setVersionName(AppUtils.getVersionName(this));
-//                mLoginData.setMarketType(ConstUtils.KEY_LOGIN_MARKET_GOOGLE);
-//                mLoginData.setPhone(AppUtils.getUserPhoneNumber(this));
-//                mLoginData.setLocaleCounty(AppUtils.getUserPhoneLanuage(this));
-//                mLoginData.setDeviceID(AppUtils.getUserDeviceID(this));
-//
-//                sqlQuery.deleteUserLogin(mContext);
-//                sqlQuery.insertUserLogin(mContext, mLoginData.getAutoLogin(), mLoginData.getEmail(), mLoginData.getImgUrl(),
-//                        mLoginData.getPhone(), mLoginData.getToken(), mLoginData.getmefreshTokenToken(), mLoginData.getExpiredDate(),
-//                        mLoginData.getUserName(), mLoginData.getNickname(), mLoginData.getSNS());
+////                mLoginData.setSNS(ConstUtils.KEY_LOGIN_FACEBOOK);
+////                SettingData settingData = sqlQuery.getUserSetting(this);
+////                mLoginData.setPushSetting(settingData.getPushSetting());
+////                mLoginData.setGCMToken(settingData.getGcmToken());
+////                mLoginData.setVersionCode(AppUtils.getVersionCode(this));
+////                mLoginData.setVersionName(AppUtils.getVersionName(this));
+////                mLoginData.setMarketType(ConstUtils.KEY_LOGIN_MARKET_GOOGLE);
+////                mLoginData.setPhone(AppUtils.getUserPhoneNumber(this));
+////                mLoginData.setLocaleCounty(AppUtils.getUserPhoneLanuage(this));
+////                mLoginData.setDeviceID(AppUtils.getUserDeviceID(this));
+////
+////                sqlQuery.deleteUserLogin(mContext);
+////                sqlQuery.insertUserLogin(mContext, mLoginData.getAutoLogin(), mLoginData.getEmail(), mLoginData.getImgUrl(),
+////                        mLoginData.getPhone(), mLoginData.getToken(), mLoginData.getmefreshTokenToken(), mLoginData.getExpiredDate(),
+////                        mLoginData.getUserName(), mLoginData.getNickname(), mLoginData.getSNS());
 //                //화면 이동
-//                MainActivity.mWebView.loadUrl("javascript:loginAfter('" + mLoginData.getJsonLoginData() + "')");
+////                MainActivity.mWebView.loadUrl("javascript:loginAfter('" + mLoginData.getJsonLoginData() + "')");
 //                finish();
 //                break;
 //            case LOGIN_FAIL://로그인 실패
@@ -172,9 +158,9 @@
 //                LoginManager loginManager = LoginManager.getInstance();
 //                loginManager.logOut();
 //
-//                sqlQuery.deleteUserLogin(mContext);
+////                sqlQuery.deleteUserLogin(mContext);
 //                //화면 이동
-//                MainActivity.mWebView.loadUrl("javascript:logoutAfter()");
+////                MainActivity.mWebView.loadUrl("javascript:logoutAfter()");
 //                finish();
 //                break;
 //        }

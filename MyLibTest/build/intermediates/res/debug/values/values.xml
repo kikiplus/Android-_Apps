@@ -67,7 +67,7 @@
     <color name="cardview_light_background">#FFFAFAFA</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_colors.xml -->
+    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -252,9 +252,9 @@
     <eat-comment/>
     <integer name="card_flip_time_full">300</integer>
     <integer name="card_flip_time_half">150</integer>
-    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/version.xml -->
+    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/version.xml -->
     <eat-comment/>
-    <integer name="google_play_services_version">7571000</integer>
+    <integer name="google_play_services_version">7895000</integer>
     <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -285,7 +285,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_toggle">Toggle indicator</string>
     <string name="app_name">MHApp</string>
-    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/auth_strings.xml -->
+    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/auth_strings.xml -->
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -301,7 +301,7 @@
     <string name="blutooth_main_support">해당 디바이스는 블루투스를 지원합니다.</string>
     <string name="card_back_description"><![CDATA[Lorem ipsum dolor sit]]></string>
     <string name="card_back_title">Angry Red Android</string>
-    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_strings.xml -->
+    <!-- From: file:/D:/workspace/Android_Apps/MyLibTest/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>

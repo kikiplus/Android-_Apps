@@ -8,25 +8,11 @@
 //import android.os.Message;
 //import android.util.Log;
 //
-//import com.congnavi.android.http.IHttpReceive;
-//import com.congnavi.utils.AppUtils;
-//import com.congnavi.utils.CSLog;
-//import com.congnavi.utils.ConstUtils;
-//import com.congnavi.utils.sqlite.SQLQuery;
-//import com.itw.android.R;
-//import com.itw.android.activity.MainActivity;
-//import com.itw.android.data.Login;
-//import com.itw.android.data.SettingData;
-//import com.kakao.APIErrorResult;
-//import com.kakao.AuthType;
-//import com.kakao.LogoutResponseCallback;
-//import com.kakao.MeResponseCallback;
-//import com.kakao.Session;
-//import com.kakao.SessionCallback;
-//import com.kakao.UserManagement;
-//import com.kakao.UserProfile;
-//import com.kakao.exception.KakaoException;
-//import com.kakao.widget.LoginButton;
+//import com.kiki.View.Bean.Login;
+//import com.kiki.View.R;
+//import com.kiki.android.Listener.IHttpReceive;
+//import com.kiki.android.Utils.KLog;
+//
 //
 ///**
 // * 카카오 로그인 액티비티
@@ -95,7 +81,7 @@
 //        String isValue = intent.getStringExtra("LOGOUT");
 //
 //        if (isValue != null && isValue.equals("Y")) {
-//            CSLog.d(this.getClass().getSimpleName(), "@@ 카카오 액티비티 로그아웃 : " + isValue);
+//            KLog.d(this.getClass().getSimpleName(), "@@ 카카오 액티비티 로그아웃 : " + isValue);
 //            mLoginout = true;
 //            requestLogout();
 //        } else {
@@ -126,7 +112,7 @@
 //     */
 //    public void onSessionOpened() {
 //        // 프로그레스바 종료
-//        CSLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionOpened ");
+//        KLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionOpened ");
 //        // 세션 오픈후 보일 페이지로 이동
 //        requestMe();
 //    }
@@ -136,13 +122,13 @@
 //     * 세션연결 연결 실패시
 //     */
 //    public void onSessionClosed(final KakaoException exception) {
-//        CSLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionClosed ");
+//        KLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionClosed ");
 //        mHandler.sendEmptyMessage(LOGIN_FAIL);
 //    }
 //
 //    @Override
 //    public void onSessionOpening() {
-//        CSLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionOpening ");
+//        KLog.d(this.getClass().getSimpleName(), "@@ KakaoLoginActivity MySessionStatusCallback onSessionOpening ");
 //        //프로그레스바 시작
 //    }
 //
@@ -195,19 +181,19 @@
 //
 //    private void requestLogout() {
 //        Log.d(TAG, "@@ requestLogout ");
-//        CSLog.d(this.getClass().getSimpleName(), "@@ kakao requestLogout call");
+//        KLog.d(this.getClass().getSimpleName(), "@@ kakao requestLogout call");
 //        UserManagement.requestLogout(new LogoutResponseCallback() {
 //            @Override
 //            protected void onSuccess(long userId) {
-//                CSLog.d(this.getClass().getSimpleName(), "@@ kakao logout onSuccess");
+//                KLog.d(this.getClass().getSimpleName(), "@@ kakao logout onSuccess");
 //                mHandler.sendEmptyMessage(LOGOUT);
 //            }
 //
 //            @Override
 //            protected void onFailure(APIErrorResult apiErrorResult) {
-//                CSLog.d(this.getClass().getSimpleName(), "@@ kakao logout onFailure");
-//                CSLog.d(this.getClass().getSimpleName(), "@@ kakao logout Message: " + apiErrorResult.getErrorMessage());
-//                CSLog.d(this.getClass().getSimpleName(), "@@ kakao logout ErrorResult: " + apiErrorResult.toString());
+//                KLog.d(this.getClass().getSimpleName(), "@@ kakao logout onFailure");
+//                KLog.d(this.getClass().getSimpleName(), "@@ kakao logout Message: " + apiErrorResult.getErrorMessage());
+//                KLog.d(this.getClass().getSimpleName(), "@@ kakao logout ErrorResult: " + apiErrorResult.toString());
 //                mHandler.sendEmptyMessage(LOGOUT);
 //            }
 //        });
@@ -215,30 +201,30 @@
 //
 //    @Override
 //    public boolean handleMessage(Message msg) {
-//        SQLQuery sqlQuery = new SQLQuery();
+////        SQLQuery sqlQuery = new SQLQuery();
 //        switch (msg.what) {
 //            case LOGIN_OK:
 //                Log.d(TAG, "@@ 카카오 액티비티 handleMessage OK ");
 //                //프로필 정보 SQLite 업데이트
-//                mLoginData.setSNS(ConstUtils.KEY_LOGIN_KAKAO);
-//                SettingData settingData = sqlQuery.getUserSetting(this);
-//                mLoginData.setPushSetting(settingData.getPushSetting());
-//                mLoginData.setGCMToken(settingData.getGcmToken());
-//                mLoginData.setVersionCode(AppUtils.getVersionCode(this));
-//                mLoginData.setVersionName(AppUtils.getVersionName(this));
-//                mLoginData.setMarketType(ConstUtils.KEY_LOGIN_MARKET_GOOGLE);
-//                mLoginData.setPhone(AppUtils.getUserPhoneNumber(this));
-//                mLoginData.setLocaleCounty(AppUtils.getUserPhoneLanuage(this));
-//                mLoginData.setDeviceID(AppUtils.getUserDeviceID(this));
-//
-//                sqlQuery.deleteUserLogin(mContext);
-//                sqlQuery.insertUserLogin(mContext, mLoginData.getAutoLogin(), mLoginData.getEmail(), mLoginData.getImgUrl(),
-//                        mLoginData.getPhone(), mLoginData.getToken(), mLoginData.getmefreshTokenToken(), mLoginData.getExpiredDate(),
-//                        mLoginData.getUserName(), mLoginData.getNickname(), mLoginData.getSNS());
-//
-//                //화면 이동
-//                MainActivity.mWebView.loadUrl("javascript:loginAfter('" + mLoginData.getJsonLoginData() + "')");
-//                MainActivity.mWebView.resumeTimers();
+////                mLoginData.setSNS(ConstUtils.KEY_LOGIN_KAKAO);
+////                SettingData settingData = sqlQuery.getUserSetting(this);
+////                mLoginData.setPushSetting(settingData.getPushSetting());
+////                mLoginData.setGCMToken(settingData.getGcmToken());
+////                mLoginData.setVersionCode(AppUtils.getVersionCode(this));
+////                mLoginData.setVersionName(AppUtils.getVersionName(this));
+////                mLoginData.setMarketType(ConstUtils.KEY_LOGIN_MARKET_GOOGLE);
+////                mLoginData.setPhone(AppUtils.getUserPhoneNumber(this));
+////                mLoginData.setLocaleCounty(AppUtils.getUserPhoneLanuage(this));
+////                mLoginData.setDeviceID(AppUtils.getUserDeviceID(this));
+////
+////                sqlQuery.deleteUserLogin(mContext);
+////                sqlQuery.insertUserLogin(mContext, mLoginData.getAutoLogin(), mLoginData.getEmail(), mLoginData.getImgUrl(),
+////                        mLoginData.getPhone(), mLoginData.getToken(), mLoginData.getmefreshTokenToken(), mLoginData.getExpiredDate(),
+////                        mLoginData.getUserName(), mLoginData.getNickname(), mLoginData.getSNS());
+////
+////                //화면 이동
+////                MainActivity.mWebView.loadUrl("javascript:loginAfter('" + mLoginData.getJsonLoginData() + "')");
+////                MainActivity.mWebView.resumeTimers();
 //
 ////                Intent intent = new Intent(this, MainActivity.class);
 ////                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -270,8 +256,8 @@
 //                break;
 //            case LOGOUT://로그아웃
 //                Log.d(TAG, "@@ 카카오 액티비티 handleMessage LOGOUT ");
-//                sqlQuery.deleteUserLogin(mContext);
-//                MainActivity.mWebView.loadUrl("javascript:logoutAfter()");
+////                sqlQuery.deleteUserLogin(mContext);
+////                MainActivity.mWebView.loadUrl("javascript:logoutAfter()");
 //                finish();
 //                break;
 //        }
@@ -280,7 +266,7 @@
 //
 //    @Override
 //    public void onHttpReceive(int type, Object obj) {
-//        CSLog.d(this.getClass().getSimpleName(),"@@ receive : " + obj);
+//        KLog.d(this.getClass().getSimpleName(),"@@ receive : " + obj);
 //        switch (type) {
 //            case HTTP_OK:
 //                Log.d(TAG, "@@ 카카오 액티비티 onHttpReceive HTTP OK ");
