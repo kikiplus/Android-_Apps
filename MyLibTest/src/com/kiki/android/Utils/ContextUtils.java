@@ -34,4 +34,11 @@ public class ContextUtils {
      * GCM REGID
      */
     public static final String KEY_GCM_REGID = "KEY_GCM_REGID";
+
+
+    /*
+    * 네이버
+    */
+    public static final String KEY_NAVER_CLIENT_ID = "zv6dWKYeb5_r8wITuW5u";
+    public static final String KEY_NAVER_OAUTH_SECRET = "NPEQblRKdg";
 }

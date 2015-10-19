@@ -58,6 +58,37 @@
             </intent-filter>
         </activity>
 
+        <!-- 소셜 로그인 화면 -->
+        <activity
+            android:name=".Activity.login.NaverLoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!--<activity-->
+            <!--android:name=".activity.login.KakaoLoginActivity"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--<activity-->
+            <!--android:name=".activity.login.FacebookLoginActivity"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--<activity-->
+            <!--android:name=".activity.login.GoogleLoginActivity"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name="com.facebook.FacebookActivity"-->
+            <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--<activity-->
+            <!--android:name=".activity.BeaconPopupActivity"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!-- 소셜 로그인 화면 END -->
+
         <!-- GCM 리비서 -->
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
