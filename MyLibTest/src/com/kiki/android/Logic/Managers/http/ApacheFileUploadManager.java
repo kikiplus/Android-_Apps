@@ -71,21 +71,21 @@ public class ApacheFileUploadManager extends AsyncTask<Object, Void, Void> {
             e.printStackTrace();
         }
         if (response == null) {
-            mHttpReceive.onHttpReceive("HttpResponse Null");
+            mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, "HttpResponse Null");
             return null;
         }
 
         if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
-            mHttpReceive.onHttpReceive("Http Error [ Code : " + response.getStatusLine().getStatusCode() + " ]");
+            mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, "Http Error [ Code : " + response.getStatusLine().getStatusCode() + " ]");
             return null;
         }
 
         HttpEntity resEntity = response.getEntity();
         if (resEntity == null) {
-            mHttpReceive.onHttpReceive("HttpResponse Entity Null");
+            mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, "HttpResponse Entity Null");
             return null;
         }
-        mHttpReceive.onHttpReceive("Upload Success");
+        mHttpReceive.onHttpReceive(mHttpReceive.HTTP_OK, "Upload Success");
         return null;
     }
 

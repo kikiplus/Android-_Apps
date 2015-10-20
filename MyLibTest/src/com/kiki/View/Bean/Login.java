@@ -1,14 +1,12 @@
 package com.kiki.View.Bean;
 
-import com.congnavi.utils.CSLog;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
 
 /***
- * @author mh kim
+ * @author grape girl
  * @version 1.0
  * @Class Name : Login
  * @Description : 로그인정보

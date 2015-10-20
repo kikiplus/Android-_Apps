@@ -105,28 +105,28 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             // 전송 버튼
-        //    case R.id.fileupload_main_sendButton:// 웹 전송 업로드
-                //mProgressDialog.setDataLoadingDialog(true, "파일을 전송하고 있습니다.");
-                //ApacheFileUploadManager fileUploadTaskMangaer = new ApacheFileUploadManager(this);
-                //fileUploadTaskMangaer.execute("url", mBitmap, "test.jpg");
+            //    case R.id.fileupload_main_sendButton:// 웹 전송 업로드
+            //mProgressDialog.setDataLoadingDialog(true, "파일을 전송하고 있습니다.");
+            //ApacheFileUploadManager fileUploadTaskMangaer = new ApacheFileUploadManager(this);
+            //fileUploadTaskMangaer.execute("url", mBitmap, "test.jpg");
 
-                //HttpUrlFileUploadManager manager = new HttpUrlFileUploadManager(this);
-                //manager.execute("url", mBitmap, "test.jpg");
-             //   break;
+            //HttpUrlFileUploadManager manager = new HttpUrlFileUploadManager(this);
+            //manager.execute("url", mBitmap, "test.jpg");
+            //   break;
             //case R.id.fileupload_main_cametraButton://사진찍기
 //                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 //                if (intent.resolveActivity(getPackageManager()) != null) {
 //                    startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
 //                }
 //                break;
-          //  case R.id.fileupload_main_downloadButton: // 다운로드
-                //mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
-                //HttpUrlFileDownloadManager fileDownloadManager = new HttpUrlFileDownloadManager(this);
-                //fileDownloadManager.execute("url", "filename.txt");
+            //  case R.id.fileupload_main_downloadButton: // 다운로드
+            //mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
+            //HttpUrlFileDownloadManager fileDownloadManager = new HttpUrlFileDownloadManager(this);
+            //fileDownloadManager.execute("url", "filename.txt");
 
-                //ApacheFileDownloadManager fileDownloadManager = new ApacheFileDownloadManager(this);
-                //fileDownloadManager.execute("url","finame.txt");
-                //break;
+            //ApacheFileDownloadManager fileDownloadManager = new ApacheFileDownloadManager(this);
+            //fileDownloadManager.execute("url","finame.txt");
+            //break;
         }
     }
 
@@ -159,7 +159,11 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     }
 
     @Override
-    public void onHttpReceive(Object obj) {
-        mHandler.sendMessage(mHandler.obtainMessage(1, obj));
+    public void onHttpReceive(int type, Object obj) {
+        switch (type) {
+            case HTTP_OK:
+                mHandler.sendMessage(mHandler.obtainMessage(1, obj));
+                break;
+        }
     }
 }

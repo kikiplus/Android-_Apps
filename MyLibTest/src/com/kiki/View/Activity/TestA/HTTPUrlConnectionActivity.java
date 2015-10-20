@@ -77,11 +77,17 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
     }
 
 
+
+
     @Override
-    public void onHttpReceive(Object obj) {
-        mProgressDialog.setDataLoadingDialog(false, null);
-        String data = (String) obj;
-        mHandler.sendMessage(mHandler.obtainMessage(0, data));
+    public void onHttpReceive(int type, Object obj) {
+        switch (type){
+            case HTTP_OK:
+                mProgressDialog.setDataLoadingDialog(false, null);
+                String data = (String) obj;
+                mHandler.sendMessage(mHandler.obtainMessage(0, data));
+                break;
+        }
     }
 
     @Override

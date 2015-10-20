@@ -68,9 +68,9 @@ public class HttpUrlFileDownloadManager extends AsyncTask<Object, Void, Void> {
                 output.flush();
                 output.close();
                 input.close();
-                mHttpReceive.onHttpReceive("HttpResponse Download Ok");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_OK, "HttpResponse Download Ok");
             } else {
-                mHttpReceive.onHttpReceive("HttpResponse InputStream null");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, "HttpResponse InputStream null");
             }
             urlConnection.disconnect();
         } catch (IOException e) {

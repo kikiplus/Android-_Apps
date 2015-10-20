@@ -105,19 +105,19 @@ public class HttpUrlFileUploadManager extends AsyncTask<Object, Void, Void> {
             int serverResponseCode = conn.getResponseCode();
             String serverResponseMessage = conn.getResponseMessage();
             if (serverResponseCode == 200) {
-                mIHttpReceive.onHttpReceive(this.getClass() + " @@ OK  " + serverResponseMessage);
+                mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_OK,this.getClass() + " @@ OK  " + serverResponseMessage);
             } else {
-                mIHttpReceive.onHttpReceive(this.getClass() + " @@ Not OK " + serverResponseMessage);
+                mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, this.getClass() + " @@ Not OK " + serverResponseMessage);
             }
             byteArrayInputStream.close();
             dos.flush();
             dos.close();
         } catch (MalformedURLException ex) {
             ex.printStackTrace();
-            mIHttpReceive.onHttpReceive(this.getClass() + " @@ MalformedURLException ");
+            mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL,this.getClass() + " @@ MalformedURLException ");
 
         } catch (Exception e) {
-            mIHttpReceive.onHttpReceive(this.getClass() + " @@ Exception ");
+            mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL,this.getClass() + " @@ Exception ");
         }
         return null;
     }

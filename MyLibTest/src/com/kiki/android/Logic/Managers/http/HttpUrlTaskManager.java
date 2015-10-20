@@ -102,8 +102,9 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
                     data += buffer;
                 }
                 bufferedReader.close();
-                mIHttpReceive.onHttpReceive(data);
+                mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_OK, data);
                 httpURLConnection.disconnect();
+                return null;
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -118,6 +119,7 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "IOException");
         }
+        mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
         return  null;
     }
 

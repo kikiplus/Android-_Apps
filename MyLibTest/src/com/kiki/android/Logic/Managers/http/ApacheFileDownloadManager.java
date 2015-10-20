@@ -64,11 +64,11 @@ public class ApacheFileDownloadManager extends AsyncTask<Object, Void, Void> {
             HttpResponse response = httpClient.execute(httpGet);
             InputStream inputStream = new BufferedInputStream(response.getEntity().getContent());
             if (response == null) {
-                mHttpReceive.onHttpReceive(this.getClass() + " HttpResponse Null");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, this.getClass() + " HttpResponse Null");
                 return null;
             }
             if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
-                mHttpReceive.onHttpReceive(this.getClass() + " Http Error [ Code : " + response.getStatusLine().getStatusCode() + " ]");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_OK, this.getClass() + " Http Error [ Code : " + response.getStatusLine().getStatusCode() + " ]");
                 return null;
             }
 
@@ -91,11 +91,10 @@ public class ApacheFileDownloadManager extends AsyncTask<Object, Void, Void> {
                 output.flush();
                 output.close();
                 inputStream.close();
-                mHttpReceive.onHttpReceive(this.getClass() + " HttpResponse Download Ok");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_OK, this.getClass() + " HttpResponse Download Ok");
             } else {
-                mHttpReceive.onHttpReceive(this.getClass() + " HttpResponse InputStream null");
+                mHttpReceive.onHttpReceive(mHttpReceive.HTTP_FAIL, this.getClass() + " HttpResponse InputStream null");
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
