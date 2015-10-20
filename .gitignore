@@ -3,6 +3,5 @@ MyLibTest/.build/*
 MyLibTest/.gradle/*
 MyLibTest/local.properties
 MyLibTest/.idea/libraries
-*.xml
 
 
