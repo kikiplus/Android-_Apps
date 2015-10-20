@@ -41,4 +41,10 @@ public class ContextUtils {
     */
     public static final String KEY_NAVER_CLIENT_ID = "zv6dWKYeb5_r8wITuW5u";
     public static final String KEY_NAVER_OAUTH_SECRET = "NPEQblRKdg";
+
+    /**
+     * 다음지도 프로젝트
+     */
+    public static final String KEY_DAUM_MAP_KEY = "783e2fdef22927878490302ecfc58a52";
+
 }
