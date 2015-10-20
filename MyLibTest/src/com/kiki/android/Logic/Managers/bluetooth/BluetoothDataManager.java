@@ -93,8 +93,8 @@ public class BluetoothDataManager {
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
-                    short rssi = intent.getShortExtra(BluetoothDevice.EXTRA_RSSI,  Short.MIN_VALUE);
-                    String data = device.getName() + "/" + device.getAddress() + "/" +rssi;
+                    short rssi = intent.getShortExtra(BluetoothDevice.EXTRA_RSSI, Short.MIN_VALUE);
+                    String data = device.getName() + "/" + device.getAddress() + "/" + rssi;
                     //검색 후 주변 디바이스가 리스트에 없는 기기이면 추가
                     if (!checkAddedListItem(data)) {
                         mSearchArrayList.add(data);
@@ -133,9 +133,9 @@ public class BluetoothDataManager {
      * @return 블루투스 어뎁터 상태
      */
     public boolean getBlutoothAdpaterStatus() {
-        if (mBluetoothAdapter != null){
+        if (mBluetoothAdapter != null) {
             return mBluetoothAdapter.isEnabled();
-        }else{
+        } else {
             return false;
         }
 
@@ -323,6 +323,65 @@ public class BluetoothDataManager {
         return mBluetoothAdapter;
     }
 
+    /**
+     * zoyi 에서 사용하는 맥변환 코드
+     * 5gh 대역대의 mac address 를 2.5g 대역대로 변환해주는 소스
+     * <p/>
+     *
+     * @param mac   가공할 맥어드레스(5G)  -   (1) 맥어드레스 +1
+     * @param value 번호
+     *              <p/>
+     *              1) 2.4G WIFI & LAN 맥어드레스
+     *              장비 하단에 쓰여있는 맥어드레스와 동일합니다.
+     *              2) WAN 맥 어드레스
+     *              (1) 맥어드레스 -1
+     *              3) 블루투스 맥 어드레스
+     *              (1) 맥어드레스 +2
+     */
+    public static String changeMacAddress(String mac, int value) {
+        String splitMac = mac.replace(":", "");
+
+        //hex 코드로 변환
+        String hexMac = "";
+        for (int i = 0; i < splitMac.length(); i++) {
+            hexMac += String.format("%02X ", (int) splitMac.charAt(i));
+        }
+
+        //변환된 hex 코드로 , zoyi 룰에 맞게 쪼갠 후 , 합침
+        ArrayList<String> arrChangeMac = new ArrayList<String>();
+        String[] arrMac = hexMac.split(" ");
+        for (int i = 0; i < arrMac.length; i++) {
+            if (i == arrMac.length - 1) {
+                int nLastMac = Integer.valueOf(arrMac[i]);
+                String strLastMacChange;
+                if (value == 1) {
+                    strLastMacChange = Integer.toString(nLastMac - 1);
+                } else if (value == 2) {
+                    strLastMacChange = Integer.toString(nLastMac - 2);
+                } else{
+                    strLastMacChange = Integer.toString(nLastMac + 1);
+                }
+                arrChangeMac.add(strLastMacChange);
+
+            } else {
+                arrChangeMac.add(arrMac[i]);
+            }
+        }
+
+        //변환 후 , 주소를 자료에 담음
+        String finalStrMac = "";
+        for (int k = 0; k < arrChangeMac.size(); k++) {
+            finalStrMac += arrChangeMac.get(k);
+        }
+
+        //담음 hex 코드를 다시 String 으로 변환
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < finalStrMac.length(); i += 2) {
+            str.append((char) Integer.parseInt(finalStrMac.substring(i, i + 2), 16));
+        }
+
+        return str.toString();
+    }
 
 }
 

@@ -1,12 +1,14 @@
 package com.kiki.View.Activity.TestB;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.widget.TextView;
 
 import com.kiki.View.R;
+import com.kiki.android.Logic.Managers.bluetooth.BluetoothDataManager;
 import com.kiki.android.Utils.AppUtils;
 import com.kiki.android.Utils.KLog;
 
@@ -19,15 +21,12 @@ public class TestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_layout);
 
-        String phone = AppUtils.getUserPhoneNumber(this);
+        String wifi_5g = "f4:fd:2b:10:1a:df";
+        String wifi_2_5g = BluetoothDataManager.changeMacAddress(wifi_5g, 1);
 
-        TelephonyManager telephony = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        KLog.d(this.getClass().getSimpleName(), "@@ wifi 5g mac : " + wifi_5g);
+        KLog.d(this.getClass().getSimpleName(), "@@ wifi 2.5g mac : " + wifi_2_5g);
 
-        KLog.d(this.getClass().getSimpleName(), "@@ phone : " + phone);
-        KLog.d(this.getClass().getSimpleName(), "@@ getLine1Number : " + telephony.getLine1Number());
-        KLog.d(this.getClass().getSimpleName(), "@@ getSimOperator : " + telephony.getSimOperator());
-        KLog.d(this.getClass().getSimpleName(), "@@ getSimCountryIso : " + telephony.getSimCountryIso());
-
-                ((TextView) findViewById(R.id.textView1)).setText(AppUtils.getUserPhoneNetworkOperationName(this));
+        ((TextView) findViewById(R.id.textView1)).setText(wifi_2_5g);
     }
 }
