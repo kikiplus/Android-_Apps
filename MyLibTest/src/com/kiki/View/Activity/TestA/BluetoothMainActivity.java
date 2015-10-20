@@ -126,8 +126,8 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
         setButton();
 
         //서버소켓으로 열어놓고 기다리기
-        mBluetoothAccpetionTask = new BluetoothAcceptTask(mBluetoothMgr.getmBluetoothAdapter(), this);
-        mBluetoothAccpetionTask.execute();
+//        mBluetoothAccpetionTask = new BluetoothAcceptTask(mBluetoothMgr.getmBluetoothAdapter(), this);
+//        mBluetoothAccpetionTask.execute();
     }
 
     @Override

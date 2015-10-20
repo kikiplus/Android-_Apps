@@ -93,8 +93,8 @@ public class BluetoothDataManager {
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
-                    String data = device.getName() + "\n"
-                            + device.getAddress();
+                    short rssi = intent.getShortExtra(BluetoothDevice.EXTRA_RSSI,  Short.MIN_VALUE);
+                    String data = device.getName() + "/" + device.getAddress() + "/" +rssi;
                     //검색 후 주변 디바이스가 리스트에 없는 기기이면 추가
                     if (!checkAddedListItem(data)) {
                         mSearchArrayList.add(data);
