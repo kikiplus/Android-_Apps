@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.kiki.View.R;
 
 import java.io.ByteArrayOutputStream;
@@ -87,20 +88,20 @@ public class ImageManager {
      * @param degree 글자 이미지 방향(각도값)
      * @return
      */
-    private Bitmap getImageBitmap(Bitmap bitmap, String text, float degree){
-        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.train_image_layout, null);
-        ((ImageView)view.findViewById( R.id.train_image )).setImageBitmap(bitmap);
-        ((TextView)view.findViewById( R.id.train_num )).setText( text );
-        ((TextView)view.findViewById( R.id.train_num )).setRotation( degree );
+//    private Bitmap getImageBitmap(Bitmap bitmap, String text, float degree){
+//        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        View view = inflater.inflate(R.layout.train_image_layout, null);
+//        ((ImageView)view.findViewById( R.id.train_image )).setImageBitmap(bitmap);
+//        ((TextView)view.findViewById( R.id.train_num )).setText( text );
+//        ((TextView)view.findViewById( R.id.train_num )).setRotation( degree );
+//
+//        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+//        Bitmap newBitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(),
+//                Bitmap.Config.ARGB_8888);
+//        Canvas canvas = new Canvas(newBitmap);
+//        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+//        view.draw(canvas);
+//        return newBitmap;
 
-        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-        Bitmap newBitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(),
-                Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(newBitmap);
-        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
-        view.draw(canvas);
-        return newBitmap;
-
-    }
+//    }
 }
