@@ -8,7 +8,12 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.kiki.View.R;
 
 import java.io.ByteArrayOutputStream;
 
@@ -73,5 +78,29 @@ public class ImageManager {
         Canvas canvas = new Canvas( bitmap );
         view.draw( canvas );
         return bitmap;
+    }
+
+    /**
+     * 열차 이미지와 열차번호 를 쓴 비트맵 반홤 메소드
+     * @param bitmap 열차 이미지
+     * @param text 열차번호
+     * @param degree 글자 이미지 방향(각도값)
+     * @return
+     */
+    private Bitmap getImageBitmap(Bitmap bitmap, String text, float degree){
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.train_image_layout, null);
+        ((ImageView)view.findViewById( R.id.train_image )).setImageBitmap(bitmap);
+        ((TextView)view.findViewById( R.id.train_num )).setText( text );
+        ((TextView)view.findViewById( R.id.train_num )).setRotation( degree );
+
+        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        Bitmap newBitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(),
+                Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(newBitmap);
+        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        view.draw(canvas);
+        return newBitmap;
+
     }
 }
