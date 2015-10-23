@@ -67,7 +67,7 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
 
 //        HttpUrlTaskManager manager = new HttpUrlTaskManager("https://github.com", false, this);
 //        manager.execute();
-        HttpUrlTaskManager manager = new HttpUrlTaskManager("http://210.220.248.236:8080/MemoServer/jsp/login.jsp", true, this);
+        HttpUrlTaskManager manager = new HttpUrlTaskManager("http://210.220.248.236:8080/MemoServer/jsp/login.jsp", true, "UTF-8", this);
 
         HashMap<String, Object> data = new HashMap<String,Object>();
         data.put("name","mihye");

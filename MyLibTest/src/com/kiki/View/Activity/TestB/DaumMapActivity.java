@@ -88,9 +88,13 @@ public class DaumMapActivity extends Activity implements View.OnClickListener {
                 mLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
             }
         }
-        mapView.setMapCenterPoint(MapPoint.mapPointWithCONGCoord(mLocation.getLatitude(), mLocation.getLongitude()), true);
-        setMarker(MapPoint.mapPointWithCONGCoord(mLocation.getLatitude(), mLocation.getLongitude()));
 
+        if(mLocation != null){
+            mapView.setMapCenterPoint(MapPoint.mapPointWithCONGCoord(mLocation.getLatitude(), mLocation.getLongitude()), true);
+            setMarker(MapPoint.mapPointWithCONGCoord(mLocation.getLatitude(), mLocation.getLongitude()));
+        }else{
+            Toast.makeText(this, "위치 정보가 없네용", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

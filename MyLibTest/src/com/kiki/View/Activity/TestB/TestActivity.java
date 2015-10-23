@@ -3,12 +3,16 @@ package com.kiki.View.Activity.TestB;
 import android.app.Activity;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kiki.View.R;
 import com.kiki.View.UIComfonent.BiconPopupDialog;
+import com.kiki.View.asynctask.PopupAlarmTask;
+import com.kiki.View.service.KService;
 import com.kiki.android.Listener.UIEvent.OnPopupEventListener;
 import com.kiki.android.Logic.Managers.bluetooth.BluetoothDataManager;
 import com.kiki.android.Utils.AppUtils;
@@ -31,9 +35,8 @@ public class TestActivity extends Activity implements OnPopupEventListener{
 
         ((TextView) findViewById(R.id.textView1)).setText(wifi_2_5g);
 
-        BiconPopupDialog  bpdl =   new BiconPopupDialog(this, "", "", "", "TESTSSSSSSSSS", R.layout.popupview_bicon_layout, this, 10000);            //contenxtView , popid
-        bpdl.showDialog();
-
+        Intent intent = new Intent(this, KService.class);
+        startService(intent);
     }
 
     @Override

@@ -40,6 +40,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <!-- 다음지도 퍼미션 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!-- <uses-feature -->
     <!-- android:name="android.hardware.camera" -->
@@ -56,6 +57,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.kiki.View.Activity.TestB.TestActivity2" />
 
         <!-- 소셜 로그인 화면 -->
         <activity
@@ -102,6 +104,17 @@
                 <category android:name="com.kiki.View" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name="com.kiki.View.Activity.receive.KbroadCastReceiver"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_TICK" />
+            </intent-filter>
+        </receiver>
 
         <!-- GCM REG 발급 서비스 -->
         <service
@@ -119,6 +132,8 @@
             </intent-filter>
         </service>
         <service android:name="com.kiki.android.Logic.Managers.push.SafetyRegistrationService" >
+        </service>
+        <service android:name="com.kiki.View.service.KService" >
         </service>
 
         <meta-data
