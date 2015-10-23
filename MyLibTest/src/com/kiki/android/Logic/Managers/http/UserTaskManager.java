@@ -16,7 +16,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
- * @author mihye kim
+ * @author graepe girl
  * @version 1.0
  * @Class Name : HTTPManager.java
  * @Description : 사용자 정보 HTTP 통신 매니저 클래스(네이버/구글/카카오)
@@ -96,22 +96,15 @@ public class UserTaskManager extends AsyncTask<String, Void, Void> {
                 bufferedReader.close();
                 mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_OK, data);
                 httpURLConnection.disconnect();
-                return  null;
+                return null;
+            } else {
+                mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
             }
-        } catch (MalformedURLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            KLog.d(this.getClass().getSimpleName(), "MalformedURLException");
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-            KLog.d(this.getClass().getSimpleName(), "ProtocolException");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            KLog.d(this.getClass().getSimpleName(), "UnsupportedEncodingException");
-        } catch (IOException e) {
-            e.printStackTrace();
-            KLog.d(this.getClass().getSimpleName(), "IOException");
+            KLog.d(this.getClass().getSimpleName(), e.toString());
+            mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
         }
-        mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
         return null;
     }
 

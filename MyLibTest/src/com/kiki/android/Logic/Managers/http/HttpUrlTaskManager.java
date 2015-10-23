@@ -18,6 +18,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import com.kiki.android.Listener.IHttpReceive;
+import com.kiki.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -43,13 +44,18 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
      */
     private IHttpReceive mIHttpReceive = null;
 
+    /**
+     * 인코딩 방식
+     */
+    private String mEncoding = null;
 
     /**
      * 생성자
      */
-    public HttpUrlTaskManager(String url, boolean post, IHttpReceive receive) {
+    public HttpUrlTaskManager(String url, boolean post, String encoding, IHttpReceive receive) {
         mURl = url;
         isPost = post;
+        mEncoding = encoding;
         mIHttpReceive = receive;
     }
 
@@ -63,7 +69,7 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
     protected Void doInBackground(String... params) {
         String data = null;
         try {
-            URL   url = new URL(mURl);
+            URL url = new URL(mURl);
             URLConnection urlConnection = url.openConnection();
             HttpURLConnection httpURLConnection = (HttpURLConnection) urlConnection;
             httpURLConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
@@ -81,46 +87,35 @@ public class HttpUrlTaskManager extends AsyncTask<String, Void, Void> {
             httpURLConnection.setUseCaches(false);
             httpURLConnection.setDefaultUseCaches(false);
 
-            if(isPost){//Post 방식으로 데이타 전달시
+            if (isPost) {//Post 방식으로 데이타 전달시
                 OutputStream outputStream = httpURLConnection.getOutputStream();
-                if(params != null){
-                    String sendData = (String)params[0];
-                    outputStream.write(sendData.getBytes("UTF-8"));
+                if (params != null) {
+                    String sendData = (String) params[0];
+                    outputStream.write(sendData.getBytes(mEncoding));
                     outputStream.flush();
                     outputStream.close();
                 }
             }
             if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 String buffer = null;
-                BufferedReader bufferedReader;
-                if(isPost){
-                    bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "UTF-8"));
-                }else{
-                    bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "EUC-KR"));
-                }
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), mEncoding));
                 while ((buffer = bufferedReader.readLine()) != null) {
                     data += buffer;
                 }
                 bufferedReader.close();
                 mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_OK, data);
                 httpURLConnection.disconnect();
-                return null;
+
+            } else {
+                mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
             }
-        } catch (MalformedURLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "MalformedURLException");
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "ProtocolException");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "UnsupportedEncodingException");
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "IOException");
+            KLog.d(this.getClass().getSimpleName(), e.toString());
+            mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
         }
-        mIHttpReceive.onHttpReceive(mIHttpReceive.HTTP_FAIL, null);
-        return  null;
+
+        return null;
     }
 
     @Override

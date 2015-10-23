@@ -64,11 +64,11 @@ public class BasicPoup extends ParentPopup implements View.OnClickListener {
         int tag = (Integer) v.getId();
         switch (tag) {
         case EVENT_BASIC_POPUP_BTN_OK:
-            m_PopupListener.onPopupAction(m_PopupListener.POPUP_BTN_OK, null);
+            m_PopupListener.onPopupAction(m_PopupListener.CONFIRM_POPUP, m_PopupListener.POPUP_BTN_OK, null);
             System.out.println("@@ basic ok 버튼 ");
             break;
         case EVENT_BASIC_POPUP_BTN_CANCLE:
-            m_PopupListener.onPopupAction(m_PopupListener.POPUP_BTN_CLOSEE, null);
+            m_PopupListener.onPopupAction(m_PopupListener.CONFIRM_POPUP, m_PopupListener.POPUP_BTN_CLOSEE, null);
             System.out.println("@@ basic cancle 버튼 ");
             break;
         }

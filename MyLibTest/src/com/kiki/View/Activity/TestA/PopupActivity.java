@@ -35,7 +35,7 @@ public class PopupActivity extends Activity implements OnPopupEventListener, and
     }
 
     @Override
-    public void onPopupAction(int what, Object obj) {
+    public void onPopupAction(int popid, int what, Object obj) {
         switch (what) {
         // 확인 버튼
         case POPUP_BTN_OK:

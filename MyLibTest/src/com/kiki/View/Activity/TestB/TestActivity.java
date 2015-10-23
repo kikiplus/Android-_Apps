@@ -8,6 +8,8 @@ import android.telephony.TelephonyManager;
 import android.widget.TextView;
 
 import com.kiki.View.R;
+import com.kiki.View.UIComfonent.BiconPopupDialog;
+import com.kiki.android.Listener.UIEvent.OnPopupEventListener;
 import com.kiki.android.Logic.Managers.bluetooth.BluetoothDataManager;
 import com.kiki.android.Utils.AppUtils;
 import com.kiki.android.Utils.KLog;
@@ -15,7 +17,7 @@ import com.kiki.android.Utils.KLog;
 /**
  * Created by cs on 2015-10-08.
  */
-public class TestActivity extends Activity {
+public class TestActivity extends Activity implements OnPopupEventListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,5 +30,14 @@ public class TestActivity extends Activity {
         KLog.d(this.getClass().getSimpleName(), "@@ wifi 2.5g mac : " + wifi_2_5g);
 
         ((TextView) findViewById(R.id.textView1)).setText(wifi_2_5g);
+
+        BiconPopupDialog  bpdl =   new BiconPopupDialog(this, "", "", "", "TESTSSSSSSSSS", R.layout.popupview_bicon_layout, this, 10000);            //contenxtView , popid
+        bpdl.showDialog();
+
+    }
+
+    @Override
+    public void onPopupAction(int popId, int what, Object obj) {
+
     }
 }
