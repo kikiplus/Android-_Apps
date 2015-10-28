@@ -185,7 +185,7 @@ category#com.kiki.View
 ADDED from AndroidManifest.xml:106:17
 	android:name
 		ADDED from AndroidManifest.xml:106:27
-receiver#com.kiki.View.Activity.receive.KbroadCastReceiver
+receiver#com.kiki.View.receive.KbroadCastReceiver
 ADDED from AndroidManifest.xml:112:9
 	android:process
 		ADDED from AndroidManifest.xml:114:13

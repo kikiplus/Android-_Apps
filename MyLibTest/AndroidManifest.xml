@@ -110,7 +110,7 @@
 
 
         <receiver android:enabled="true"
-            android:name=".Activity.receive.KbroadCastReceiver"
+            android:name=".receive.KbroadCastReceiver"
             android:process=":remote"
             >
             <intent-filter>

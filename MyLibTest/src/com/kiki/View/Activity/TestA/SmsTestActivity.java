@@ -135,8 +135,6 @@ public class SmsTestActivity extends Activity {
 		byte[] rawBytes = data.getBytes( "euc-kr" );
 		int rawLength = rawBytes.length;
 
-		KLog.d(this.getClass().getSimpleName(), "byte length : " + rawLength);
-
 		if ( rawLength > len ) {
 			int aryLength = ( rawLength / len ) + ( rawLength % len != 0 ? 1 : 0 );
 			ary = new String[aryLength];

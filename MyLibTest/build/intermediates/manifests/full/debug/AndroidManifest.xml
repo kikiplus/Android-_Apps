@@ -105,7 +105,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.kiki.View.Activity.receive.KbroadCastReceiver"
+            android:name="com.kiki.View.receive.KbroadCastReceiver"
             android:enabled="true"
             android:process=":remote" >
             <intent-filter>
