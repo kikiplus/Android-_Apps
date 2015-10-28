@@ -1,5 +1,7 @@
 package com.kiki.android.Logic.Managers;
 
+import com.kiki.android.Utils.KLog;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -35,8 +37,6 @@ public class FileMgr {
 	 * @throws IOException
 	 */
 	public void readStationListFile(String filePath) throws IOException {
-		System.out.println( "## file read start" );
-
 		FileInputStream fis;
 		try {
 
@@ -47,13 +47,13 @@ public class FileMgr {
 			try {
 				while ( ( line = br.readLine() ) != null ) {
 					mFileList.add( line );
-					System.out.println( "## line Data : " + line );
+					KLog.d(this.getClass().getSimpleName(), "## line Data : " + line);
 				}
 			} catch ( IOException e ) {
 				e.printStackTrace();
 			} finally {
 				br.close();
-				System.out.println( "## file read end" );
+				KLog.d(this.getClass().getSimpleName(), "## file read end");
 			}
 		} catch ( FileNotFoundException e1 ) {
 			e1.printStackTrace();
@@ -69,7 +69,7 @@ public class FileMgr {
 	 * @throws IOException
 	 */
 	public void readStationListFile(InputStream is) throws IOException {
-		System.out.println( "## file read start" );
+		KLog.d(this.getClass().getSimpleName(), "## file read start");
 
 		FileInputStream fis;
 		try {
@@ -84,7 +84,7 @@ public class FileMgr {
 				e.printStackTrace();
 			} finally {
 				br.close();
-				System.out.println( "## file read end" );
+				KLog.d(this.getClass().getSimpleName(), "## file read end");
 			}
 		} catch ( FileNotFoundException e1 ) {
 			e1.printStackTrace();

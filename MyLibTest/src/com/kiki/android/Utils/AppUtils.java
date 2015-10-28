@@ -54,8 +54,7 @@ public class AppUtils {
      */
     public static String getUserPhoneLanuage(Context context) {
         Locale locale = context.getResources().getConfiguration().locale;
-        String launage = locale.getLanguage();
-        return launage;
+        return locale.getLanguage();
     }
 
     /***
@@ -292,8 +291,7 @@ public class AppUtils {
      */
     public static String getUserPhoneNumber(Context context) {
         TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String telPhoneNo = telephony.getLine1Number();
-        return telPhoneNo;
+        return telephony.getLine1Number();
     }
 
     /**
@@ -303,8 +301,7 @@ public class AppUtils {
      */
     public static String getUserDeviceID(Context context) {
         TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String deviceId = telephony.getDeviceId();
-        return deviceId;
+        return telephony.getDeviceId();
     }
 
     /**
@@ -314,7 +311,6 @@ public class AppUtils {
      */
     public static String getUserPhoneNetworkOperationName(Context context) {
         TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String value = telephony.getNetworkOperatorName();
-        return value;
+        return telephony.getNetworkOperatorName();
     }
 }

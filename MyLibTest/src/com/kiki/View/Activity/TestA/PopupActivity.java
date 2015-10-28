@@ -31,7 +31,6 @@ public class PopupActivity extends Activity implements OnPopupEventListener, and
         Calendar calendar = Calendar.getInstance();
         java.util.Date date = calendar.getTime();
         String today = (new SimpleDateFormat("HHmmss").format(date));
-        System.out.println("@@ today : " + today);
     }
 
     @Override

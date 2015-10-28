@@ -26,6 +26,7 @@ import android.widget.TextView;
 import com.kiki.View.R;
 
 import com.kiki.android.Listener.UIEvent.OnPopupEventListener;
+import com.kiki.android.Utils.KLog;
 
 /***
  * @Class Name : ParentPopup
@@ -252,7 +253,7 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
      */
     public void closePopup() {
         if (mDialog != null && mDialog.isShowing()) {
-            System.out.println("@@ closePopup");
+            KLog.d(this.getClass().getSimpleName(), "@@ closePopup");
             mDialog.dismiss();
         }
     }

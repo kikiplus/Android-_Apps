@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.kiki.View.R;
+import com.kiki.android.Utils.KLog;
 
 import java.io.UnsupportedEncodingException;
 
@@ -38,11 +39,11 @@ public class SmsTestActivity extends Activity {
 			}
 
 			sendSMS( "01050666713", msg );
-			System.out.println( "====================================" );
+			KLog.d(this.getClass().getSimpleName(), "====================================");
 			for ( int j = 0; j < msg.length; j++ ) {
-				System.out.println( "msg [ " + j + "] : " + msg[j] );
+				KLog.d(this.getClass().getSimpleName(), "msg [ " + j + "] : " + msg[j]);
 			}
-			System.out.println( "====================================" );
+			KLog.d(this.getClass().getSimpleName(), "====================================");
 		}
 	}
 
@@ -74,7 +75,7 @@ public class SmsTestActivity extends Activity {
 		registerReceiver( new BroadcastReceiver() {
 			@Override
 			public void onReceive(Context context, Intent intent) {
-				System.out.println( "intent : " + intent.toString() );
+				KLog.d(this.getClass().getSimpleName(), "intent : " + intent.toString());
 				switch ( getResultCode() ) {
 				case Activity.RESULT_OK :
 					// 전송 성공
@@ -134,7 +135,7 @@ public class SmsTestActivity extends Activity {
 		byte[] rawBytes = data.getBytes( "euc-kr" );
 		int rawLength = rawBytes.length;
 
-		System.out.println( "byte length : " + rawLength );
+		KLog.d(this.getClass().getSimpleName(), "byte length : " + rawLength);
 
 		if ( rawLength > len ) {
 			int aryLength = ( rawLength / len ) + ( rawLength % len != 0 ? 1 : 0 );

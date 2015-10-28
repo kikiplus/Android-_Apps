@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.kiki.View.UIComfonent.ProgressBar;
 import com.kiki.android.Listener.IHttpReceive;
+import com.kiki.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -138,7 +139,7 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mHandler.sendMessage(mHandler.obtainMessage(0, imageBitmap));
         } else if (requestCode == REQUEST_SAVE_IMAGE && resultCode == RESULT_OK) {
-            System.out.println("@@ MH " + mFilePath);
+            KLog.d(this.getClass().getSimpleName(), "@@ File Path" + mFilePath);
         }
     }
 

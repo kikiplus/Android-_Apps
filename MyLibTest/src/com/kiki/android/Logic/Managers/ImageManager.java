@@ -44,8 +44,7 @@ public class ImageManager {
      */
     public Bitmap getImageDrawbleToBitmap(int resultId){
         BitmapDrawable bitmapDrawable = (BitmapDrawable)mContext.getResources().getDrawable(resultId);
-        Bitmap bitmap = bitmapDrawable.getBitmap();
-        return bitmap;
+        return  bitmapDrawable.getBitmap();
     }
 
     /***
@@ -54,8 +53,7 @@ public class ImageManager {
      * @return 비트맵 이미지
      */
     public Bitmap getDrawbleToBitmap(Drawable drawable){
-        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        return bitmap;
+        return Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
     }
     /**
      * 비트맵을 바이트 배열로 변환하여 반환하는메소드
@@ -65,8 +63,7 @@ public class ImageManager {
     public byte[] getBitmapToByteArray(Bitmap bitmap){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-        byte[] byteArray = stream.toByteArray();
-        return byteArray;
+        return  stream.toByteArray();
     }
 
     /**

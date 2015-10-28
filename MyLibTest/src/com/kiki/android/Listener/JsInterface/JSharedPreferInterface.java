@@ -49,7 +49,6 @@ public class JSharedPreferInterface {
      * @return 프레퍼런스 저장한 값
      */
     public String getPreferenceValue(String keyName) {
-        String object = (String) SharedPreferenceUtils.read(mContext, keyName, SharedPreferenceUtils.SHARED_PREF_VALUE_STRING);
-        return object;
+        return  (String) SharedPreferenceUtils.read(mContext, keyName, SharedPreferenceUtils.SHARED_PREF_VALUE_STRING);
     }
 }

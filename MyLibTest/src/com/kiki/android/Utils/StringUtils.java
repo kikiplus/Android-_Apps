@@ -65,7 +65,6 @@ public class StringUtils {
 			else
 				sb.append(keyName).append("=").append(value);
 		}
-		System.out.println("@@ getHTTPPostSendData :  " + sb.toString());
 		return sb.toString();
 	}
 

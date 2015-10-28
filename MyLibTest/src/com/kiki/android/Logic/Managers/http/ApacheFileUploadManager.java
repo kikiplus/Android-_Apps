@@ -17,6 +17,7 @@ import java.io.IOException;
 
 import com.kiki.android.Listener.IHttpReceive;
 import com.kiki.android.Utils.ByteUtils;
+import com.kiki.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -54,8 +55,8 @@ public class ApacheFileUploadManager extends AsyncTask<Object, Void, Void> {
         Bitmap saveFile = (Bitmap) params[1];
         String saveFileName = (String) params[2];
 
-        System.out.println("@@ url : " + mUrl);
-        System.out.println("@@ saveFile : " + saveFileName);
+        KLog.d(this.getClass().getSimpleName(), "@@ url : " + mUrl);
+        KLog.d(this.getClass().getSimpleName(), "@@ saveFile : " + saveFileName);
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(mUrl);
         httpPost.setHeader("Connection", "Keep-Alive");

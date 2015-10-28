@@ -12,6 +12,7 @@ import java.net.Socket;
 
 import com.kiki.android.Listener.INetException;
 import com.kiki.android.Listener.IServerResponse;
+import com.kiki.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -84,7 +85,7 @@ public class SocketAsynTaskManager extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        Log.d("TCP", "C: Connecting...");
+        KLog.d(this.getClass().getSimpleName(), "C: Connecting...");
 
         try {
             m_clientSocket = new Socket(m_serverIp, m_serverPort);

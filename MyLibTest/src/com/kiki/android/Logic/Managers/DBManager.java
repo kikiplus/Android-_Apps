@@ -66,7 +66,7 @@ public class DBManager extends SQLiteOpenHelper {
 			mDatabase = getWritableDatabase();
 			mDatabase.execSQL( sql );
 		} catch ( Exception e ) {
-			System.out.println( "질의문 실행 에러" );
+			e.printStackTrace();
 		}
 	}
 

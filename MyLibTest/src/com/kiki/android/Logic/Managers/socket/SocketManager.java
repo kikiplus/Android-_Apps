@@ -11,6 +11,7 @@ import java.net.Socket;
 
 import com.kiki.android.Listener.INetException;
 import com.kiki.android.Listener.IServerResponse;
+import com.kiki.android.Utils.KLog;
 
 
 /**
@@ -73,7 +74,7 @@ public class SocketManager implements Runnable {
     @Override
     public void run() {
         try {
-            Log.d("TCP", "C: Connecting...");
+            KLog.d(this.getClass().getSimpleName(), "C: Connecting...");
             m_clientSocket = new Socket(m_serverIp, m_serverPort);
             try {
                 Log.d("TCP", "C: Sending: '" + m_msg + "'");
