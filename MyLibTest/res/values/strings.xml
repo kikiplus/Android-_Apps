@@ -83,6 +83,9 @@
     <string name="transmode_app_name">transmode</string>
     <string name="navigation_app_name">NavigationDrawer</string>
     <string name="tutorial_app_name">Tutorial</string>
-    <string name="app_name">MHApp</string>
+    <string name="app_name">KAndroid</string>
+
+    <!-- 구글 맵스 연동-->
+    <string name="google_maps_key">AIzaSyASO6ln5_B3_A7ZkWrYKW23HtqrizgXpE0 </string>
 
 </resources>

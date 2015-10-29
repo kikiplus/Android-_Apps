@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.telephony.TelephonyManager;
 import android.util.Base64;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.text.DateFormat;
@@ -312,5 +313,14 @@ public class AppUtils {
     public static String getUserPhoneNetworkOperationName(Context context) {
         TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return telephony.getNetworkOperatorName();
+    }
+
+    /***
+     * 토스트
+     * @param context 컨텍스트
+     * @param msg 메시지
+     */
+    public static  void toast(Context context, String msg) {
+        Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 }
