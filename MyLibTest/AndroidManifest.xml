@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.kiki.View"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kiki.View"
     android:versionCode="1"
-    android:versionName="1.0"
-    >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="19"/>
+        android:targetSdkVersion="19" />
 
     <!--GCM 관련 퍼미션 -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uese-
         android:name="com.kiki.View.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission
-        android:name="com.kiki.View.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.kiki.View.permission.C2D_MESSAGE" />
 
     <!-- 문자 관련 퍼미션-->
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <!-- 단말기 상태 관련 퍼미션-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 저장소 관련 퍼미션-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 네트워크 관련 퍼미션-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <!-- 재부팅시 관련 퍼미션-->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- 와이파이 관련 퍼미션-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <!--블루투스 퍼미션 -->
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <!--다음지도 퍼미션 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 
     <!--<uses-feature-->
@@ -55,34 +54,35 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light">
 
-        <!--<activity android:name=".Activity.TestB.DaumMapActivity">-->
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
-        <activity android:name=".Activity.TestB.GoogleMapActivity2">
+        <activity android:name=".Activity.TestB.DaumMapActivity2"
+            android:label="@string/daum_map_app_name">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.TestB.GoogleMapActivity2"
+            android:label="@string/google_map_app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <activity android:name=".Activity.TestB.TestActivity2"/>
-
         <!-- 소셜 로그인 화면 -->
         <activity
             android:name=".Activity.login.NaverLoginActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <!--<activity-->
-            <!--android:name=".activity.login.KakaoLoginActivity"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--android:name=".activity.login.KakaoLoginActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
         <!--<activity-->
-            <!--android:name=".activity.login.FacebookLoginActivity"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--android:name=".activity.login.FacebookLoginActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
         <!--<activity-->
-            <!--android:name=".activity.login.GoogleLoginActivity"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--android:name=".activity.login.GoogleLoginActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
         <activity
             android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
             android:configChanges="orientation"
@@ -92,19 +92,19 @@
             android:label="OAuth2.0 In-app"
             android:screenOrientation="portrait" />
         <!--<activity-->
-            <!--android:name="com.facebook.FacebookActivity"-->
-            <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--android:name="com.facebook.FacebookActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
         <!--<activity-->
-            <!--android:name=".activity.BeaconPopupActivity"-->
-            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+        <!--android:name=".activity.BeaconPopupActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
         <!-- 소셜 로그인 화면 END -->
 
         <!-- GCM 리비서 -->
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <!-- for Gingerbread GSF backward compat -->`
@@ -115,12 +115,13 @@
         </receiver>
 
 
-        <receiver android:enabled="true"
+        <receiver
             android:name=".receive.KbroadCastReceiver"
-            android:process=":remote"
-            >
+            android:enabled="true"
+            android:process=":remote">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.TIME_TICK"></action>
             </intent-filter>
@@ -129,23 +130,21 @@
         <!-- GCM REG 발급 서비스 -->
         <service
             android:name="com.kiki.android.Logic.Managers.push.SafetyGcmListenerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
         <service
             android:name="com.kiki.android.Logic.Managers.push.SafetyInstanceIDListenerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
             </intent-filter>
         </service>
-        <service android:name="com.kiki.android.Logic.Managers.push.SafetyRegistrationService" >
-        </service>
+        <service android:name="com.kiki.android.Logic.Managers.push.SafetyRegistrationService"></service>
 
-        <service android:name=".service.KService" >
-        </service>
+        <service android:name=".service.KService"></service>
 
         <meta-data
             android:name="com.google.android.gms.version"
