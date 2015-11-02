@@ -97,8 +97,6 @@ public class DaumMapActivity2 extends Activity implements View.OnClickListener {
 
         if(mLocation != null){
             setMarker(MapPoint.mapPointWithGeoCoord(mLocation.getLatitude(), mLocation.getLongitude()));
-        }else{
-            AppUtils.toast(this, "위치 정보가 없음");
         }
     }
 

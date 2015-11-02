@@ -35,19 +35,11 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
 
     private String TAG = this.getClass().getSimpleName();
 
-    private GPSManager mGpsMgr;
-
     private ToggleButton mToggleButton;
 
     private GoogleMap mGoogleMap;
 
-    private MapView mMapView;
-
     private Location mLocation;
-
-    private final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 0;
-
-    private final long MIN_TIMEE_CHANGE_FOR_UPDATES = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,9 +66,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
     }
 
     private void setMarker(double latitude, double longitude) {
-        AppUtils.toast(getApplicationContext(), "setMarker");
-        AppUtils.toast(getApplicationContext(), "setMarker latitude: " + latitude);
-        AppUtils.toast(getApplicationContext(), "setMarker longitude: " + longitude);
         double locationLatitude = latitude;
         double locationLongitude = longitude;
         LatLng latLng = new LatLng(locationLatitude, locationLongitude);
@@ -91,7 +80,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
-        AppUtils.toast(this, "onClick");
         switch (view.getId()) {
             case R.id.google_map_button:
                 if (mToggleButton.isChecked()) {
@@ -109,7 +97,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
      * 내 위치 가져오기
      */
     private void getLocation() {
-        AppUtils.toast(getApplicationContext(), "getLocation");
         LocationManager locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
 
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
@@ -129,8 +116,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
 
         if (mLocation != null) {
             setMarker(mLocation.getLatitude(), mLocation.getLongitude());
-        } else {
-            AppUtils.toast(getApplicationContext(), "위치 정보가 없네용");
         }
     }
 
@@ -138,7 +123,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
      * 내 위치 가져오기 중지 메소드
      */
     private void stopLocation() {
-        AppUtils.toast(getApplicationContext(), "stopLocation");
         LocationManager locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
         locationManager.removeUpdates(mLocationListener);
     }
@@ -148,10 +132,9 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
      */
     private LocationListener mLocationListener = new LocationListener() {
         public void onLocationChanged(Location location) {
-            AppUtils.toast(getApplicationContext(), "onLocationChanged");
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
-            Toast.makeText(getApplicationContext(), "위치정보 값 변경 : " + latitude + ", " + longitude, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "GPS 위치정보 값 변경 : " + latitude + ", " + longitude, Toast.LENGTH_LONG).show();
             setMarker(latitude, longitude);
         }
 
@@ -171,7 +154,6 @@ public class GoogleMapActivity2 extends FragmentActivity implements View.OnClick
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        AppUtils.toast(this, "onMapReady");
         mGoogleMap = googleMap;
         mGoogleMap.getUiSettings().setZoomControlsEnabled(false);
     }

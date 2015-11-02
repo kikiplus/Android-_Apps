@@ -6,21 +6,25 @@ import android.app.FragmentTransaction;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.kiki.View.Bean.GpsLocation;
 import com.kiki.View.R;
 import com.kiki.android.Listener.IGPSReceive;
 import com.kiki.android.Logic.Managers.GPSManager;
+import com.kiki.android.Utils.AppUtils;
 import com.kiki.android.Utils.ContextUtils;
 import com.kiki.android.Utils.KLog;
 
@@ -31,7 +35,7 @@ import net.daum.mf.map.api.MapView;
 /**
  * Created by cs on 2015-10-29.
  */
-public class GoogleMapActivity extends Activity implements View.OnClickListener, IGPSReceive, OnMapReadyCallback {
+public class GoogleMapActivity extends FragmentActivity implements View.OnClickListener, IGPSReceive, OnMapReadyCallback {
 
     private String TAG = this.getClass().getSimpleName();
 
@@ -39,12 +43,16 @@ public class GoogleMapActivity extends Activity implements View.OnClickListener,
 
     private ToggleButton mToggleButton;
 
-    private GoogleMap mapView;
+    private GoogleMap mGoogleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_googleamp_layout);
+
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
+        mapFragment.getMapAsync(this);
 
         mGpsMgr = new GPSManager(getApplicationContext(), this);
         mToggleButton = (ToggleButton) findViewById(R.id.google_map_button);
@@ -73,16 +81,14 @@ public class GoogleMapActivity extends Activity implements View.OnClickListener,
 
     @Override
     public void onGpsReceive(int type, Object obj) {
-        KLog.d(TAG, "@@ onGpsReceive type : " + type);
-        switch (type){
+        switch (type) {
             case RECEIVE_OK:
             case RECEIVE_UPDATE:
-                GpsLocation location = (GpsLocation)obj;
-                if(location != null){
+                GpsLocation location = (GpsLocation) obj;
+                if (location != null) {
                     double locationLatitude = location.getLatitude();
                     double locationLongitude = location.getLongitude();
-                    LatLng latLng = new LatLng(locationLatitude, locationLongitude);
-                    mapView.addMarker(new MarkerOptions().position(latLng));
+                    setMarker(locationLatitude, locationLongitude);
                 }
                 break;
             case RECEIVE_FAIL:
@@ -90,8 +96,22 @@ public class GoogleMapActivity extends Activity implements View.OnClickListener,
         }
     }
 
+    private void setMarker(double latitude, double longitude) {
+        double locationLatitude = latitude;
+        double locationLongitude = longitude;
+        LatLng latLng = new LatLng(locationLatitude, locationLongitude);
+        mGoogleMap.addMarker(new MarkerOptions().position(latLng));
+        LatLngBounds bounds = new LatLngBounds.Builder()
+                .include(latLng)
+                .build();
+
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 50));
+        Toast.makeText(this, "위치 : " + locationLatitude + ", " + locationLongitude, Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mapView = googleMap;
+        mGoogleMap = googleMap;
+        mGoogleMap.getUiSettings().setZoomControlsEnabled(false);
     }
 }

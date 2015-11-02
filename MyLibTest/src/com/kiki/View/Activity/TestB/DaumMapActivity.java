@@ -106,13 +106,11 @@ public class DaumMapActivity extends Activity implements View.OnClickListener, I
 
     @Override
     public void onGpsReceive(int type, Object obj) {
-        KLog.d(TAG, "@@ onGpsReceive type : " + type);
         switch (type) {
             case RECEIVE_OK:
             case RECEIVE_UPDATE:
                 GpsLocation location = (GpsLocation) obj;
                 if (location != null) {
-                    KLog.d(TAG, "@@ onGpsReceive obj : " + location );
                     setMarker(MapPoint.mapPointWithGeoCoord(location.getLatitude(), location.getLongitude()));
                 }
                 break;
