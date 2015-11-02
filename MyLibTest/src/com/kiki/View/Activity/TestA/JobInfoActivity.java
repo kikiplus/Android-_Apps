@@ -9,7 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.kiki.android.Logic.service.MyJobService;
+import com.kiki.View.service.MyJobService;
 
 /**
  * @author grapegirl
