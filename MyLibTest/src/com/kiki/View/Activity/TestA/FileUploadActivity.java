@@ -134,7 +134,7 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + "onActivityResult");
+            KLog.d(this.getClass().getSimpleName(), this.getClass() + "onActivityResult");
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mHandler.sendMessage(mHandler.obtainMessage(0, imageBitmap));

@@ -18,10 +18,10 @@ public class MemoryUtils {
      * @param context 컨텍스트
      */
     public static void printMemory(Context context){
-        Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
-        Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
-        Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
-        Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
-        Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, context.getClass()+ "@@ ==============================================");
+        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ ==============================================");
+        KLog.d(context.getClass().getSimpleName(),context.getClass()+ "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
+        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
+        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
+        KLog.d(context.getClass().getSimpleName(),context.getClass()+ "@@ ==============================================");
     }
 }

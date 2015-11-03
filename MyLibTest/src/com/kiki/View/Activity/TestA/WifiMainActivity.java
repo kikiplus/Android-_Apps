@@ -8,7 +8,6 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,8 +23,9 @@ import com.kiki.View.ViewAdapter.WifiListAdpater;
 import com.kiki.android.Listener.IWiFiScanLinstener;
 import com.kiki.android.Listener.IWiFiStatusListener;
 import com.kiki.android.Listener.UIEvent.OnButtonSelectedListener;
-import com.kiki.android.Logic.Managers.WifiMgr;
-import com.kiki.android.Logic.Managers.WifiMonitor;
+import com.kiki.android.Managers.WifiMgr;
+import com.kiki.android.Managers.WifiMonitor;
+import com.kiki.android.Utils.KLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -206,7 +206,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
     public boolean handleMessage(Message msg) {
         switch (msg.what) {
             case 0:// wifi 결과 표시
-                Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + " handleMessage ");
+                KLog.d(this.getClass().getSimpleName(), this.getClass() + " handleMessage ");
                // mListAdpater = new WifiListAdpater(this, R.layout.listview_wifi_line, mWifitData);
                // mListView.setAdapter(mListAdpater);
                 break;

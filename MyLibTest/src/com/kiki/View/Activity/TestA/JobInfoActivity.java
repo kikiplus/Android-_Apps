@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.kiki.View.service.MyJobService;
+import com.kiki.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -28,7 +29,7 @@ public class JobInfoActivity extends Activity {
         //setContentView(R.layout.jobinfo_main_layout);
 
         if(Build.VERSION.SDK_INT > 21 ){
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + " @@ JobInfo 실행 ");
+            KLog.d(this.getClass().getSimpleName(), this.getClass() + " @@ JobInfo 실행 ");
             JobInfo job = new JobInfo.Builder(JOB_ID, new ComponentName(this, MyJobService.class))
                     .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
                     .setOverrideDeadline(5000)
@@ -38,7 +39,7 @@ public class JobInfoActivity extends Activity {
             JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
             jobScheduler.schedule(job);
         }else{
-            Log.d(com.kiki.android.Utils.conf.Log.LOG_NAME, this.getClass() + " @@ JobInfo 실행 안되요~ ");
+            KLog.d(this.getClass().getSimpleName(),this.getClass() + " @@ JobInfo 실행 안되요~ ");
         }
 
 
