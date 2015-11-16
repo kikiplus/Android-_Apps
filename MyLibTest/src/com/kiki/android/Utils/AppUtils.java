@@ -14,13 +14,11 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.telephony.TelephonyManager;
 import android.util.Base64;
-import android.util.Log;
 import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -317,10 +315,11 @@ public class AppUtils {
 
     /***
      * 토스트
+     *
      * @param context 컨텍스트
-     * @param msg 메시지
+     * @param msg     메시지
      */
-    public static  void toast(Context context, String msg) {
+    public static void toast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 }

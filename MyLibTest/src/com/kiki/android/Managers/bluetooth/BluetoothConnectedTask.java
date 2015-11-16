@@ -1,4 +1,4 @@
-package com.kiki.android.Logic.Managers.bluetooth;
+package com.kiki.android.Managers.bluetooth;
 
 import android.bluetooth.BluetoothSocket;
 import android.os.AsyncTask;

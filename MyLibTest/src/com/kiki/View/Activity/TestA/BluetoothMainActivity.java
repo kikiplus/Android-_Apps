@@ -22,10 +22,10 @@ import android.widget.ToggleButton;
 import com.kiki.View.R;
 import com.kiki.android.Listener.IBLConnectLinstener;
 import com.kiki.android.Listener.UIEvent.OnBluetoothEventListener;
-import com.kiki.android.Logic.Managers.bluetooth.BluetoothAcceptTask;
-import com.kiki.android.Logic.Managers.bluetooth.BluetoothConnectTask;
-import com.kiki.android.Logic.Managers.bluetooth.BluetoothConnectedTask;
-import com.kiki.android.Logic.Managers.bluetooth.BluetoothDataManager;
+import com.kiki.android.Managers.bluetooth.BluetoothAcceptTask;
+import com.kiki.android.Managers.bluetooth.BluetoothConnectTask;
+import com.kiki.android.Managers.bluetooth.BluetoothConnectedTask;
+import com.kiki.android.Managers.bluetooth.BluetoothDataManager;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

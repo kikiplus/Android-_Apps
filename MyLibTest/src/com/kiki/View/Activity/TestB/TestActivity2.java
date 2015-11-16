@@ -2,32 +2,35 @@ package com.kiki.View.Activity.TestB;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.NumberPicker;
 
 import com.kiki.View.R;
-import com.kiki.View.UIComfonent.BiconPopupDialog;
 import com.kiki.android.Listener.UIEvent.OnPopupEventListener;
-import com.kiki.android.Logic.Managers.bluetooth.BluetoothDataManager;
-import com.kiki.android.Utils.KLog;
 
 /**
  * Created by cs on 2015-10-08.
  */
-public class TestActivity2 extends Activity implements OnPopupEventListener{
+public class TestActivity2 extends Activity implements NumberPicker.OnValueChangeListener {
+
+    private NumberPicker mNumberPicker = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.test_layout);
+        setContentView(R.layout.test_layout);
 
-        KLog.d(this.getClass().getSimpleName(), "@@ TestActivity2 onCreate");
-        BiconPopupDialog  bpdl =   new BiconPopupDialog(this, "", "", "", "TESTSSSSSSSSS", R.layout.popupview_bicon_layout, this, 10000);            //contenxtView , popid
-        bpdl.showDialog();
-
+        mNumberPicker = (NumberPicker)findViewById(R.id.test_number_picker);
+        mNumberPicker.setOnValueChangedListener( this );
+        mNumberPicker.setMinValue( 1 );
+        mNumberPicker.setMaxValue( 10 );
+        mNumberPicker.setOnLongPressUpdateInterval( 100 );
+        mNumberPicker.setWrapSelectorWheel( true );
     }
 
     @Override
-    public void onPopupAction(int popId, int what, Object obj) {
+    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.kiki.android.Logic.Managers.push;
+package com.kiki.android.Managers.push;
 
 import android.app.IntentService;
 import android.content.Intent;
