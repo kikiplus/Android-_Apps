@@ -5,10 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 
 import com.kiki.View.Bean.WiFiAP;
-import com.kiki.View.R;
 
 import java.util.ArrayList;
 

@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kiki.View.Bean.ViewItem;
-import com.kiki.View.R;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package com.kiki.android.Logic.Managers;
 
 import android.graphics.Bitmap;
 import android.os.Environment;
-import android.util.Log;
 
 import com.kiki.android.Utils.KLog;
 

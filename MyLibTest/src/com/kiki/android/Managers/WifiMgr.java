@@ -11,13 +11,12 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Build;
-import android.util.Log;
-
-import java.util.List;
 
 import com.kiki.View.Bean.WiFiAP;
 import com.kiki.android.Listener.IWiFiScanLinstener;
 import com.kiki.android.Utils.KLog;
+
+import java.util.List;
 
 /**
  * @author grapegirl

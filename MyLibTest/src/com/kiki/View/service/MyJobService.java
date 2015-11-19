@@ -6,7 +6,6 @@ import android.app.job.JobService;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.SystemClock;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.kiki.android.Utils.KLog;

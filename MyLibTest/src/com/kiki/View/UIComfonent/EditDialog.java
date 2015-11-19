@@ -2,12 +2,7 @@ package com.kiki.View.UIComfonent;
 
 import android.app.AlertDialog.Builder;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.EditText;
-
-import com.kiki.View.R;
 
 import com.kiki.android.Listener.UIEvent.OnButtonSelectedListener;
 

@@ -3,9 +3,7 @@ package com.kiki.android.Utils;
 import com.kiki.View.Bean.PostData;
 
 import java.text.Collator;
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.Map;
 
 

@@ -24,7 +24,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.kiki.View.R;
-
 import com.kiki.android.Listener.UIEvent.OnPopupEventListener;
 import com.kiki.android.Utils.KLog;
 

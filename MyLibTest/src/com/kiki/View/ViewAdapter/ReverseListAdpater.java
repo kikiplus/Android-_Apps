@@ -9,11 +9,10 @@ import android.widget.TextView;
 
 import com.kiki.View.Bean.PostData;
 import com.kiki.View.R;
+import com.kiki.android.Utils.SortUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import com.kiki.android.Utils.SortUtils;
 
 /***
  * @Class Name : ReverseListAdpater

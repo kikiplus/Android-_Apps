@@ -4,9 +4,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
-import com.kiki.View.Activity.TestB.TestActivity2;
+import com.kiki.View.Activity.TestB.DpiCheckActivity;
 import com.kiki.android.Utils.KLog;
 
 import org.json.JSONObject;
@@ -33,7 +32,7 @@ public class PopupAlarmTask extends AsyncTask<Void, Void, JSONObject> {
         KLog.d(this.getClass().getSimpleName() , "@@ PopupAlramTask onPostExecute");
         super.onPostExecute(result);
         try {
-            Intent intent = new Intent(mContext, TestActivity2.class);
+            Intent intent = new Intent(mContext, DpiCheckActivity.class);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             pendingIntent.send();

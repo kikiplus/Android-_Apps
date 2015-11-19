@@ -1,7 +1,6 @@
 package com.kiki.android.Managers;
 
 import android.content.Context;
-import android.content.Loader;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -10,10 +9,7 @@ import android.widget.Toast;
 
 import com.kiki.View.Bean.GpsLocation;
 import com.kiki.android.Listener.IGPSReceive;
-import com.kiki.android.Utils.AppUtils;
 import com.kiki.android.Utils.KLog;
-
-import net.daum.mf.map.api.MapPoint;
 
 /**
  * Created by cs on 2015-10-29.

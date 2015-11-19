@@ -2,7 +2,6 @@ package com.kiki.android.Utils;
 
 import android.content.Context;
 import android.os.Debug;
-import android.util.Log;
 
 /**
  * @author grapegirl
