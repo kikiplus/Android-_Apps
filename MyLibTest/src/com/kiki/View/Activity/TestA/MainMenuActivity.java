@@ -1,6 +1,7 @@
 package com.kiki.View.Activity.TestA;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,11 +10,11 @@ import android.widget.Toast;
 import com.kiki.View.R;
 
 /***
+ * @author grapegirl
+ * @version 1.0
  * @Class Name : 메인메뉴 5개 테스트
  * @Description :
  * @since 2015. 6. 17.
- * @version 1.0
- * @author grapegirl
  */
 public class MainMenuActivity extends Activity implements android.view.View.OnClickListener {
 
@@ -37,26 +38,32 @@ public class MainMenuActivity extends Activity implements android.view.View.OnCl
         mButton[3].setOnClickListener(this);
         mButton[4].setOnClickListener(this);
 
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("DATA");
+        if (data != null) {
+            Toast.makeText(this, data, Toast.LENGTH_LONG).show();
+        }
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-        case R.id.main_tab1:
-            Toast.makeText(getApplicationContext(), "메인1", Toast.LENGTH_SHORT).show();
-            break;
-        case R.id.main_tab2:
-            Toast.makeText(getApplicationContext(), "메인2", Toast.LENGTH_SHORT).show();
-            break;
-        case R.id.main_tab3:
-            Toast.makeText(getApplicationContext(), "메인3", Toast.LENGTH_SHORT).show();
-            break;
-        case R.id.main_tab4:
-            Toast.makeText(getApplicationContext(), "메인4", Toast.LENGTH_SHORT).show();
-            break;
-        case R.id.main_tab5:
-            Toast.makeText(getApplicationContext(), "메인5", Toast.LENGTH_SHORT).show();
-            break;
+            case R.id.main_tab1:
+                Toast.makeText(getApplicationContext(), "메인1", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_tab2:
+                Toast.makeText(getApplicationContext(), "메인2", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_tab3:
+                Toast.makeText(getApplicationContext(), "메인3", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_tab4:
+                Toast.makeText(getApplicationContext(), "메인4", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.main_tab5:
+                Toast.makeText(getApplicationContext(), "메인5", Toast.LENGTH_SHORT).show();
+                break;
 
         }
 

@@ -48,13 +48,33 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light">
 
-        <activity android:name=".Activity.TestB.DpiCheckActivity">
+        <activity
+            android:name=".Activity.TestB.NumberPickerActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity android:name=".Activity.TestA.MainMenuActivity"/>
+        <!-- 커스톰 위젯 -->
+        <receiver
+            android:name=".Activity.TestB.MyWidget"
+            android:label="위젯 테스트">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_configuration" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.kiki.View.widget.ACTION_EVENT" />
+                <action android:name="com.kiki.View.widget.ACTION_ACTIVITY" />
+                <action android:name="com.kiki.View.widget.ACTION_EMPTY" />
+                <action android:name="com.kiki.View.widget.ACTION_ALRAM" />
+            </intent-filter>
+
+
+        </receiver>
 
         <!-- GCM 리비서 -->
         <receiver
@@ -66,18 +86,6 @@
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                 <category android:name="com.kiki.View" />
 
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name=".receive.KbroadCastReceiver"
-            android:enabled="true"
-            android:process=":remote">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.TIME_TICK"></action>
             </intent-filter>
         </receiver>
 
@@ -98,10 +106,7 @@
         </service>
         <service android:name="com.kiki.android.Managers.push.SafetyRegistrationService"></service>
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
+        <!-- 구글 지도-->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/google_maps_key" />
