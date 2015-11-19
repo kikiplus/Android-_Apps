@@ -54,9 +54,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
-        <activity
-            android:name="com.kiki.View.Activity.TestB.GoogleMapActivity"
-            android:label="@string/google_map_app_name" >
+        <activity android:name="com.kiki.View.Activity.TestB.TestActivity2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -122,20 +120,20 @@
 
         <!-- GCM REG 발급 서비스 -->
         <service
-            android:name="com.kiki.android.Logic.Managers.push.SafetyGcmListenerService"
+            android:name="com.kiki.android.Managers.push.SafetyGcmListenerService"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
         <service
-            android:name="com.kiki.android.Logic.Managers.push.SafetyInstanceIDListenerService"
+            android:name="com.kiki.android.Managers.push.SafetyInstanceIDListenerService"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
             </intent-filter>
         </service>
-        <service android:name="com.kiki.android.Logic.Managers.push.SafetyRegistrationService" />
+        <service android:name="com.kiki.android.Managers.push.SafetyRegistrationService" />
         <service android:name="com.kiki.View.service.KService" />
 
         <meta-data

@@ -1,4 +1,4 @@
-package com.kiki.android.Logic.Managers;
+package com.kiki.android.Managers;
 
 import android.content.Context;
 import android.content.Loader;

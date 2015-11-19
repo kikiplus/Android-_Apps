@@ -2,17 +2,17 @@
 manifest
 ADDED from AndroidManifest.xml:2:1
 	xmlns:android
-		ADDED from AndroidManifest.xml:3:5
+		ADDED from AndroidManifest.xml:2:11
 	package
-		ADDED from AndroidManifest.xml:4:5
+		ADDED from AndroidManifest.xml:3:5
 	android:versionName
-		ADDED from AndroidManifest.xml:6:5
-	android:versionCode
 		ADDED from AndroidManifest.xml:5:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 uses-sdk
-ADDED from AndroidManifest.xml:8:5
+ADDED from AndroidManifest.xml:7:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.android.support:recyclerview-v7:21.0.3:15:5
@@ -155,60 +155,60 @@ MERGED from com.google.android.gms:play-services-base:8.1.0:18:5
 MERGED from com.google.android.gms:play-services-basement:8.1.0:18:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:10:9
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
-	android:minSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from AndroidManifest.xml:13:5
+ADDED from AndroidManifest.xml:12:5
 MERGED from com.google.android.gms:play-services-gcm:8.1.0:21:5
 MERGED from com.google.android.gms:play-services-gcm:8.1.0:21:5
 	android:name
-		ADDED from AndroidManifest.xml:13:22
+		ADDED from AndroidManifest.xml:12:22
 uses-permission#android.permission.WAKE_LOCK
-ADDED from AndroidManifest.xml:14:5
+ADDED from AndroidManifest.xml:13:5
 MERGED from com.google.android.gms:play-services-measurement:8.1.0:24:5
 	android:name
-		ADDED from AndroidManifest.xml:14:22
+		ADDED from AndroidManifest.xml:13:22
 uese-
-ADDED from AndroidManifest.xml:16:5
+ADDED from AndroidManifest.xml:15:5
 	android:protectionLevel
-		ADDED from AndroidManifest.xml:18:9
-	android:name
 		ADDED from AndroidManifest.xml:17:9
-uses-permission#com.kiki.View.permission.C2D_MESSAGE
-ADDED from AndroidManifest.xml:20:5
 	android:name
-		ADDED from AndroidManifest.xml:20:22
+		ADDED from AndroidManifest.xml:16:9
+uses-permission#com.kiki.View.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:19:5
+	android:name
+		ADDED from AndroidManifest.xml:19:22
 uses-permission#android.permission.SEND_SMS
+ADDED from AndroidManifest.xml:22:5
+	android:name
+		ADDED from AndroidManifest.xml:22:22
+uses-permission#android.permission.RECEIVE_SMS
 ADDED from AndroidManifest.xml:23:5
 	android:name
 		ADDED from AndroidManifest.xml:23:22
-uses-permission#android.permission.RECEIVE_SMS
-ADDED from AndroidManifest.xml:24:5
-	android:name
-		ADDED from AndroidManifest.xml:24:22
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from AndroidManifest.xml:26:5
+ADDED from AndroidManifest.xml:25:5
 	android:name
-		ADDED from AndroidManifest.xml:26:22
+		ADDED from AndroidManifest.xml:25:22
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:27:5
+MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
+MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
+MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
+MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
+	android:name
+		ADDED from AndroidManifest.xml:27:22
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:28:5
-MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
-MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
-MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
-MERGED from com.google.android.gms:play-services-maps:8.1.0:22:5
 	android:name
 		ADDED from AndroidManifest.xml:28:22
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from AndroidManifest.xml:29:5
-	android:name
-		ADDED from AndroidManifest.xml:29:22
 uses-permission#android.permission.INTERNET
-ADDED from AndroidManifest.xml:31:5
+ADDED from AndroidManifest.xml:30:5
 MERGED from com.google.android.gms:play-services-gcm:8.1.0:22:5
 MERGED from com.google.android.gms:play-services-ads:8.1.0:20:5
 MERGED from com.google.android.gms:play-services-analytics:8.1.0:21:5
@@ -224,21 +224,21 @@ MERGED from com.google.android.gms:play-services-ads:8.1.0:20:5
 MERGED from com.google.android.gms:play-services-wallet:8.1.0:20:5
 MERGED from com.google.android.gms:play-services-maps:8.1.0:21:5
 	android:name
-		ADDED from AndroidManifest.xml:31:22
+		ADDED from AndroidManifest.xml:30:22
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from AndroidManifest.xml:33:5
+ADDED from AndroidManifest.xml:32:5
 	android:name
-		ADDED from AndroidManifest.xml:33:22
+		ADDED from AndroidManifest.xml:32:22
 uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from AndroidManifest.xml:34:5
+	android:name
+		ADDED from AndroidManifest.xml:34:22
+uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from AndroidManifest.xml:35:5
 	android:name
 		ADDED from AndroidManifest.xml:35:22
-uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from AndroidManifest.xml:36:5
-	android:name
-		ADDED from AndroidManifest.xml:36:22
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from AndroidManifest.xml:37:5
+ADDED from AndroidManifest.xml:36:5
 MERGED from com.google.android.gms:play-services-ads:8.1.0:21:5
 MERGED from com.google.android.gms:play-services-analytics:8.1.0:22:5
 MERGED from com.google.android.gms:play-services-ads:8.1.0:21:5
@@ -251,29 +251,29 @@ MERGED from com.google.android.gms:play-services-ads:8.1.0:21:5
 MERGED from com.google.android.gms:play-services-nearby:8.1.0:19:5
 MERGED from com.google.android.gms:play-services-maps:8.1.0:20:5
 	android:name
-		ADDED from AndroidManifest.xml:37:22
+		ADDED from AndroidManifest.xml:36:22
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from AndroidManifest.xml:38:5
+ADDED from AndroidManifest.xml:37:5
 	android:name
-		ADDED from AndroidManifest.xml:38:22
+		ADDED from AndroidManifest.xml:37:22
 uses-permission#android.permission.BLUETOOTH
+ADDED from AndroidManifest.xml:39:5
+	android:name
+		ADDED from AndroidManifest.xml:39:22
+uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from AndroidManifest.xml:40:5
 	android:name
 		ADDED from AndroidManifest.xml:40:22
-uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from AndroidManifest.xml:41:5
-	android:name
-		ADDED from AndroidManifest.xml:41:22
 uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from AndroidManifest.xml:42:5
+	android:name
+		ADDED from AndroidManifest.xml:42:22
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from AndroidManifest.xml:43:5
 	android:name
 		ADDED from AndroidManifest.xml:43:22
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from AndroidManifest.xml:44:5
-	android:name
-		ADDED from AndroidManifest.xml:44:22
 application
-ADDED from AndroidManifest.xml:46:5
+ADDED from AndroidManifest.xml:45:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.android.support:recyclerview-v7:21.0.3:17:5
@@ -389,123 +389,121 @@ MERGED from com.google.android.gms:play-services-wearable:8.1.0:19:5
 MERGED from com.google.android.gms:play-services-basement:8.1.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 	android:label
-		ADDED from AndroidManifest.xml:49:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:47:9
-	android:icon
 		ADDED from AndroidManifest.xml:48:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:46:9
+	android:icon
+		ADDED from AndroidManifest.xml:47:9
 	android:theme
-		ADDED from AndroidManifest.xml:50:9
-activity#com.kiki.View.Activity.TestB.GoogleMapActivity
-ADDED from AndroidManifest.xml:52:9
-	android:label
-		ADDED from AndroidManifest.xml:54:13
+		ADDED from AndroidManifest.xml:49:9
+activity#com.kiki.View.Activity.TestB.TestActivity2
+ADDED from AndroidManifest.xml:51:9
 	android:name
-		ADDED from AndroidManifest.xml:53:13
+		ADDED from AndroidManifest.xml:51:19
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:55:13
+ADDED from AndroidManifest.xml:52:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:56:17
+ADDED from AndroidManifest.xml:53:17
 	android:name
-		ADDED from AndroidManifest.xml:56:25
+		ADDED from AndroidManifest.xml:53:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:57:17
+ADDED from AndroidManifest.xml:54:17
 	android:name
-		ADDED from AndroidManifest.xml:57:27
+		ADDED from AndroidManifest.xml:54:27
 activity#com.kiki.View.Activity.login.NaverLoginActivity
-ADDED from AndroidManifest.xml:62:9
+ADDED from AndroidManifest.xml:59:9
 	android:theme
-		ADDED from AndroidManifest.xml:64:13
+		ADDED from AndroidManifest.xml:61:13
 	android:name
-		ADDED from AndroidManifest.xml:63:13
+		ADDED from AndroidManifest.xml:60:13
 activity#com.nhn.android.naverlogin.ui.OAuthLoginActivity
-ADDED from AndroidManifest.xml:74:9
+ADDED from AndroidManifest.xml:71:9
 	android:configChanges
-		ADDED from AndroidManifest.xml:76:13
+		ADDED from AndroidManifest.xml:73:13
 	android:theme
+		ADDED from AndroidManifest.xml:74:13
+	android:name
+		ADDED from AndroidManifest.xml:72:13
+activity#com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity
+ADDED from AndroidManifest.xml:75:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:78:13
+	android:label
 		ADDED from AndroidManifest.xml:77:13
 	android:name
-		ADDED from AndroidManifest.xml:75:13
-activity#com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity
-ADDED from AndroidManifest.xml:78:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:81:13
-	android:label
-		ADDED from AndroidManifest.xml:80:13
-	android:name
-		ADDED from AndroidManifest.xml:79:13
+		ADDED from AndroidManifest.xml:76:13
 receiver#com.google.android.gms.gcm.GcmReceiver
-ADDED from AndroidManifest.xml:93:9
+ADDED from AndroidManifest.xml:90:9
 	android:permission
-		ADDED from AndroidManifest.xml:95:13
+		ADDED from AndroidManifest.xml:92:13
 	android:name
-		ADDED from AndroidManifest.xml:94:13
+		ADDED from AndroidManifest.xml:91:13
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.kiki.View
-ADDED from AndroidManifest.xml:96:13
+ADDED from AndroidManifest.xml:93:13
 action#com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:94:17
+	android:name
+		ADDED from AndroidManifest.xml:94:25
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from AndroidManifest.xml:96:17
+	android:name
+		ADDED from AndroidManifest.xml:96:25
+category#com.kiki.View
 ADDED from AndroidManifest.xml:97:17
 	android:name
-		ADDED from AndroidManifest.xml:97:25
-action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from AndroidManifest.xml:99:17
-	android:name
-		ADDED from AndroidManifest.xml:99:25
-category#com.kiki.View
-ADDED from AndroidManifest.xml:100:17
-	android:name
-		ADDED from AndroidManifest.xml:100:27
+		ADDED from AndroidManifest.xml:97:27
 receiver#com.kiki.View.receive.KbroadCastReceiver
-ADDED from AndroidManifest.xml:105:9
+ADDED from AndroidManifest.xml:102:9
 	android:process
-		ADDED from AndroidManifest.xml:108:13
+		ADDED from AndroidManifest.xml:105:13
 	android:enabled
-		ADDED from AndroidManifest.xml:107:13
+		ADDED from AndroidManifest.xml:104:13
 	android:name
-		ADDED from AndroidManifest.xml:106:13
+		ADDED from AndroidManifest.xml:103:13
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.TIME_TICK+android.intent.category.DEFAULT
-ADDED from AndroidManifest.xml:109:13
+ADDED from AndroidManifest.xml:106:13
 category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:107:17
+	android:name
+		ADDED from AndroidManifest.xml:107:27
+action#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:109:17
+	android:name
+		ADDED from AndroidManifest.xml:109:25
+action#android.intent.action.TIME_TICK
 ADDED from AndroidManifest.xml:110:17
 	android:name
-		ADDED from AndroidManifest.xml:110:27
-action#android.intent.action.BOOT_COMPLETED
-ADDED from AndroidManifest.xml:112:17
-	android:name
-		ADDED from AndroidManifest.xml:112:25
-action#android.intent.action.TIME_TICK
-ADDED from AndroidManifest.xml:113:17
-	android:name
-		ADDED from AndroidManifest.xml:113:25
-service#com.kiki.android.Logic.Managers.push.SafetyGcmListenerService
-ADDED from AndroidManifest.xml:118:9
+		ADDED from AndroidManifest.xml:110:25
+service#com.kiki.android.Managers.push.SafetyGcmListenerService
+ADDED from AndroidManifest.xml:115:9
 	android:exported
-		ADDED from AndroidManifest.xml:120:13
+		ADDED from AndroidManifest.xml:117:13
 	android:name
-		ADDED from AndroidManifest.xml:119:13
+		ADDED from AndroidManifest.xml:116:13
 intent-filter#com.google.android.c2dm.intent.RECEIVE
-ADDED from AndroidManifest.xml:121:13
-service#com.kiki.android.Logic.Managers.push.SafetyInstanceIDListenerService
-ADDED from AndroidManifest.xml:125:9
+ADDED from AndroidManifest.xml:118:13
+service#com.kiki.android.Managers.push.SafetyInstanceIDListenerService
+ADDED from AndroidManifest.xml:122:9
 	android:exported
-		ADDED from AndroidManifest.xml:127:13
+		ADDED from AndroidManifest.xml:124:13
 	android:name
-		ADDED from AndroidManifest.xml:126:13
+		ADDED from AndroidManifest.xml:123:13
 intent-filter#com.google.android.gms.iid.InstanceID
-ADDED from AndroidManifest.xml:128:13
+ADDED from AndroidManifest.xml:125:13
 action#com.google.android.gms.iid.InstanceID
-ADDED from AndroidManifest.xml:129:17
+ADDED from AndroidManifest.xml:126:17
 	android:name
-		ADDED from AndroidManifest.xml:129:25
-service#com.kiki.android.Logic.Managers.push.SafetyRegistrationService
-ADDED from AndroidManifest.xml:132:9
+		ADDED from AndroidManifest.xml:126:25
+service#com.kiki.android.Managers.push.SafetyRegistrationService
+ADDED from AndroidManifest.xml:129:9
 	android:name
-		ADDED from AndroidManifest.xml:132:18
+		ADDED from AndroidManifest.xml:129:18
 service#com.kiki.View.service.KService
-ADDED from AndroidManifest.xml:134:9
+ADDED from AndroidManifest.xml:131:9
 	android:name
-		ADDED from AndroidManifest.xml:134:18
+		ADDED from AndroidManifest.xml:131:18
 meta-data#com.google.android.gms.version
-ADDED from AndroidManifest.xml:136:9
+ADDED from AndroidManifest.xml:133:9
 MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
 MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
 MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
@@ -543,15 +541,15 @@ MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
 MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
 MERGED from com.google.android.gms:play-services-basement:8.1.0:21:9
 	android:name
-		ADDED from AndroidManifest.xml:137:13
+		ADDED from AndroidManifest.xml:134:13
 	android:value
-		ADDED from AndroidManifest.xml:138:13
+		ADDED from AndroidManifest.xml:135:13
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from AndroidManifest.xml:140:9
+ADDED from AndroidManifest.xml:137:9
 	android:name
-		ADDED from AndroidManifest.xml:141:13
+		ADDED from AndroidManifest.xml:138:13
 	android:value
-		ADDED from AndroidManifest.xml:142:13
+		ADDED from AndroidManifest.xml:139:13
 activity#android.support.v7.widget.TestActivity
 ADDED from com.android.support:recyclerview-v7:21.0.3:18:9
 	android:label
