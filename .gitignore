@@ -5,3 +5,7 @@ MyLibTest/local.properties
 MyLibTest/.idea/libraries
 
 
+gradle
+.gradle
+.idea
+build

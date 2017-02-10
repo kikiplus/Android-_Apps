@@ -132,7 +132,7 @@ public abstract class ParentPopup implements android.content.DialogInterface.OnK
     }
 
     protected void setTitle(int drawbale, String title) {
-        LinearLayout titleView = (LinearLayout) m_CurrentView.findViewById(R.id.popup_view_title);
+        RelativeLayout titleView = (RelativeLayout) m_CurrentView.findViewById(R.id.popup_view_title);
         ImageView img = new ImageView(m_Context);
         img.setBackgroundResource(drawbale);
         img.setLayoutParams(new LayoutParams(200, 150));
