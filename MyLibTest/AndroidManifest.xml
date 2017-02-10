@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kiki.View">
+    package="com.kikiplus.View">
 
 
     <!--GCM 관련 퍼미션 -->
@@ -8,10 +8,10 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uese-
-        android:name="com.kiki.View.permission.C2D_MESSAGE"
+        android:name="com.kikiplus.View.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.kiki.View.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.kikiplus.View.permission.C2D_MESSAGE" />
 
     <!-- 문자 관련 퍼미션-->
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -70,20 +70,20 @@
 
         <!-- GCM REG 발급 서비스 -->
         <service
-            android:name="com.kiki.android.Managers.push.SafetyGcmListenerService"
+            android:name="com.kikiplus.android.Managers.push.SafetyGcmListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
         <service
-            android:name="com.kiki.android.Managers.push.SafetyInstanceIDListenerService"
+            android:name="com.kikiplus.android.Managers.push.SafetyInstanceIDListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
             </intent-filter>
         </service>
-        <service android:name="com.kiki.android.Managers.push.SafetyRegistrationService"></service>
+        <service android:name="com.kikiplus.android.Managers.push.SafetyRegistrationService"></service>
 
         <!-- 구글 지도-->
         <meta-data

@@ -52,6 +52,15 @@ android {
         debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
+
+            applicationVariants.all { variant ->
+                variant.outputs.each {
+                    output->
+                        def file = output.outputFile
+                        output.outputFile = new File(file.parent,
+                                file.name.replace("app", "appname." + defaultConfig.versionName))
+                }
+            }
         }
     }
     defaultConfig {

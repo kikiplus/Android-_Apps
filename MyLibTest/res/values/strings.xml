@@ -67,7 +67,7 @@
     <string name="transmode_app_name">transmode</string>
     <string name="navigation_app_name">NavigationDrawer</string>
     <string name="tutorial_app_name">Tutorial</string>
-    <string name="app_name">KAndroid</string>
+    <string name="app_name">KApp</string>
     <string name="daum_map_app_name">KDaumMap</string>
     <string name="google_map_app_name">KGoogleMap</string>
 
