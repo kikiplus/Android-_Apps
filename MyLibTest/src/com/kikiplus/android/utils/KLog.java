@@ -1,21 +1,21 @@
-package com.kikiplus.android.utils;
+package com.kikiplus.android.Utils;
 
 import android.util.Log;
 
 /***
  * @author grapegirl
- * @version 1.0
+ * @version 1.1
  * @Class Name : KLog.java
  * @Description : Log 클래스
- * @since 2015.10.07
+ * @since 2017.02.11
  */
 public class KLog {
 
-    /**
-     * 운영 배포시 false
-     * 개발 로그 true시 보임
-     */
-    public static boolean VIEW_LOG = true;
+    private static boolean VIEW_LOG = true;
+
+    public void setLogging(boolean isDebugging) {
+        VIEW_LOG = isDebugging;
+    }
 
     public static void d(String tag, String msg) {
         if (!VIEW_LOG)

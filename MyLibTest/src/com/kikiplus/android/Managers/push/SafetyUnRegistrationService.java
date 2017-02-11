@@ -4,9 +4,9 @@ import android.app.IntentService;
 import android.content.Intent;
 
 import com.google.android.gms.iid.InstanceID;
-import com.kikiplus.android.Utils.ContextUtils;
-import com.kikiplus.android.andUtils.KLog;
-import com.kikiplus.android.andUtils.SharedPreferenceUtils;
+import com.kikiplus.android.Utils.KLog;
+import com.kikiplus.android.Utils.SharedPreferenceUtils;
+import com.kikiplus.app.setting.UserKey;
 
 /***
  * @author grape girl
@@ -19,7 +19,6 @@ public class SafetyUnRegistrationService extends IntentService {
 
     private static final String TAG = SafetyUnRegistrationService.class.getSimpleName();
 
-
     public SafetyUnRegistrationService() {
         super(TAG);
     }
@@ -31,7 +30,7 @@ public class SafetyUnRegistrationService extends IntentService {
                 InstanceID instanceID = InstanceID.getInstance(this);
                 InstanceID.getInstance(this).deleteInstanceID();
                 KLog.d(this.getClass().getSimpleName(), "@@ SafetyUnRegistrationService token 해지 ");
-                SharedPreferenceUtils.write(this, ContextUtils.KEY_PROJECT_ID, null);
+                SharedPreferenceUtils.write(this, UserKey.KEY_USER_GCM, null);
             }
         } catch (Exception e) {
             KLog.d(this.getClass().getSimpleName(), "SafetyUnRegistrationService 해지 Exception");
@@ -40,7 +39,6 @@ public class SafetyUnRegistrationService extends IntentService {
 
     @Override
     public void onDestroy() {
-//		super.onDestroy();
         KLog.d(this.getClass().getSimpleName(), "SafetyUnRegistrationService onDestroy");
     }
 }

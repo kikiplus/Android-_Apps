@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.wifi.ScanResult;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,15 +15,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.kikiplus.View.Bean.WiFiAP;
+import com.kikiplus.android.Managers.wifi.IWiFiStatusReceive;
+import com.kikiplus.android.Managers.wifi.WiFiAP;
 import com.kikiplus.View.UIComfonent.EditDialog;
 import com.kikiplus.View.UIComfonent.ProgressBar;
 import com.kikiplus.View.ViewAdapter.WifiListAdpater;
-import com.kikiplus.android.Listener.IWiFiScanLinstener;
-import com.kikiplus.android.Listener.IWiFiStatusListener;
+import com.kikiplus.android.Managers.wifi.IWiFiScanLinstener;
 import com.kikiplus.android.Listener.UIEvent.OnButtonSelectedListener;
-import com.kikiplus.android.Managers.WifiMgr;
-import com.kikiplus.android.Managers.WifiMonitor;
+import com.kikiplus.android.Managers.wifi.WifiManager;
+import com.kikiplus.android.Managers.wifi.WifiMonitor;
 import com.kikiplus.android.andUtils.KLog;
 
 import java.util.ArrayList;
@@ -37,7 +36,7 @@ import java.util.List;
  * @Description : 와이파이 관련 메인 액티비티
  * @since 2015-07-09.
  */
-public class WifiMainActivity extends Activity implements IWiFiScanLinstener, View.OnClickListener, Handler.Callback, OnButtonSelectedListener, IWiFiStatusListener {
+public class WifiMainActivity extends Activity implements IWiFiScanLinstener, View.OnClickListener, Handler.Callback, OnButtonSelectedListener, IWiFiStatusReceive {
 
     /**
      * 리스트뷰
@@ -47,7 +46,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
     /**
      * wifi 매니저
      */
-    private WifiMgr mWifiMgr;
+    private WifiManager mWifiMgr;
 
     /**
      * wifi 스캔 데이타
@@ -105,8 +104,8 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
         //와이파이 모니터 객체 생성 및 리시버 등록
         mWifiMonitor = new WifiMonitor(this);
         IntentFilter receiverFilter = new IntentFilter();
-        receiverFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
-        receiverFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+        receiverFilter.addAction(android.net.wifi.WifiManager.WIFI_STATE_CHANGED_ACTION);
+        receiverFilter.addAction(android.net.wifi.WifiManager.NETWORK_STATE_CHANGED_ACTION);
         receiverFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mWifiMonitor, receiverFilter);
 
@@ -116,7 +115,7 @@ public class WifiMainActivity extends Activity implements IWiFiScanLinstener, Vi
        // mButton.setOnClickListener(this);
 
         mHandler = new Handler(this);
-        mWifiMgr = new WifiMgr(getApplicationContext(), this);
+        mWifiMgr = new WifiManager(getApplicationContext(), this);
         mProgressBar = new ProgressBar(this);
     }
 

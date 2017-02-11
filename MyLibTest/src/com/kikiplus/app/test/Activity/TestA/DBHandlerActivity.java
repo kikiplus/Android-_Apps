@@ -6,8 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.kikiplus.android.Managers.DBManager;
-import com.kikiplus.android.Managers.FileMgr;
+import com.kikiplus.android.Managers.data.FileMgr;
 
 import java.io.IOException;
 import java.io.InputStream;

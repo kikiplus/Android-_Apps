@@ -13,6 +13,8 @@ import com.google.android.gms.iid.InstanceIDListenerService;
  */
 public class SafetyInstanceIDListenerService extends InstanceIDListenerService {
 
+	private final String TAG = this.getClass().getSimpleName();
+
 	@Override
 	public void onTokenRefresh() {
 		Intent intent = new Intent( this, SafetyRegistrationService.class );

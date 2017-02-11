@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.kikiplus.View.R;
-import com.kikiplus.android.Listener.INetException;
-import com.kikiplus.android.Listener.IServerResponse;
 import com.kikiplus.android.Managers.socket.SocketAsynTaskManager;
 
 /**

@@ -20,8 +20,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.kikiplus.View.R;
-import com.kikiplus.android.Listener.IBLConnectLinstener;
-import com.kikiplus.android.Listener.UIEvent.OnBluetoothEventListener;
+import com.kikiplus.android.Managers.ble.IBLConnectLinstener;
 import com.kikiplus.android.Managers.bluetooth.BluetoothAcceptTask;
 import com.kikiplus.android.Managers.bluetooth.BluetoothConnectTask;
 import com.kikiplus.android.Managers.bluetooth.BluetoothConnectedTask;
@@ -126,7 +125,7 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
         setButton();
 
         //서버소켓으로 열어놓고 기다리기
-//        mBluetoothAccpetionTask = new BluetoothAcceptTask(mBluetoothMgr.getmBluetoothAdapter(), this);
+//        mBluetoothAccpetionTask = new BleAcceptMgr(mBluetoothMgr.getmBluetoothAdapter(), this);
 //        mBluetoothAccpetionTask.execute();
     }
 
@@ -246,25 +245,25 @@ public class BluetoothMainActivity extends Activity implements View.OnClickListe
 //                File file = new File(urlData.getPath());
                 BluetoothDevice device = mBluetoothMgr.getBluetoothDevice(mac);
                 if (mBluetoothConnectTask == null) {
-                    System.out.println("@@ BluetoothConnectTask is Null ");
+                    System.out.println("@@ BleConnectMgr is Null ");
                     mBluetoothConnectTask = new BluetoothConnectTask(device, mBluetoothMgr.getmBluetoothAdapter());
                     mBluetoothConnectTask.execute();
                 }else{
-                    System.out.println("@@ BluetoothConnectTask is not Null ");
+                    System.out.println("@@ BleConnectMgr is not Null ");
                 }
 
                 BluetoothSocket socket = mBluetoothConnectTask.getSocket();
-                System.out.println("@@ BluetoothConnectTask socket :  "+ socket);
+                System.out.println("@@ BleConnectMgr socket :  "+ socket);
                 if (socket != null) {
                     mBluetoothConnectedTask = new BluetoothConnectedTask(socket, this);
 //                    mBluetoothConnectedTask.execute();
                     if (mBluetoothConnectedTask.getOutputStream()) {
-                        System.out.println("@@ BluetoothConnectTask 파일 전송");
+                        System.out.println("@@ BleConnectMgr 파일 전송");
                         String strdata = "TEST 입니다 !!!";
 
                         mBluetoothConnectedTask.write(strdata.getBytes());
                     }else{
-                        System.out.println("@@ BluetoothConnectTask getOutputStream false");
+                        System.out.println("@@ BleConnectMgr getOutputStream false");
                     }
                 }
                 break;

@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.kikiplus.View.UIComfonent.ProgressBar;
-import com.kikiplus.android.Listener.IHttpReceive;
-import com.kikiplus.android.Managers.http.HttpUrlTaskManager;
-import com.kikiplus.common.utils.StringUtils;
+import com.kikiplus.android.Managers.net.UrlManager;
+import com.kikiplus.android.Managers.net.IHttpReceive;
+import com.kikiplus.android.Utils.StringUtils;
 
 import java.util.HashMap;
 
@@ -64,9 +63,9 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
         mTextView.setText(null);
         mProgressDialog.setDataLoadingDialog(true, "데이타를 불러오고 있습니다");
 
-//        HttpUrlTaskManager manager = new HttpUrlTaskManager("https://github.com", false, this);
+//        UrlManager manager = new UrlManager("https://github.com", false, this);
 //        manager.execute();
-        HttpUrlTaskManager manager = new HttpUrlTaskManager("http://210.220.248.236:8080/MemoServer/jsp/login.jsp", true, "UTF-8", this);
+        UrlManager manager = new UrlManager("http://210.220.248.236:8080/MemoServer/jsp/login.jsp", true, this , 0);
 
         HashMap<String, Object> data = new HashMap<String,Object>();
         data.put("name","mihye");
@@ -75,19 +74,6 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
         manager.execute(StringUtils.getHTTPPostSendData(data));
     }
 
-
-
-
-    @Override
-    public void onHttpReceive(int type, Object obj) {
-        switch (type){
-            case HTTP_OK:
-                mProgressDialog.setDataLoadingDialog(false, null);
-                String data = (String) obj;
-                mHandler.sendMessage(mHandler.obtainMessage(0, data));
-                break;
-        }
-    }
 
     @Override
     public boolean handleMessage(Message msg) {
@@ -98,5 +84,16 @@ public class HTTPUrlConnectionActivity extends Activity implements View.OnClickL
                 break;
         }
         return false;
+    }
+
+    @Override
+    public void onHttpReceive(int type, int actionId, Object obj) {
+        switch (type){
+            case HTTP_OK:
+                mProgressDialog.setDataLoadingDialog(false, null);
+                String data = (String) obj;
+                mHandler.sendMessage(mHandler.obtainMessage(0, data));
+                break;
+        }
     }
 }

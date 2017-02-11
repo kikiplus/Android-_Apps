@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import com.google.android.gms.gcm.GcmListenerService;
-import com.kikiplus.android.andUtils.KLog;
+import com.kikiplus.android.Utils.KLog;
 
 import org.json.JSONObject;
 
@@ -19,6 +19,8 @@ import java.net.URLDecoder;
  * @since 2015. 6. 8.
  */
 public class SafetyGcmListenerService extends GcmListenerService {
+
+    private final String TAG = this.getClass().getSimpleName();
 
     private static SafetyGcmListenerService INSTANCE;
     private JSONObject mjsonObject = null;

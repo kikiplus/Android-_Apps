@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kikiplus.View.UIComfonent.ProgressBar;
-import com.kikiplus.android.Listener.IHttpReceive;
-import com.kikiplus.android.andUtils.KLog;
+import com.kikiplus.android.Managers.net.IHttpReceive;
+import com.kikiplus.android.Utils.KLog;
 
 /**
  * @author grapegirl
@@ -110,7 +109,7 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
             //ApacheFileUploadManager fileUploadTaskMangaer = new ApacheFileUploadManager(this);
             //fileUploadTaskMangaer.execute("url", mBitmap, "test.jpg");
 
-            //HttpUrlFileUploadManager manager = new HttpUrlFileUploadManager(this);
+            //FileUploadMgr manager = new FileUploadMgr(this);
             //manager.execute("url", mBitmap, "test.jpg");
             //   break;
             //case R.id.fileupload_main_cametraButton://사진찍기
@@ -121,7 +120,7 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
 //                break;
             //  case R.id.fileupload_main_downloadButton: // 다운로드
             //mProgressDialog.setDataLoadingDialog(true, "파일을 다운로드 하고 있습니다.");
-            //HttpUrlFileDownloadManager fileDownloadManager = new HttpUrlFileDownloadManager(this);
+            //FileDownloadMgr fileDownloadManager = new FileDownloadMgr(this);
             //fileDownloadManager.execute("url", "filename.txt");
 
             //ApacheFileDownloadManager fileDownloadManager = new ApacheFileDownloadManager(this);
@@ -159,7 +158,7 @@ public class FileUploadActivity extends Activity implements View.OnClickListener
     }
 
     @Override
-    public void onHttpReceive(int type, Object obj) {
+    public void onHttpReceive(int type, int actionId, Object obj) {
         switch (type) {
             case HTTP_OK:
                 mHandler.sendMessage(mHandler.obtainMessage(1, obj));

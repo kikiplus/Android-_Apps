@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.kikiplus.View.Bean.WiFiAP;
+import com.kikiplus.android.Managers.wifi.WiFiAP;
 
 import java.util.ArrayList;
 

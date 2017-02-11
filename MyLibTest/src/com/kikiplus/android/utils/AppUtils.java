@@ -1,4 +1,4 @@
-package com.kikiplus.android.utils;
+package com.kikiplus.android.Utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -288,13 +288,14 @@ public class AppUtils {
 
     /***
      * 힙 메모리 출력 메소드
+     *
      * @param context 컨텍스트
      */
-    public static void printMemory(Context context){
-        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ ==============================================");
-        KLog.d(context.getClass().getSimpleName(),context.getClass()+ "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
-        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
-        KLog.d(context.getClass().getSimpleName(), context.getClass()+ "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
-        KLog.d(context.getClass().getSimpleName(),context.getClass()+ "@@ ==============================================");
+    public static void printMemory(Context context) {
+        KLog.d(context.getClass().getSimpleName(), context.getClass() + "@@ ==============================================");
+        KLog.d(context.getClass().getSimpleName(), context.getClass() + "@@ 힙사이즈 : " + Debug.getNativeHeapSize());
+        KLog.d(context.getClass().getSimpleName(), context.getClass() + "@@ 힙 Free 사이즈: " + Debug.getNativeHeapFreeSize());
+        KLog.d(context.getClass().getSimpleName(), context.getClass() + "@@ 힙에 할당된 사이즈 : " + Debug.getNativeHeapAllocatedSize());
+        KLog.d(context.getClass().getSimpleName(), context.getClass() + "@@ ==============================================");
     }
 }

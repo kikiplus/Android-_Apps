@@ -1,4 +1,4 @@
-package com.kikiplus.android.utils;
+package com.kikiplus.android.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
