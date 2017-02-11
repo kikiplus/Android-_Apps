@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kikiplus.app">
 
-
     <!--GCM 관련 퍼미션 -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -13,27 +12,19 @@
 
     <uses-permission android:name="com.kikiplus.View.permission.C2D_MESSAGE" />
 
-    <!-- 문자 관련 퍼미션-->
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <!-- 단말기 상태 관련 퍼미션-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 저장소 관련 퍼미션-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 네트워크 관련 퍼미션-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 재부팅시 관련 퍼미션-->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!-- 와이파이 관련 퍼미션-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <!--블루투스 퍼미션 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <!--지도 퍼미션 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -43,15 +34,13 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light">
         <activity
-            android:name=".Activity.TestA.MainMenuActivity"
+            android:name=".main.MainMenuActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            >
-
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -61,8 +50,8 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <!-- for Gingerbread GSF backward compat -->`
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
                 <category android:name="com.kiki.View" />
 
             </intent-filter>
@@ -85,10 +74,6 @@
         </service>
         <service android:name="com.kikiplus.android.Managers.push.SafetyRegistrationService"></service>
 
-        <!-- 구글 지도-->
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>
